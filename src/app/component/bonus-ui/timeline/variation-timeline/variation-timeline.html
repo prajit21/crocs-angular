@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Variation Timeline</h4>
+    <p class="f-m-light mt-1">
+      Use the <code>.activity-dot-primary </code>through rounded animations.
+    </p>
+  </div>
+  <div class="card-body dark-timeline">
+    <ul>
+      @for(data of veriationTimeline; track data ){
+      <li class="d-flex">
+        <div class="activity-dot-{{data.colorClass}}"></div>
+        <div class="w-100 ms-3">
+          <p
+            class="d-flex justify-content-between mb-2"
+            [innerHTML]="data.dateTime"
+          ></p>
+          <h6>{{ data.title }}<span class="dot-notification"></span></h6>
+          @if(data.id === 2){
+          <span class="{{data.class }}">{{ data.text }}</span>
+          }@else{
+          <p class="{{data.class}}">{{ data.text }}</p>
+          } @if(data.img === true){
+          <div class="recent-images">
+            <ul>
+              @for(item of data.data; track item){
+              <li>
+                <div class="recent-img-wrap">
+                  <img src="{{item.img}}" alt="chair" />
+                </div>
+              </li>
+              }
+            </ul>
+          </div>
+          }
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

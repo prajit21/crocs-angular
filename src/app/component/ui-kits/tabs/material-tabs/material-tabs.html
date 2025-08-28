@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header card-no-border pb-0">
+    <h4>Material Style Tabs</h4>
+    <p class="mt-1 f-m-light">
+      Use the <code>.nav-link </code>with <code>.active </code>class through
+      access new tabs. And icons of design for attractive webpage.
+    </p>
+  </div>
+  <div class="card-body">
+    <ul
+      class="nav nav-tabs border-tab border-0 mb-0 nav-danger"
+      id="topline-tab"
+      ngbNav
+      #nav="ngbNav"
+      [(activeId)]="active"
+    >
+      <li class="nav-item" [ngbNavItem]="1">
+        <a
+          class="nav-link nav-border pt-0 txt-danger nav-danger"
+          id="topline-top-user-tab"
+          ngbNavLink
+          ><i class="icofont icofont-man-in-glasses"></i>User</a
+        >
+        <ng-template ngbNavContent>
+          <div class="tab-pane fade show" id="topline-top-user">
+            <app-user-details />
+          </div>
+        </ng-template>
+      </li>
+      <li class="nav-item" [ngbNavItem]="2">
+        <a
+          class="nav-link nav-border txt-danger nav-danger"
+          id="topline-top-description-tab"
+          ngbNavLink
+          ><i class="icofont icofont-file-document"></i>Description</a
+        >
+        <ng-template ngbNavContent>
+          <div class="tab-pane fade show" id="topline-top-description">
+            <app-description />
+          </div>
+        </ng-template>
+      </li>
+      <li class="nav-item" [ngbNavItem]="3">
+        <a
+          class="nav-link nav-border txt-danger nav-danger"
+          id="topline-top-review-tab"
+          ngbNavLink
+          ><i class="icofont icofont-star"></i>Review</a
+        >
+        <ng-template ngbNavContent>
+          <div class="tab-pane fade show" id="topline-top-review">
+            <app-review />
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+    <div [ngbNavOutlet]="nav" class="ms-2"></div>
+  </div>
+</div>

@@ -1,0 +1,170 @@
+<div
+  class="table-responsive product-table custom-scrollbar custom-support-list"
+>
+  <div class="dataTables_wrapper no-footer">
+    <form>
+      <div class="d-flex justify-content-between p-2">
+        <div class="dataTables_length" id="basic-6_length">
+          <label
+            >Show
+            <select name="pageSize" [(ngModel)]="service.pageSize">
+              <option [ngValue]="10">10</option>
+              <option [ngValue]="15">15</option>
+              <option [ngValue]="20">20</option>
+              <option [ngValue]="25">25</option>
+            </select>
+            entries
+          </label>
+        </div>
+        <div class="mb-3 row">
+          <label
+            for="table-complete-search"
+            class="col-xs-3 col-sm-auto col-form-label"
+            >Search:</label
+          >
+          <div class="col-xs-3 col-sm-auto">
+            <input
+              id="table-complete-search"
+              type="text"
+              class="form-control"
+              name="searchTerm"
+              [(ngModel)]="service.searchTerm"
+              autocomplete="off"
+            />
+          </div>
+          @if(service.loading$ | async){
+          <span class="col col-form-label">Loading...</span>
+          }
+        </div>
+      </div>
+    </form>
+    <table class="display dataTable no-footer border" id="basic-6">
+      <thead>
+        <tr>
+          <th
+            rowspan="2"
+            class="sorting sorting_asc border"
+            sortable="name"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            style="width: 256px"
+          >
+            Name
+          </th>
+          <th colspan="2" rowspan="1">HR Information</th>
+          <th colspan="4" rowspan="1" class="border">Contact</th>
+        </tr>
+        <tr>
+          <th
+            sortable="position"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+          >
+            Position
+          </th>
+          <th
+            sortable="salary"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            class="border"
+          >
+            Salary
+          </th>
+          <th
+            sortable="office"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            class="border"
+          >
+            Office
+          </th>
+          <th
+            sortable="skill"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            class="border"
+          >
+            Skill
+          </th>
+          <th
+            sortable="extn"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            class="border"
+          >
+            Extn.
+          </th>
+          <th
+            sortable="email"
+            (sort)="onSort($event)"
+            style="cursor: pointer"
+            class="border"
+          >
+            E-mail
+          </th>
+          <th class="border">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(data of countries$ | async; track data){
+        <tr>
+          <td>
+            <div class="d-flex">
+              <img
+                class="rounded-circle img-30 me-3"
+                [src]="data.img"
+                alt="Generic placeholder image"
+              />
+              <div class="flex-grow-1 align-self-center">
+                <div>{{ data.name }}</div>
+              </div>
+            </div>
+          </td>
+          <td>{{ data.position }}</td>
+          <td>${{ data.salary | number }}</td>
+          <td>{{ data.office }}</td>
+          <td>
+            <div class="progress-showcase">
+              <div class="progress sm-progress-bar">
+                <div
+                  [ngClass]="data.skill"
+                  role="progressbar"
+                  [style.width]="data.progress"
+                ></div>
+              </div>
+            </div>
+          </td>
+          <td>{{ data.extn }}</td>
+          <td>{{ data.email }}</td>
+          <td>
+            <i class="fa fa-eye font-primary pe-2"></i>
+            <i class="icofont icofont-close-circled font-danger ps-2"></i>
+          </td>
+        </tr>
+        } @if(!Data.length){
+        <tr class="odd">
+          <td colspan="10" class="dataTables_empty" style="text-align: center">
+            <div class="search-not-found text-center">
+              <p>Sorry, No records found</p>
+            </div>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-between p-2">
+      <div class="dataTables_info">
+        <span class="mt-4"
+          >Showing {{ getStartingIndex() }} to {{ getEndingIndex() }} of {{
+          filteredData.length }} entries</span
+        >
+      </div>
+      <ngb-pagination
+        class="ms-3 custom-primary-pagination"
+        [collectionSize]="( total$ | async)!"
+        [(page)]="service.page"
+        [pageSize]="service.pageSize"
+      />
+    </div>
+  </div>
+</div>

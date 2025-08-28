@@ -1,0 +1,44 @@
+<div class="container-fluid ecommerce-dashboard">
+  <div class="row">
+    <div class="col-xxl-6 col-xl-7 col-lg-7 box-col-7">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <app-top-common-ecommerce [data]="TotalRevenueData" />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <app-top-common-ecommerce [data]="TotalSalesData" />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <app-top-common-ecommerce [data]="TotalCustomerData" />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <app-top-common-ecommerce [data]="TotalProductData" />
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-6 col-xl-5 col-lg-5 box-col-5">
+      <app-daily-visitors />
+    </div>
+    <div class="col-xxl-5 col-xl-4 col-lg-4 box-col-4">
+      <app-top-product />
+    </div>
+    <div class="col-xxl-7 col-xl-8 col-lg-8 box-col-8e">
+      <app-open-invoices />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 box-col-4">
+      <app-top-categories />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 box-col-4">
+      <app-track-order />
+    </div>
+    <div class="col-xl-4 col-lg-4 box-col-4">
+      <app-product-sales />
+    </div>
+    <div class="col-xl-7 col-lg-7 box-col-7">
+      <app-manage-order />
+    </div>
+    <div class="col-xl-5 col-lg-5 box-col-5">
+      <app-stock-report />
+    </div>
+  </div>
+</div>

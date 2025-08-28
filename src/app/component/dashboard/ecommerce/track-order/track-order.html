@@ -1,0 +1,57 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Track Order</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="order-place">
+      <div class="d-flex">
+        <div class="flex-shrink-0">
+          <img
+            src="assets/images/dashboard-2/product/headphone.png"
+            alt="product"
+          />
+        </div>
+        <div class="flex-grow-1">
+          <a [routerLink]="['/ecommerce/products']">
+            <h6 class="f-w-500">Wired Headphones with Mic (Black)</h6>
+            <h5 class="font-primary f-w-600 mt-1">$27.93</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <ul class="track-order">
+      @for( data of TrackOrderData; track data){
+      <li>
+        <div class="d-flex">
+          <div class="flex-shrink-0 bg-{{ data.class }}">
+            <img src="{{ data.img }}" alt="img" />
+          </div>
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <a [routerLink]="['/ecommerce/products']">
+                <h6>{{data.status }}</h6>
+                <p class="text-truncate">{{ data.statusdes}}</p>
+              </a>
+              <span class="font-{{ data.class }} f-w-500"
+                >{{ data.dateTime }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

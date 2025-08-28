@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Our Growth</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div id="growth-chart">
+      <apx-chart
+        [series]="growthChart.series"
+        [chart]="growthChart.chart"
+        [plotOptions]="growthChart.plotOptions"
+        [stroke]="growthChart.stroke"
+        [colors]="growthChart.colors"
+        [dataLabels]="growthChart.dataLabels"
+        [grid]="growthChart.grid"
+        [yaxis]="growthChart.yaxis"
+        [xaxis]="growthChart.xaxis"
+        [legend]="growthChart.legend"
+        [fill]="growthChart.fill"
+        [tooltip]="growthChart.tooltip"
+      />
+    </div>
+  </div>
+</div>

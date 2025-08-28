@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Badges As Part Buttons</h4>
+    <p class="f-m-light mt-1">
+      <code>.badge</code> can be used as part of <code>.btn</code> to provide a
+      icons.
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="badge-spacing flex-column align-items-start">
+      <button class="btn btn-primary d-flex align-items-center" type="button">
+        Messages
+        <span
+          class="badge rounded-circle btn-p-space badge-light text-dark ms-2"
+        >
+          <app-feathericon [icon]="'mail'" />
+        </span>
+      </button>
+      <button class="btn btn-secondary d-flex align-items-center" type="button">
+        notifications
+        <span
+          class="badge rounded-circle btn-p-space badge-light text-dark ms-2"
+        >
+          <app-feathericon [icon]="'bell'" />
+        </span>
+      </button>
+      <button class="btn btn-success d-flex align-items-center" type="button">
+        Update available
+        <span
+          class="badge rounded-circle btn-p-space badge-light text-dark ms-2"
+        >
+          <app-feathericon [icon]="'settings'" />
+        </span>
+      </button>
+      <button class="btn btn-info d-flex align-items-center" type="button">
+        Playing Now
+        <span
+          class="badge rounded-circle btn-p-space badge-light text-dark ms-2"
+        >
+          <app-feathericon [icon]="'music'" />
+        </span>
+      </button>
+      <button
+        class="btn btn-warning text-dark d-flex align-items-center"
+        type="button"
+      >
+        1.2 GB Used
+        <span
+          class="badge rounded-circle btn-p-space badge-light text-dark ms-2"
+        >
+          <app-feathericon [icon]="'alert-triangle'" />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

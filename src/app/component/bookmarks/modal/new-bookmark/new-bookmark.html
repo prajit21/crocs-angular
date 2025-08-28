@@ -1,0 +1,72 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h3 class="modal-title" id="exampleModalLabel">Add Bookmark</h3>
+    <button class="btn-close" type="button" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body">
+    <form
+      class="form-bookmark needs-validation"
+      novalidate
+      [formGroup]="myForm"
+      (ngSubmit)="submit()"
+    >
+      <div class="row g-2">
+        <div class="mb-3 mt-0 col-md-12">
+          <label for="bm-weburl">Web Url</label>
+          <input
+            class="form-control"
+            type="text"
+            autocomplete="off"
+            formControlName="url"
+            [ngClass]="{ 'is-invalid' : (url?.touched || validate) && url?.errors , 'is-valid' : !url?.errors }"
+          />
+        </div>
+        <div class="mb-3 mt-0 col-md-12">
+          <label for="bm-title">Title</label>
+          <input
+            class="form-control"
+            type="text"
+            autocomplete="off"
+            formControlName="title"
+            [ngClass]="{ 'is-invalid' : (title?.touched || validate) && title?.errors , 'is-valid' : !title?.errors }"
+          />
+        </div>
+        <div class="mb-3 mt-0 col-md-12">
+          <label>Description</label>
+          <textarea
+            class="form-control"
+            autocomplete="off"
+            formControlName="description"
+            [ngClass]="{ 'is-invalid' : (description?.touched || validate) && description?.errors , 'is-valid' : !description?.errors }"
+          ></textarea>
+        </div>
+        <div class="mb-3 mt-0 col-md-6">
+          <label>Group</label>
+          <select
+            class="form-control"
+            formControlName="group"
+            [ngClass]="{ 'is-invalid' : (group?.touched || validate) && group?.errors , 'is-valid' : !group?.errors }"
+          >
+            <option value="bookmark">My Bookmarks</option>
+          </select>
+        </div>
+        <div class="mb-3 mt-0 col-md-6">
+          <label>Collection</label>
+          <select
+            class="form-control"
+            formControlName="collection"
+            [ngClass]="{ 'is-invalid' : (collection?.touched || validate) && collection?.errors , 'is-valid' : !collection?.errors }"
+          >
+            <option value="general">General</option>
+            <option value="fs">fs</option>
+          </select>
+        </div>
+      </div>
+      <input type="hidden" value="6" />
+      <button class="btn btn-secondary me-2" type="submit">Save</button>
+      <button class="btn btn-primary" type="button" (click)="closeModal()">
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Sizes modal</h4>
+    <p class="mt-1 f-m-light">
+      Modals have three optional sizes, available via modifier classes to be
+      placed on a
+    </p>
+    <code>.modal-dialog</code>
+  </div>
+  <div class="card-body badge-spacing">
+    <div class="btn btn-secondary" (click)="openModal('full')">
+      Full Screen Modal
+    </div>
+    <!--Extra large modal-->
+    <div class="btn btn-info" (click)="openModal('xl')">Extra large Modal</div>
+    <!-- Large modal-->
+    <button class="btn btn-success" type="button" (click)="openModal('lg')">
+      Large Modal
+    </button>
+    <!-- Small modal-->
+    <button class="btn btn-primary" type="button" (click)="openModal('sm')">
+      Small Modal
+    </button>
+  </div>
+</div>

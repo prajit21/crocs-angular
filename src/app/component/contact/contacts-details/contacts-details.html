@@ -1,0 +1,265 @@
+<div class="email-right-aside bookmark-tabcontent contacts-tabs">
+  <div class="card email-body radius-left">
+    <div class="ps-0">
+      <div class="tab-content">
+        <div
+          class="tab-pane fade active show"
+          id="pills-personal"
+          role="tabpanel"
+        >
+          <div class="card mb-0">
+            <div class="card-header d-flex">
+              <h3>{{ contactData.title }}</h3>
+              <span class="f-14 pull-right mt-0"
+                >{{contactData.totalContact }} Contacts</span
+              >
+            </div>
+            <div class="card-body p-0">
+              <div class="row list-persons" id="addcon">
+                <div class="col-xl-4 xl-50 col-md-5">
+                  <div
+                    class="nav flex-column nav-pills"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    @for(details of contactDetails; track details){
+                    <a
+                      class="contact-tab-0 nav-link"
+                      [class.active]="details.active"
+                      id="v-pills-user-tab"
+                      href="javascript:void(0)"
+                      role="tab"
+                      (click)="changeDetails(details)"
+                    >
+                      <div class="d-flex">
+                        <img
+                          class="img-50 img-fluid m-r-20 rounded-circle update_img_0"
+                          [src]="details.img"
+                          alt=""
+                        />
+                        <div class="flex-grow-1">
+                          <h4>
+                            <span class="first_name_0"
+                              >{{ details.firstName }}
+                            </span>
+                            <span class="last_name_0"
+                              >{{ details.lastName }}</span
+                            >
+                          </h4>
+                          <p class="email_add_0">{{ details.email }}</p>
+                        </div>
+                      </div>
+                    </a>
+                    }@empty {
+                    <div class="search-not-found text-center p-5">
+                      <img
+                        class="img-100 mb-4"
+                        src="assets/images/other-images/sad.gif"
+                        alt=""
+                      />
+                      <p>Sorry, Not Found Any Contact</p>
+                    </div>
+                    }
+                  </div>
+                </div>
+                <div class="col-xl-8 xl-50 col-md-7">
+                  <div
+                    class="tab-content"
+                    id="v-pills-tabContent"
+                    [ngStyle]="{ 'display' : edit && contactData.title === 'Personal' ? 'none' : 'block' }"
+                  >
+                    @for(details of contactDetails; track details; let i =
+                    $index){ @if(details.active){
+                    <div
+                      class="tab-pane contact-tab-0 tab-content-child fade show active"
+                      id="v-pills-user"
+                    >
+                      @if(contactData.title === 'Personal'){
+                      <div class="profile-mail">
+                        <div class="d-flex">
+                          <img
+                            class="img-100 img-fluid m-r-20 rounded-circle update_img_0"
+                            [src]="details.img"
+                            alt=""
+                          />
+                          <input
+                            class="updateimg"
+                            type="file"
+                            name="img"
+                            onchange="readURL(this,0)"
+                          />
+                          <div class="flex-grow-1 mt-0">
+                            <h3>
+                              <span class="first_name_0"
+                                >{{ details.firstName }} </span
+                              ><span class="last_name_0"
+                                >{{ details.lastName }}</span
+                              >
+                            </h3>
+                            <p class="email_add_0">{{ details.email }}</p>
+                            <ul>
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  (click)="editForm(details)"
+                                  >Edit</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  (click)="deleteContact(details, i)"
+                                  >Delete</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  (click)="openHistory()"
+                                  >History</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  (click)="printContact(details)"
+                                  >Print</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="email-general">
+                          <h4 class="mb-3 f-w-600">General</h4>
+                          <ul>
+                            <li>
+                              Name
+                              <span class="font-primary first_name_0"
+                                >{{ details.firstName }}</span
+                              >
+                            </li>
+                            <li>
+                              Gender
+                              <span class="font-primary"
+                                >{{ details.gender }}</span
+                              >
+                            </li>
+                            <li>
+                              Birthday<span class="font-primary">
+                                <span class="birth_day_0"
+                                  >{{ details.dob }}</span
+                                ></span
+                              >
+                            </li>
+                            <li>
+                              Personality<span
+                                class="font-primary personality_0"
+                                >{{ details.personality }}</span
+                              >
+                            </li>
+                            <li>
+                              City<span class="font-primary city_0"
+                                >{{ details.city }}</span
+                              >
+                            </li>
+                            <li>
+                              Mobile No<span class="font-primary mobile_num_0"
+                                >{{ details.mobile }}</span
+                              >
+                            </li>
+                            <li>
+                              Email Address
+                              <span class="font-primary email_add_0"
+                                >{{ details.email }}</span
+                              >
+                            </li>
+                            <li>
+                              Website<span class="font-primary url_add_0"
+                                >{{ details.website }}</span
+                              >
+                            </li>
+                            <li>
+                              Interest<span class="font-primary interest_0"
+                                >{{ details.interest }}</span
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      }@else if(contactData.title === 'Organization'){
+                      <div class="profile-mail">
+                        <div class="d-flex">
+                          <img
+                            class="img-100 img-fluid m-r-20 rounded-circle update_img_5"
+                            [src]="details.img"
+                            alt=""
+                          />
+                          <div class="flex-grow-1 mt-0">
+                            <h3>
+                              <span class="first_name_5"
+                                >{{ details.firstName }} </span
+                              ><span class="last_name_5"
+                                >{{ details.lastName }}</span
+                              >
+                            </h3>
+                            <p class="email_add_5">{{ details.email }}</p>
+                            <ul>
+                              <li>
+                                <a
+                                  href="javascript:void(0)"
+                                  (click)="printContact(details)"
+                                  >Print</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="email-general">
+                          <h4>General</h4>
+                          <p>
+                            Email Address:
+                            <span class="font-primary email_add_5"
+                              >{{ details.email }}</span
+                            >
+                          </p>
+                          <div class="gender">
+                            <h4>Personal</h4>
+                            <p>Gender: <span>{{ details.gender }}</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      }
+                    </div>
+                    } } @empty {
+                    <div class="search-not-found text-center p-5">
+                      <img
+                        class="img-100 mb-4"
+                        src="assets/images/other-images/sad.gif"
+                        alt=""
+                      />
+                      <p>Sorry, Not Found Any Contact</p>
+                    </div>
+                    }
+                  </div>
+                  <div
+                    class="contact-editform ps-0"
+                    [ngStyle]="{ 'display' : edit && contactData.title === 'Personal' ? 'block' : 'none' }"
+                  >
+                    <app-edit-contact-details
+                      (editValue)="editValue($event)"
+                      [editContactDetails]="editContactDetails"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="right-history" [class.show]="history">
+          <app-contact-history (history)="getHistory($event)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

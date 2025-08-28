@@ -1,0 +1,68 @@
+<div class="card categories-card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Top Categories</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="categories-chart">
+      <div id="categories">
+        <apx-chart
+          [series]="TopCategoriesChart.series"
+          [chart]="TopCategoriesChart.chart"
+          [plotOptions]="TopCategoriesChart.plotOptions"
+          [responsive]="TopCategoriesChart.responsive"
+          [grid]="TopCategoriesChart.grid!"
+          [colors]="TopCategoriesChart.colors"
+          [legend]="TopCategoriesChart.legend"
+          [dataLabels]="TopCategoriesChart.dataLabels"
+        />
+      </div>
+      <ul>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0 me-2">
+              <span class="bg-primary"></span>
+            </div>
+            <div class="flex-grow-1">
+              <h4>75%</h4>
+              <h6>Electronics</h6>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0 me-2">
+              <span class="bg-secondary"></span>
+            </div>
+            <div class="flex-grow-1">
+              <h4>46,8%</h4>
+              <h6>Fashion Trends</h6>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0 me-2">
+              <span class="bg-success"></span>
+            </div>
+            <div class="flex-grow-1">
+              <h4>17,8%</h4>
+              <h6>Entertainment</h6>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

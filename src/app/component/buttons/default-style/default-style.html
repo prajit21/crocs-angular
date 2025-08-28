@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      @for(defaultitem of defaultstyleData; track defaultitem){
+      <div class="card" id="default">
+        <div class="card-header">
+          <h3>{{defaultitem.headtitle}}</h3>
+          <span [innerHtml]="defaultitem.title"></span>
+        </div>
+        <div class="card-body common-flex">
+          @for( defaultstyleitem of defaultitem.items; track defaultstyleitem){
+          <button
+            class="{{defaultstyleitem.class}}"
+            type="button"
+            placement="top"
+          >
+            {{defaultstyleitem.text}}
+          </button>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

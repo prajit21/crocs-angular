@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h4>Background colors</h4>
+    <p class="f-m-light mt-1">
+      Use the <code>.bg-* </code>and <code>.alert-light-* </code>colors in crocs
+      theme. Use of any components.
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-xl-4 col-sm-6">
+        <app-common-background-colors [data]="DarkBackgrounData" />
+      </div>
+      <div class="col-xl-4 col-sm-6">
+        <app-common-background-colors [data]="LightBackgroundsData" />
+      </div>
+      <div class="col-xl-4 col-sm-6">
+        <app-common-background-colors [data]="ExtendedBackgroundData" />
+      </div>
+    </div>
+  </div>
+</div>

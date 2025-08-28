@@ -1,0 +1,116 @@
+<div class="card right-sidebar-chat">
+  <div class="right-sidebar-title">
+    <div class="common-space">
+      <div class="chat-time">
+        <div class="active-profile">
+          <img
+            class="img-fluid rounded-circle"
+            src="{{privatchat.img}}"
+            alt="user"
+          />
+          <div class="status {{privatchat.class}}"></div>
+        </div>
+        <div>
+          <span>{{privatchat.name}}</span>
+          <p>{{privatchat.status}}</p>
+        </div>
+      </div>
+      <div class="d-flex gap-2">
+        <div class="contact-edit chat-alert">
+          <i class="icon-info-alt"></i>
+        </div>
+        <div class="contact-edit chat-alert">
+          <svg class="dropdown-toggle" role="menu" (click)="openMenu()">
+            <use href="assets/svg/icon-sprite.svg#menubar"></use>
+          </svg>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+            <a class="dropdown-item" href="#!">View details</a>
+            <a class="dropdown-item" href="#!">Send messages</a>
+            <a class="dropdown-item" href="#!">Add to favorites</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-sidebar-Chats">
+    <div class="msger">
+      <div class="msger-chat">
+        @if(chats.length){ @for(item of chats; track item){ @if(item.reply ===
+        true){
+        <div class="msg left-msg">
+          <div class="msg-img">
+            <img
+              class="img-fluid rounded-circle"
+              src="{{item.otherimg}}"
+              alt="user"
+            />
+          </div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">{{item.otherName}}</div>
+              <div class="msg-info-time">{{item.otherTime}}</div>
+            </div>
+            <div class="msg-text">{{item.otherText}}</div>
+          </div>
+        </div>
+        } @else{
+        <div class="msg right-msg">
+          <div class="msg-img">
+            <img
+              class="img-fluid rounded-circle"
+              src="{{item.userimg}}"
+              alt="user"
+            />
+          </div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">{{item.userName}}</div>
+              <div class="msg-info-time">{{item.userTime}}</div>
+            </div>
+            <div class="msg-text">{{item.userText}}</div>
+          </div>
+        </div>
+        } } } @else {
+        <div class="search-not-found text-center p-5">
+          <img
+            class="img-100 mb-2"
+            src="assets/images/other-images/sad.gif"
+            alt=""
+          />
+          <p>No Chat Found</p>
+        </div>
+        }
+      </div>
+      <form class="msger-inputarea">
+        <div class="dropdown-form dropdown-toggle" role="main">
+          <i class="icon-plus"></i>
+          <div class="chat-icon dropdown-menu dropdown-menu-start">
+            <div class="dropdown-item mb-2">
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#camera"></use>
+              </svg>
+            </div>
+            <div class="dropdown-item">
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#attchment"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <input
+          class="msger-input two uk-textarea"
+          type="text"
+          [(ngModel)]="newMessage"
+          placeholder="Type Message here.."
+          name="text"
+        />
+        <div class="open-emoji">
+          <div class="second-btn uk-button"></div>
+        </div>
+        <button class="msger-send-btn" type="submit" (click)="sendMessage()">
+          <i class="fa fa-location-arrow"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

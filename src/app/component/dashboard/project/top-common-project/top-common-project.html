@@ -1,0 +1,39 @@
+@for( data of TopProjectData;track data){
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-6">
+  <div class="card project-task">
+    <div class="card-body">
+      <div class="website-design">
+        <div class="d-flex">
+          <h4 class="font-{{ data.class }}">{{ data.title }}</h4>
+          <span>{{ data.status }}</span>
+        </div>
+        <div class="progress-value">
+          <h5>Task Completed: {{ data.completed }}</h5>
+          <div class="progress">
+            <div
+              class="progress-bar bg-{{ data.class }}"
+              role="progressbar"
+              [ngStyle]="{'width':data.value}"
+            ></div>
+          </div>
+        </div>
+        <div class="client">
+          <div class="flex-grow-1">
+            <h6>Client: {{ data.client }}</h6>
+            <span>Deadline: {{ data.date}}</span>
+          </div>
+          <div class="flex-shrink-0">
+            <div class="design-card bg-light-{{ data.class }}">
+              <svg>
+                <use
+                  attr.xlink:href="assets/svg/icon-sprite.svg#{{ data.icon}}"
+                ></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+}

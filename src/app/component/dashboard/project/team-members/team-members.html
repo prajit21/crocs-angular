@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Team Members</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pt-0 team-members">
+    <div class="table-responsive custom-scrollbar">
+      <div class="dataTables_wrapper no-footer">
+        <table class="table display dataTable no-footer" style="width: 100%">
+          <thead>
+            <tr>
+              <th>Team Name</th>
+              <th>Designation</th>
+              <th>Hours</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for( data of TeamMemberData;track data){
+            <tr>
+              <td>
+                <div class="d-flex">
+                  <div class="flex-shrink-0">
+                    <img src="{{ data.img }}" alt="" />
+                  </div>
+                  <div class="flex-grow-1 ms-2">
+                    <a [routerLink]="['/user/users-profile']">
+                      <h6>{{data.name}}</h6>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td>{{ data.designation }}</td>
+              <td>{{ data.hours}}h</td>
+              <td>
+                <div class="member-chart" id="teamChart1">
+                  <app-common-charts [data]="data.option" />
+                </div>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

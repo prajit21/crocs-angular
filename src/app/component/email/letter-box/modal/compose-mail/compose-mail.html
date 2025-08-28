@@ -1,0 +1,57 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h3 class="modal-title fs-5">Compose Message</h3>
+    <button class="btn-close" type="button" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body compose-modal">
+    <form>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="composeFrom">From :</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="composeFrom" type="email" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="composeTo">To :</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="composeTo" type="email" />
+          <div class="add-bcc">
+            <div class="d-flex gap-2">
+              <a class="btn" (click)="addField('cc')">Cc </a>
+              <a class="btn" (click)="addField('Bcc')">Bcc</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapse row mb-3" [class.show]="isOpenCC" id="collapseCc">
+        <label class="col-sm-2 col-form-label" for="composeCc">Cc:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="composeCc" type="email" />
+        </div>
+      </div>
+      <div class="collapse row mb-3" [class.show]="isOpenBCC" id="collapseBcc">
+        <label class="col-sm-2 col-form-label" for="composeBcc">Bcc:</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="composeBcc" type="email" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="composeSubject"
+          >Subject :</label
+        >
+        <div class="col-sm-10">
+          <input class="form-control" id="composeSubject" type="email" />
+        </div>
+      </div>
+      <div class="toolbar-box">
+        <angular-editor />
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-light" type="button">Save as draft</button>
+    <button class="btn btn-primary" type="button" (click)="closeModal()">
+      Send
+    </button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card user-country">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>User By Country</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <h2 class="me-2">216.459</h2>
+      <span class="bg-light-success">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#up-arrow"></use>
+        </svg>
+      </span>
+      <h6 class="font-success">+ 5.09%</h6>
+    </div>
+    <span>Increase than last month</span>
+    <div
+      class="jvector-map-height"
+      id="world-map2"
+      leaflet
+      [leafletOptions]="options3"
+    ></div>
+  </div>
+</div>

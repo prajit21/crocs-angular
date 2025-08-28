@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-header">
+    <div class="header-top">
+      <h3>Sales Overview</h3>
+      <div class="card-header-right-icon">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            id="dropdownMenuButton"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Today
+          </button>
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item" href="javascript:void(0)">Today</a
+            ><a class="dropdown-item" href="javascript:void(0)">Tomorrow</a
+            ><a class="dropdown-item" href="javascript:void(0)">Yesterday</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="chart-container progress-chart">
+      <div id="sales-overview-2">
+        <apx-chart
+          [series]="salesOverviewChart.series"
+          [chart]="salesOverviewChart.chart"
+          [labels]="salesOverviewChart.labels"
+          [legend]="salesOverviewChart.legend"
+          [colors]="salesOverviewChart.colors"
+          [fill]="salesOverviewChart.fill"
+          [tooltip]="salesOverviewChart.tooltip"
+          [grid]="salesOverviewChart.grid"
+          [xaxis]="salesOverviewChart.xaxis"
+          [yaxis]="salesOverviewChart.yaxis"
+          [markers]="salesOverviewChart.markers"
+          [stroke]="salesOverviewChart.stroke"
+          [responsive]="salesOverviewChart.responsive"
+        />
+      </div>
+    </div>
+  </div>
+</div>

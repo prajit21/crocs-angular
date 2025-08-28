@@ -1,0 +1,37 @@
+<div class="container-fluid default-dashboard">
+  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-7 box-col-4">
+      <app-top-defult-card />
+    </div>
+    <div class="col-xl-2 col-xl-25 col-md-5 col-sm-6 box-col-3">
+      <app-top-common-chart [data]="TotalEarningsData" />
+    </div>
+    <div class="col-xl-2 col-md-5 col-sm-6 expenses-card">
+      <app-top-common-chart [data]="TotalExpensesData" />
+    </div>
+    <div class="col-xl-4 col-xl-40 col-md-7 box-col-5e">
+      <app-top-selling-product />
+    </div>
+    <div class="col-xl-7 col-lg-7 box-col-7">
+      <app-recent-order />
+    </div>
+    <div class="col-xl-5 col-lg-5 box-col-5">
+      <app-our-growth />
+    </div>
+    <div class="col-xl-8 col-lg-8 col-md-7">
+      <app-product-valuation />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-5">
+      <app-transaction-history />
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6">
+      <app-dashboard-notifications />
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6">
+      <app-user-by-country />
+    </div>
+    <div class="col-xl-4">
+      <app-calendar />
+    </div>
+  </div>
+</div>

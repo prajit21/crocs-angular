@@ -1,0 +1,52 @@
+<div class="card earning-card">
+  <div class="card-header">
+    <div class="header-top">
+      <h5>{{ data()?.title }}</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div class="expenses-chart" id="Expenses-chart">
+      <apx-chart
+        [series]="data()!.series"
+        [chart]="data()!.chart"
+        [stroke]="data()?.stroke!"
+        [colors]="data()?.colors!"
+        [states]="data()?.states!"
+        [plotOptions]="data()?.plotOptions!"
+        [dataLabels]="data()!.dataLabels"
+        [grid]="data()?.grid!"
+        [yaxis]="data()!.yaxis"
+        [xaxis]="data()!.xaxis"
+        [legend]="data()?.legend!"
+        [fill]="data()?.fill!"
+        [tooltip]="data()!.tooltip"
+        [markers]="data()?.markers!"
+      />
+    </div>
+    <div class="d-flex p-3 pt-0">
+      <h2 class="me-2">$ {{data()?.price}}</h2>
+      <span class="bg-light-{{data()?.class}}">
+        <svg>
+          <use
+            attr.xlink:href="assets/svg/icon-sprite.svg#{{data()?.icon}}"
+          ></use>
+        </svg>
+      </span>
+      <h6 class="font-{{data()?.class}}">{{data()?.percentage}}</h6>
+    </div>
+  </div>
+</div>

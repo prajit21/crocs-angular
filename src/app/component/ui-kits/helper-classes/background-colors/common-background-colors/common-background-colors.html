@@ -1,0 +1,11 @@
+@for( borders of data(); track borders){
+<div class="border-wrapper h-100 border">
+  <h3 class="mb-3">{{ borders.mainTitle }}</h3>
+  @for(item of borders.item; track item){
+  <div class="helper-common-box">
+    <div class="{{item.class}}"></div>
+    <span>{{item.title}}</span>
+  </div>
+  }
+</div>
+}

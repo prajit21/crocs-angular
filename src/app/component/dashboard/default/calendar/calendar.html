@@ -1,0 +1,32 @@
+<div class="card schedule custom-calendar-schedule">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Schedule</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen = !isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="timeline-calendar custom-scrollbar">
+      <div class="custom-calendar" id="calendar-container">
+        <div class="time-line" id="calendar">
+          <div class="datepicker-here" data-language="en">
+            <ngb-datepicker #dp (navigate)="date = $event.next" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

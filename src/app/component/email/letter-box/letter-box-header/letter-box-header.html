@@ -1,0 +1,57 @@
+<div class="mail-header-wrapper">
+  <div class="mail-header">
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input checkbox-primary"
+        id="emailCheckboxA"
+        type="checkbox"
+        value="option1"
+      />
+      <label class="form-check-label" for="emailCheckboxA"></label>
+      <ul class="email-tabs nav" role="tablist">
+        @for(tab of letterBoxHeaderTab; track tab){
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeTab === tab.value"
+            href="javascript:void(0)"
+            role="tab"
+            (click)="changeTab(tab.value)"
+          >
+            <app-svg-icon [icon]="tab.icon" [class]="'stroke-icon'" />
+            <span>{{ tab.title }} </span>
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="mail-body">
+    <div class="mail-search d-flex-align-items-center">
+      <input class="form-control" type="text" placeholder="Search..." /><i
+        class="fa fa-search"
+      ></i>
+    </div>
+    <div class="light-square"><i class="fa fa-refresh"></i></div>
+    <div class="light-square"><i class="fa fa-trash"></i></div>
+    <div
+      class="light-square dropdown-toggle"
+      [class.show]="isOpen"
+      role="main"
+      (click)="open()"
+    >
+      <i class="fa fa-ellipsis-v"></i>
+    </div>
+    <ul
+      class="dropdown-menu dropdown-block dropdown-menu-end"
+      [class.show]="isOpen"
+    >
+      <li><a class="dropdown-item" href="javascript:void(0)">All</a></li>
+      <li><a class="dropdown-item" href="javascript:void(0)">None</a></li>
+      <li><a class="dropdown-item" href="javascript:void(0)">Read</a></li>
+      <li><a class="dropdown-item" href="javascript:void(0)">Unread</a></li>
+      <li><a class="dropdown-item" href="javascript:void(0)">Starred</a></li>
+      <li><a class="dropdown-item" href="javascript:void(0)">Unstarred</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Open invoices</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pt-0 open-invoice">
+    <div class="table-responsive custom-scrollbar">
+      <div class="dataTables_wrapper no-footer">
+        <table
+          class="table display dataTable no-footer"
+          id="invoice"
+          style="width: 100%"
+        >
+          <thead>
+            <tr>
+              <th>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" />
+                  <label class="form-check-label"></label>
+                </div>
+              </th>
+              <th>Invoice</th>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for( data of OpenInvoice;track data){
+            <tr>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" />
+                  <label class="form-check-label"></label>
+                </div>
+              </td>
+              <td>{{ data.invoice}}</td>
+              <td>
+                <div class="d-flex">
+                  <div class="flex-shrink-0">
+                    <img src="{{ data.img }}" alt />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <a [routerLink]="['/ecommerce/product-list']">
+                      <h6>{{ data.customerName }}</h6>
+                      <span>{{ data.email }}</span>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <button class="btn btn-{{ data.class }}">
+                  {{ data.status }}
+                </button>
+              </td>
+              <td>${{data.amount }}.00</td>
+              <td>{{ data.dueDate }}</td>
+              <td>
+                <div
+                  class="dropdown icon-dropdown"
+                  (clickOutside)="data.isOpen = false"
+                >
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    (click)="openMenu(data.id)"
+                  >
+                    <i class="icon-more-alt"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-end"
+                    [class.show]="data.isOpen"
+                    style="
+                      position: absolute;
+                      inset: 0px 0px auto auto;
+                      margin: 0px;
+                      transform: translate(-4px, 35px);
+                    "
+                  >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Weekly</a
+                    >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Monthly</a
+                    >
+                    <a class="dropdown-item" href="javascript:void(0)"
+                      >Yearly</a
+                    >
+                  </div>
+                </div>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

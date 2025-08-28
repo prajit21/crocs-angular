@@ -1,0 +1,76 @@
+<div class="modal-header">
+  <div class="product-box row">
+    <div class="product-img col-lg-6">
+      <img class="img-fluid" src="{{productDetails.img}}" alt="img" />
+    </div>
+    <div class="product-details col-lg-6 text-start">
+      <h4>{{productDetails.name}}</h4>
+      <div class="product-price">
+        ${{productDetails.price}}
+        <del>${{productDetails.discountPrice}}</del>
+      </div>
+      <div class="product-view">
+        <h5>Product Details</h5>
+        <p class="mb-0">
+          Rock Paper Scissors Women Tank Top High Neck Cotton Top Stylish Women
+          Top..
+        </p>
+      </div>
+      <div class="product-size">
+        <ul>
+          <li>
+            <button class="btn btn-light" type="button">M</button>
+          </li>
+          <li>
+            <button class="btn btn-light" type="button">L</button>
+          </li>
+          <li>
+            <button class="btn btn-light" type="button">Xl</button>
+          </li>
+        </ul>
+      </div>
+      <div class="product-qnty">
+        <h3>Quantity</h3>
+        <fieldset>
+          <div class="touchspin-wrapper">
+            <button
+              class="decrement-touchspin btn-touchspin touchspin-primary"
+              (click)="decrement()"
+            >
+              <i class="fa fa-minus"> </i>
+            </button>
+            <input
+              class="input-touchspin spin-outline-primary"
+              type="number"
+              value="{{ counter }}"
+            />
+            <button
+              class="increment-touchspin btn-touchspin touchspin-primary"
+              (click)="increment()"
+            >
+              <i class="fa fa-plus"> </i>
+            </button>
+          </div>
+        </fieldset>
+        <div class="addcart-btn">
+          <a
+            class="btn btn-primary"
+            [routerLink]="['/ecommerce/cart']"
+            (click)="activeModal.dismiss('')"
+            >Add to Cart</a
+          ><a
+            class="btn btn-primary ms-2"
+            [routerLink]="['/ecommerce/product-page']"
+            (click)="activeModal.dismiss('')"
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="btn-close"
+    type="button"
+    (click)="activeModal.dismiss('')"
+  ></button>
+</div>

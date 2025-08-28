@@ -1,0 +1,72 @@
+<div class="mail-body-wrapper">
+  <ul id="paginated-list" data-current-page="1" aria-live="polite">
+    @for(details of mailDetails | slice: (currentPage - 1) * pageSize:
+    currentPage * pageSize; track details; ;let i = $index){
+    <li class="inbox-data">
+      <div class="inbox-user">
+        <div class="form-check form-check-inline m-0">
+          <input
+            class="form-check-input checkbox-primary"
+            id="emailCheckboxB"
+            type="checkbox"
+            [(ngModel)]="details.check"
+          />
+          <label class="form-check-label" for="emailCheckboxB"></label>
+        </div>
+        <svg
+          class="important-mail"
+          [class.active]="details.favorite"
+          (click)="favoriteMail(details)"
+        >
+          <use href="assets/svg/icon-sprite.svg#fill-star"></use>
+        </svg>
+        <div class="rounded-border">
+          @if(details.userProfileText){
+          <div class="circle-{{ details.profileColor }}">
+            <p class="txt-{{ details.profileColor }}">
+              {{ details.userProfileText }}
+            </p>
+          </div>
+          }@else {
+          <img class="img-fluid" [src]="details.userProfile" alt="user" />
+          }
+        </div>
+        <p>{{ details.userName }}</p>
+      </div>
+      <div class="inbox-message">
+        <div class="email-data" (click)="showMailDetails()">
+          <span>{{ details.title }} <span>{{ details.subTitle }}</span></span>
+          @if(details.tag){ @if(details.tagList){ @for(tags of details.tagList;
+          track tags){
+          <div class="badge badge-light-{{ tags.tagColor }}">
+            {{ tags.tagText }}
+          </div>
+          } }@else {
+          <div class="badge badge-light-{{ details.tagColor }}">
+            {{ details.tagText }}
+          </div>
+          } }
+        </div>
+        <div class="email-timing"><span>{{ details.time }}</span></div>
+        <div class="email-options">
+          <i
+            class="fa envelope-1 show"
+            [ngClass]="details.mailOpen ? 'fa-envelope-open-o' : 'fa-envelope-o'"
+            (click)="mailToggle(details)"
+          ></i>
+          <i class="fa fa-trash-o trash-3" (click)="removeMail(details)"></i>
+          <i class="fa fa-print"></i>
+        </div>
+      </div>
+    </li>
+    }
+  </ul>
+</div>
+@if(activeTab() === 'inbox' || activeTab() === 'starred'){
+<div class="mail-pagination">
+  <ngb-pagination
+    [collectionSize]="mailDetails.length"
+    [(page)]="currentPage"
+  />
+</div>
+}

@@ -1,0 +1,39 @@
+<div class="sidebar-body">
+  <form class="mt-0">
+    <div class="product-upload">
+      <p>Product Image</p>
+      <form
+        class="dropzone dropzone-light custom-scrollbar customize-dropzone"
+        id="multiFileUploadA"
+      >
+        <dropzone class="no-preview" [config]="config" [message]="text" />
+      </form>
+    </div>
+    <div class="product-upload">
+      <p>Product Gallery</p>
+      <form
+        class="dropzone dropzone-light custom-scrollbar customize-dropzone"
+        id="multiFileUploadB"
+      >
+        <dropzone class="no-preview" [config]="config2" [message]="text" />
+      </form>
+    </div>
+  </form>
+  <div class="product-buttons">
+    <div class="btn me-2" (click)="previous()">
+      <div class="d-flex align-items-center gap-sm-2 gap-1">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#back-arrow"></use></svg
+        >Previous
+      </div>
+    </div>
+    <div class="btn" (click)="next(myForm)">
+      <div class="d-flex align-items-center gap-sm-2 gap-1">
+        Next
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#front-arrow"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

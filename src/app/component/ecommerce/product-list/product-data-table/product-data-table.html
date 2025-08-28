@@ -1,0 +1,161 @@
+<div class="card-body">
+  <div class="list-product">
+    <div class="dataTables_wrapper">
+      <div class="d-flex justify-content-between mt-2">
+        <div class="dataTables_length" id="basic-6_length">
+          <label
+            >Show
+            <select name="pageSize" [(ngModel)]="service.pageSize">
+              <option [ngValue]="10">10</option>
+              <option [ngValue]="15">15</option>
+              <option [ngValue]="20">20</option>
+              <option [ngValue]="25">25</option>
+            </select>
+            entries
+          </label>
+        </div>
+        <div class="mb-3 row">
+          <label
+            for="table-complete-search"
+            class="col-xs-3 col-sm-auto col-form-label"
+            >Search:</label
+          >
+          <div class="col-xs-3 col-sm-auto">
+            <input
+              id="table-complete-search"
+              type="text"
+              class="form-control"
+              name="searchTerm"
+              [(ngModel)]="service.searchTerm"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table" id="project-status">
+          <thead>
+            <tr>
+              <th>
+                <div class="form-check">
+                  <input
+                    class="form-check-input checkbox-primary"
+                    type="checkbox"
+                  />
+                </div>
+              </th>
+              <th sortable="name" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Product Name</span>
+              </th>
+              <th sortable="sku" (sort)="onSort($event)">
+                <span class="f-light f-w-600">SKU</span>
+              </th>
+              <th sortable="category" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Category</span>
+              </th>
+              <th sortable="price" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Price</span>
+              </th>
+              <th sortable="qty" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Qty</span>
+              </th>
+              <th sortable="status" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Status</span>
+              </th>
+              <th sortable="rating" (sort)="onSort($event)">
+                <span class="f-light f-w-600">Rating</span>
+              </th>
+              <th><span class="f-light f-w-600">Action</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(item of (products$ | async) ? (products$ | async) : []; track
+            item){
+            <tr class="product-removes">
+              <td>
+                <div class="form-check">
+                  <input
+                    class="form-check-input checkbox-primary"
+                    type="checkbox"
+                    [(ngModel)]="item.value"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="product-names">
+                  <div class="light-product-box">
+                    <img class="img-fluid" src="{{item.img}}" alt="laptop" />
+                  </div>
+                  <p>{{item.name}}</p>
+                </div>
+              </td>
+              <td>
+                <p class="f-light">{{item.sku}}</p>
+              </td>
+              <td>
+                <p class="f-light">{{item.category}}</p>
+              </td>
+              <td>
+                <p class="f-light">{{item.price}}</p>
+              </td>
+              <td>
+                <p class="f-light">{{item.qty}}</p>
+              </td>
+              <td>
+                <span
+                  class="badge"
+                  [ngClass]="item.status === 'Sold Out' ? 'badge-light-secondary':'badge-light-primary'"
+                  >{{item.status}}</span
+                >
+              </td>
+              <td>
+                <ngb-rating [rate]="item.rating" class="font-warning" />
+              </td>
+              <td>
+                <div class="product-action">
+                  <a [routerLink]="['/ecommerce/add-products']">
+                    <svg>
+                      <use href="assets/svg/icon-sprite.svg#edit-content"></use>
+                    </svg>
+                  </a>
+                  <svg>
+                    <use href="assets/svg/icon-sprite.svg#trash1"></use>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            } @if(!Data.length){
+            <tr class="odd">
+              <td
+                colspan="10"
+                class="dataTables_empty"
+                style="text-align: center"
+              >
+                <div class="search-not-found text-center">
+                  <p>Sorry, No records found</p>
+                </div>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="dataTables_paginate paging_simple_numbers d-flex justify-content-between"
+      >
+        <span class="mt-4"
+          >Showing {{ getStartingIndex() }} to {{ getEndingIndex() }} of {{
+          filteredData.length }} entries
+        </span>
+        <span>
+          <ngb-pagination
+            class="ms-3 custom-primary-pagination"
+            [collectionSize]="(total$ | async)!"
+            [(page)]="service.page"
+            [pageSize]="service.pageSize"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

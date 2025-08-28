@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Default calendar</h4>
+  </div>
+  <div class="card-body card-wrapper custom-events-calendar">
+    <div class="row g-3">
+      <div class="col-12">
+        <div class="input-group main-inline-calender">
+          <input
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="dp"
+            [(ngModel)]="model"
+            ngbDatepicker
+          />
+          <ngb-datepicker
+            #dp
+            [(ngModel)]="model"
+            (navigate)="date = $event.next"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

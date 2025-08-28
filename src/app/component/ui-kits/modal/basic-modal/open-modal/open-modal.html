@@ -1,0 +1,70 @@
+<div class="modal-content">
+  <div class="modal-toggle-wrapper social-profile text-start dark-sign-up">
+    <h4 class="modal-header justify-content-center border-0">Crocs SIGN-UP</h4>
+    <div class="modal-body">
+      <form
+        class="row g-3"
+        novalidate=""
+        [formGroup]="myForm"
+        (ngSubmit)="submit()"
+      >
+        <div class="col-md-6">
+          <label class="form-label" for="validationCustom01">First name</label>
+          <input
+            class="form-control"
+            id="validationCustom01"
+            type="text"
+            placeholder="Enter your name"
+            formControlName="fname"
+            [ngClass]="{ 'is-invalid' : (fname?.touched || validate) && fname?.errors , 'is-valid' : !fname?.errors}"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="validationCustom02">Last name</label>
+          <input
+            class="form-control"
+            id="validationCustom02"
+            type="text"
+            placeholder="Enter your surname"
+            formControlName="lname"
+            [ngClass]="{ 'is-invalid' : (lname?.touched || validate) && lname?.errors , 'is-valid' : !lname?.errors}"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-12">
+          <div class="mb-3">
+            <label class="form-label" for="exampleFormControlInput1"
+              >Email address</label
+            >
+            <input
+              class="form-control"
+              id="exampleFormControlInput1"
+              type="email"
+              placeholder="Crocsthemes@gmail.com"
+              formControlName="email"
+              [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors}"
+            />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              id="flexCheckDefault"
+              type="checkbox"
+              value=""
+              formControlName="term"
+              [ngClass]="{ 'is-invalid' : (term?.touched || validate) && term?.errors , 'is-valid' : !term?.errors}"
+            />
+            <label class="form-check-label d-block mb-0" for="flexCheckDefault"
+              >You accept our Terms and Privacy Policy by clicking Submit
+              below.</label
+            >
+          </div>
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

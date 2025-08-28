@@ -1,0 +1,133 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Datatable order history</h5>
+  </div>
+  <div class="card-body custom-order-history">
+    <div class="dataTables_wrapper">
+      <div class="d-flex justify-content-between mt-2">
+        <div class="dataTables_length" id="basic-6_length">
+          <label
+            >Show
+            <select name="pageSize" [(ngModel)]="service.pageSize">
+              <option [ngValue]="10">10</option>
+              <option [ngValue]="15">15</option>
+              <option [ngValue]="15">20</option>
+              <option [ngValue]="25">25</option>
+            </select>
+            entries
+          </label>
+        </div>
+        <div class="mb-3 row">
+          <label
+            for="table-complete-search"
+            class="col-xs-3 col-sm-auto col-form-label"
+            >Search:</label
+          >
+          <div class="col-xs-3 col-sm-auto">
+            <input
+              type="text"
+              class="form-control"
+              name="searchTerm"
+              [(ngModel)]="service.searchTerm"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="order-history table-responsive custom-scrollbar">
+        <div class="dataTables_wrapper no-footer" id="basic-1_wrapper">
+          <table
+            class="table table-bordernone custom-product-table display dataTable no-footer"
+          >
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  sortableOrder="productimg"
+                  (sort)="onSort($event)"
+                >
+                  Prdouct
+                </th>
+                <th scope="col" sortableOrder="product" (sort)="onSort($event)">
+                  Prdouct name
+                </th>
+                <th scope="col" sortableOrder="size" (sort)="onSort($event)">
+                  Size
+                </th>
+                <th scope="col" sortableOrder="color" (sort)="onSort($event)">
+                  Color
+                </th>
+                <th
+                  scope="col"
+                  sortableOrder="articleNumber"
+                  (sort)="onSort($event)"
+                >
+                  Article number
+                </th>
+                <th scope="col" sortableOrder="units" (sort)="onSort($event)">
+                  Units
+                </th>
+                <th scope="col" sortableOrder="price" (sort)="onSort($event)">
+                  Price
+                </th>
+                <th scope="col"><i class="fa fa-angle-down"></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              @for(item of (products$ | async) ? (products$ | async) : []; track
+              item){
+              <tr>
+                <td>
+                  <img class="img-30" src="{{item.productimg}}" alt="img" />
+                </td>
+                <td>
+                  <div class="product-name">
+                    <a href="javascript:void(0)">{{item.product}}</a>
+                    <div class="order-process">
+                      <span class="order-{{item.class}}"></span>{{item.status}}
+                    </div>
+                  </div>
+                </td>
+                <td>{{item.size}}</td>
+                <td>{{item.color}}</td>
+                <td>{{item.articleNumber}}</td>
+                <td>{{item.units}}</td>
+                <td>{{item.price}}</td>
+                <td>
+                  <app-feathericon [icon]="'more-vertical'" />
+                </td>
+              </tr>
+              } @empty{
+              <tr class="odd">
+                <td
+                  colspan="10"
+                  class="dataTables_empty"
+                  style="text-align: center"
+                >
+                  <div class="search-not-found text-center">
+                    <p>Sorry, No records found</p>
+                  </div>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div
+        class="dataTables_paginate paging_simple_numbers d-flex justify-content-between"
+      >
+        <span class="mt-4"
+          >Showing {{ getStartingIndex() }} to {{ getEndingIndex() }} of {{
+          filteredData.length }} entries</span
+        >
+        <ngb-pagination
+          class="ms-3"
+          [collectionSize]="(total$ | async)!"
+          [(page)]="service.page"
+          [pageSize]="service.pageSize"
+        />
+      </div>
+    </div>
+  </div>
+</div>

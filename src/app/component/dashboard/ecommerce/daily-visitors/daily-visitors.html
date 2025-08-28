@@ -1,0 +1,80 @@
+<div class="card visitors">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Daily Visitors</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="row">
+      <div class="col-xl-8 xl-12 col-md-8 box-col-12">
+        <div class="area-line" id="area-line">
+          <apx-chart
+            [series]="DailyVistorsChart.series"
+            [chart]="DailyVistorsChart.chart"
+            [stroke]="DailyVistorsChart.stroke"
+            [colors]="DailyVistorsChart.colors"
+            [dataLabels]="DailyVistorsChart.dataLabels"
+            [grid]="DailyVistorsChart.grid"
+            [yaxis]="DailyVistorsChart.yaxis"
+            [xaxis]="DailyVistorsChart.xaxis"
+            [legend]="DailyVistorsChart.legend"
+            [fill]="DailyVistorsChart.fill"
+            [tooltip]="DailyVistorsChart.tooltip"
+          />
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4 ecommerce-chart daily-visitors">
+        <div class="d-flex">
+          <div class="flex-shrink-0 bg-light-primary me-3">
+            <div class="deals">
+              <h4>350</h4>
+              <span>Deals</span>
+            </div>
+          </div>
+          <div class="flex-shrink-0 bg-light-secondary">
+            <div class="deals">
+              <h4>$31K</h4>
+              <span>Order Price</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress-value">
+          <p>Visits<span>20,200</span></p>
+          <div class="progress bg-light-primary">
+            <div
+              class="progress-bar bg-primary"
+              role="progressbar"
+              style="width: 70%"
+              aria-valuenow="10"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+        <div class="progress-value">
+          <p>Order Value<span>15,610</span></p>
+          <div class="progress bg-light-secondary">
+            <div
+              class="progress-bar bg-secondary"
+              role="progressbar"
+              style="width: 70%"
+              aria-valuenow="10"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

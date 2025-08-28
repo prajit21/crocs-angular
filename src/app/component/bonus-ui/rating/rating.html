@@ -1,0 +1,106 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xxl-4 col-md-4">
+      <div class="card">
+        <div class="card-header pb-0 rating-header">
+          <h4>1 to 10 Rating Bar</h4>
+          <p class="f-m-light mt-1">
+            Rating is displayed using <code>#u-rating-1to10</code> id using
+            typescript.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="rating-container digits">
+            <bar-rating
+              class="bar"
+              [(rate)]="faRate"
+              [max]="10"
+              [theme]="'horizontal'"
+              [showText]="true"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-4 col-md-4">
+      <div class="card">
+        <div class="card-header pb-0 pb-0">
+          <h4>Movie Rating Bar</h4>
+          <p class="f-m-light mt-1">
+            Movie rating is displayed using <code>#u-rating-movie</code> id
+            using typescript.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="rating-container">
+            <div class="card-body">
+              <div class="rating-container">
+                <bar-rating
+                  [(rate)]="movieRate"
+                  [max]="4"
+                  [theme]="'movie'"
+                  [showText]="true"
+                  [titles]="['No rating', 'Bad', 'Mediocre', 'Good', 'Awesome']"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-4 col-md-4">
+      <div class="card">
+        <div class="card-header pb-0 pb-0">
+          <h4>Square Rating Bar</h4>
+          <p class="f-m-light mt-1">
+            Square rating is displayed using <code>#u-rating-square </code> id
+            using typescript.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="rating-container">
+            <bar-rating theme="square" [(rate)]="squareRate" [max]="5" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-4 col-md-4">
+      <div class="card">
+        <div class="card-header pb-0 pb-0">
+          <h4>Star Rating Bar</h4>
+          <p class="f-m-light mt-1">
+            Star rating is displayed using
+            <code>#u-rating-fontawesome </code> id using typescript.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="rating-container">
+            <bar-rating class="star" [(rate)]="cssRate" [max]="5" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-4 col-md-4">
+      <div class="card height-equal">
+        <div class="card-header pb-0 pb-0">
+          <h4>Horizontal Rating Bar</h4>
+          <p class="f-m-light mt-1">
+            Horizontal rating is displayed using
+            <code>#u-rating-horizontal</code> id using typescript.
+          </p>
+        </div>
+        <div class="rating-container digits">
+          <bar-rating
+            [(rate)]="HorizontalRate"
+            [max]="10"
+            [theme]="'vertical'"
+            [showText]="true"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-4 col-md-4">
+      <app-current-ratingbar />
+    </div>
+  </div>
+</div>

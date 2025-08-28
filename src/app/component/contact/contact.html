@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="email-wrap bookmark-wrap">
+    <div class="row">
+      <div class="col-xl-3 box-col-3">
+        <app-contact-sidemenu (activeTabValue)="tabValue($event)" />
+      </div>
+      <div class="col-xl-9 col-md-12 box-col-80">
+        <app-contacts-details [activeTab]="activeTab" />
+      </div>
+    </div>
+  </div>
+</div>

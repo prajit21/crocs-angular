@@ -1,0 +1,19 @@
+import { Component, inject } from "@angular/core";
+
+import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
+
+import { Feathericon } from "../../../../../shared/component/feathericon/feathericon";
+
+@Component({
+  selector: "app-large-size",
+  imports: [Feathericon],
+  templateUrl: "./large-size.html",
+  styleUrl: "./large-size.scss",
+})
+export class LargeSize {
+  private modal = inject(NgbActiveModal);
+
+  closeModal() {
+    this.modal.close();
+  }
+}

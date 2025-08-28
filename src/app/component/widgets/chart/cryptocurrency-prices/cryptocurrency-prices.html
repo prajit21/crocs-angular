@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Cryptocurrency Prices</h4>
+  </div>
+  <div class="card-body">
+    <div class="chart-container crypto-chart">
+      <div class="row">
+        <div class="col-12">
+          <div id="chart-crypto">
+            <apx-chart
+              [series]="CryptocurrencyPriceChart.series"
+              [chart]="CryptocurrencyPriceChart.chart"
+              [grid]="CryptocurrencyPriceChart.grid"
+              [stroke]="CryptocurrencyPriceChart.stroke"
+              [xaxis]="CryptocurrencyPriceChart.xaxis"
+              [fill]="CryptocurrencyPriceChart.fill"
+              [tooltip]="CryptocurrencyPriceChart.tooltip"
+              [dataLabels]="CryptocurrencyPriceChart.dataLabels"
+              [responsive]="CryptocurrencyPriceChart.responsive"
+              [colors]="CryptocurrencyPriceChart.colors"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

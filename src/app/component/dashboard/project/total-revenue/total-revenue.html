@@ -1,0 +1,72 @@
+<div class="card total-revenue">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Total Revenue</h5>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div class="row">
+      <div class="col-xl-9 col-xl-100 col-lg-9 col-md-12">
+        <div class="revenue-legend">
+          <ul>
+            <li class="me-3">
+              <div class="circle bg-primary me-1"></div>
+              <span>Earning</span>
+            </li>
+            <li>
+              <div class="circle bg-secondary me-1"></div>
+              <span>Expense </span>
+            </li>
+          </ul>
+        </div>
+        <div class="revenue-chart" id="revenue-chart">
+          <apx-chart
+            [series]="TotalProjectRevenue.series"
+            [chart]="TotalProjectRevenue.chart"
+            [stroke]="TotalProjectRevenue.stroke"
+            [colors]="TotalProjectRevenue.colors"
+            [plotOptions]="TotalProjectRevenue.plotOptions"
+            [dataLabels]="TotalProjectRevenue.dataLabels"
+            [grid]="TotalProjectRevenue.grid"
+            [yaxis]="TotalProjectRevenue.yaxis"
+            [xaxis]="TotalProjectRevenue.xaxis"
+            [legend]="TotalProjectRevenue.legend"
+            [tooltip]="TotalProjectRevenue.tooltip"
+            [responsive]="TotalProjectRevenue.responsive"
+          />
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 increase ps-0">
+        <div class="d-flex pe-3" (clickOutside)="isOpen = false">
+          <button class="btn dropdown-toggle" type="button" (click)="open()">
+            <span class="me-2">Year:</span>2024
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+            <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+          </div>
+        </div>
+        <div class="total-increase">
+          <h2>$25,837</h2>
+          <span>Total : 23,000</span>
+        </div>
+        <div id="monthlyChart">
+          <apx-chart
+            [series]="monthlyChart.series"
+            [chart]="monthlyChart.chart"
+            [stroke]="monthlyChart.stroke"
+            [colors]="monthlyChart.colors"
+            [dataLabels]="monthlyChart.dataLabels"
+            [grid]="monthlyChart.grid"
+            [yaxis]="monthlyChart.yaxis"
+            [xaxis]="monthlyChart.xaxis"
+            [fill]="monthlyChart.fill"
+            [tooltip]="monthlyChart.tooltip"
+          />
+        </div>
+        <button class="btn btn-primary">Increase</button>
+      </div>
+    </div>
+  </div>
+</div>

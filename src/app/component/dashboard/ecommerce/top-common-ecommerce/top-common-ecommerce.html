@@ -1,0 +1,48 @@
+<div class="card total-sales">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xl-8 xl-12 col-md-8 col-sm-12 col box-col-12">
+        <div class="d-flex {{data()?.class}}">
+          <span>
+            <svg>
+              <use
+                attr.xlink:href="assets/svg/icon-sprite.svg#{{data()?.icon}}"
+              ></use>
+            </svg>
+          </span>
+          <div class="flex-shrink-0">
+            <h4>{{data()?.price}}</h4>
+            <h6>{{ data()?.title}}</h6>
+            <div class="arrow-chart">
+              <svg>
+                <use
+                  attr.xlink:href="assets/svg/icon-sprite.svg#{{data()?.arrowicon}}"
+                ></use>
+              </svg>
+              <h5 class="font-{{data()?.color}}">{{ data()?.percentage}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4 col-4 p-0 ecommerce-chart">
+        <div class="{{data()?.chartclass}}">
+          <apx-chart
+            [series]="data()?.series!"
+            [chart]="data()?.chart!"
+            [stroke]="data()?.stroke!"
+            [states]="data()?.states!"
+            [plotOptions]="data()?.plotOptions!"
+            [dataLabels]="data()?.dataLabels!"
+            [grid]="data()?.grid!"
+            [yaxis]="data()?.yaxis!"
+            [xaxis]="data()?.xaxis!"
+            [legend]="data()?.legend!"
+            [fill]="data()?.fill!"
+            [tooltip]="data()?.tooltip!"
+            [markers]="data()?.markers!"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="md-sidebar" (clickOutside)="clickOutside()">
+  <a class="btn btn-primary md-sidebar-toggle" (click)="openFilter()"
+    >email filter</a
+  >
+  <div
+    class="md-sidebar-aside job-left-aside custom-scrollbar"
+    [class.open]="isOpen"
+  >
+    <div class="email-left-aside">
+      <div class="card">
+        <div class="card-body">
+          <div class="email-app-sidebar">
+            <button
+              class="btn btn-primary emailbox"
+              type="button"
+              (click)="openModal('compose')"
+            >
+              <i class="fa fa-plus"></i>Compose Email
+            </button>
+            <ul
+              class="nav nav-pills main-menu email-category"
+              id="email-pills-tab"
+              role="tablist"
+            >
+              @for(tab of letterBoxDetails; track tab){
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  [class.active]="activeTab === tab.value"
+                  (click)="changeTab(tab.value)"
+                >
+                  <svg class="stroke-icon">
+                    <use href="assets/svg/icon-sprite.svg#inbox"></use>
+                  </svg>
+                  <div>
+                    {{ tab.title }} @if(tab.badge){
+                    <span class="badge">{{ tab.badgeText }}</span>
+                    }
+                  </div>
+                </a>
+              </li>
+              }
+              <li class="nav-item">
+                <a class="nav-link btn" (click)="openModal('label')">
+                  <i class="fa fa-plus"></i>Add Label
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

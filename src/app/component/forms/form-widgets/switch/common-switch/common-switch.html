@@ -1,0 +1,26 @@
+<div class="row">
+  @for( data of switchData; track data){
+  <div class="col-xl-4 col-sm-6">
+    <div class="card height-equal">
+      <div class="card-header pb-0">
+        <h3>{{ data.title}}</h3>
+        <p class="desc mb-0 mt-1" [innerHtml]="data.subdes"></p>
+      </div>
+      <div class="card-body common-flex flex-column switch-wrapper">
+        @for( items of data.item; track items){
+        <div class="d-flex">
+          <div class="{{ items.divclass }}">
+            <label class="switch mb-0">
+              <input type="checkbox" [checked]="items.value" /><span
+                class="switch-state bg-{{items.colorclass}}"
+              ></span>
+            </label>
+          </div>
+          <label class="col-form-label m-l-10">{{items.text}}</label>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>

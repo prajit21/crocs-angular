@@ -1,0 +1,62 @@
+<div class="card transaction-history">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Product Valuation</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen =false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="current-sale-container order-container">
+      <div class="overview-wrapper" id="orderoverview">
+        <apx-chart
+          [series]="productValuationData.series"
+          [chart]="productValuationData.chart"
+          [stroke]="productValuationData.stroke"
+          [grid]="productValuationData.grid"
+          [plotOptions]="productValuationData.plotOptions"
+          [colors]="productValuationData.colors"
+          [fill]="productValuationData.fill"
+          [labels]="productValuationData.labels"
+          [yaxis]="productValuationData.yaxis"
+          [responsive]="productValuationData.responsive"
+          [xaxis]="productValuationData.xaxis"
+          [tooltip]="productValuationData.tooltip"
+          [markers]="productValuationData.markers"
+          [legend]="productValuationData.legend"
+        />
+      </div>
+      <div class="back-bar-container">
+        <div id="order-bar">
+          <apx-chart
+            [series]="productValuationData2.series"
+            [chart]="productValuationData2.chart"
+            [stroke]="productValuationData2.stroke"
+            [colors]="productValuationData2.colors"
+            [grid]="productValuationData2.grid"
+            [states]="productValuationData2.states"
+            [plotOptions]="productValuationData2.plotOptions"
+            [dataLabels]="productValuationData2.dataLabels"
+            [yaxis]="productValuationData2.yaxis"
+            [responsive]="productValuationData2.responsive"
+            [xaxis]="productValuationData2.xaxis"
+            [fill]="productValuationData2.fill"
+            [tooltip]="productValuationData2.tooltip"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

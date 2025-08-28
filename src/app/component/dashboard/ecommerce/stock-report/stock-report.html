@@ -1,0 +1,86 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Stock Report</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+    <div class="stock-report mt-4">
+      <ul>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <h4>$625,083</h4>
+              <svg class="ms-1">
+                <use href="assets/svg/icon-sprite.svg#arrow-chart-up"></use>
+              </svg>
+              <h6 class="font-success">+34%</h6>
+            </div>
+          </div>
+          <span>Sales Account</span>
+        </li>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <h4>36,900</h4>
+              <svg class="ms-1">
+                <use href="assets/svg/icon-sprite.svg#arrow-chart"></use>
+              </svg>
+              <h6 class="font-danger">-14%</h6>
+            </div>
+          </div>
+          <span>General Leads</span>
+        </li>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <h4>4,5%</h4>
+              <svg class="ms-1">
+                <use href="assets/svg/icon-sprite.svg#arrow-chart-up"></use>
+              </svg>
+              <h6 class="font-success">+30%</h6>
+            </div>
+          </div>
+          <span>Churn Rate</span>
+        </li>
+        <li>
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <h4>8,640</h4>
+              <svg class="ms-1">
+                <use href="assets/svg/icon-sprite.svg#arrow-chart-up"></use>
+              </svg>
+              <h6 class="font-success">+34%</h6>
+            </div>
+          </div>
+          <span>Returning Uses</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div id="report-chart">
+      <apx-chart
+        [series]="StockReportChart.series"
+        [chart]="StockReportChart.chart"
+        [plotOptions]="StockReportChart.plotOptions"
+        [dataLabels]="StockReportChart.dataLabels"
+        [stroke]="StockReportChart.stroke"
+        [colors]="StockReportChart.colors"
+        [fill]="StockReportChart.fill"
+        [yaxis]="StockReportChart.yaxis"
+        [xaxis]="StockReportChart.xaxis"
+        [legend]="StockReportChart.legend"
+        [tooltip]="StockReportChart.tooltip"
+      />
+    </div>
+  </div>
+</div>

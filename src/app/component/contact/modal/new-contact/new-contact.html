@@ -1,0 +1,88 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h3 class="modal-title" id="exampleModalLabel">Add Contact</h3>
+    <button class="btn-close" type="button" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body">
+    <form
+      class="form-bookmark needs-validation"
+      id="bookmark-form"
+      novalidate=""
+      [formGroup]="myForm"
+      (ngSubmit)="addContact()"
+    >
+      <div class="row g-2">
+        <div class="mb-3 col-md-12 mt-0">
+          <label for="con-name">Name</label>
+          <div class="row">
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                id="con-name"
+                type="text"
+                placeholder="First Name"
+                autocomplete="off"
+                formControlName="firstName"
+                [ngClass]="{ 'is-invalid' : (firstName?.touched || validate) && firstName?.errors , 'is-valid' : !firstName?.errors}"
+              />
+            </div>
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                id="con-last"
+                type="text"
+                placeholder="Last Name"
+                autocomplete="off"
+                formControlName="lastName"
+                [ngClass]="{ 'is-invalid' : (lastName?.touched || validate) && lastName?.errors , 'is-valid' : !lastName?.errors}"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 col-md-12 mt-0">
+          <label for="con-mail">Email Address</label>
+          <input
+            class="form-control"
+            id="con-mail"
+            type="text"
+            autocomplete="off"
+            formControlName="email"
+            [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors}"
+          />
+        </div>
+        <div class="mb-3 col-md-12 my-0">
+          <label for="con-phone">Phone</label>
+          <div class="row">
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                id="con-phone"
+                type="number"
+                autocomplete="off"
+                formControlName="mobile"
+                [ngClass]="{ 'is-invalid' : (mobile?.touched || validate) && mobile?.errors , 'is-valid' : !mobile?.errors}"
+              />
+            </div>
+            <div class="col-sm-6">
+              <select
+                class="form-control"
+                id="con-select"
+                formControlName="type"
+                [ngClass]="{ 'is-invalid' : (type?.touched || validate) && type?.errors , 'is-valid' : !type?.errors}"
+              >
+                <option selected="" value="mobile">Mobile</option>
+                <option value="work">Work</option>
+                <option value="other">Others</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input id="index_var" type="hidden" value="5" />
+      <button class="btn btn-secondary me-2" type="submit">Save</button>
+      <button class="btn btn-primary" type="button" (click)="closeModal()">
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>

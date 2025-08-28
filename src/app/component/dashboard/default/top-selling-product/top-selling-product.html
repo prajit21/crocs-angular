@@ -1,0 +1,55 @@
+<div class="card selling-product">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Top Selling Product</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width: 100%">
+        <tbody>
+          @for( data of TopSellingProduct;track data){
+          <tr>
+            <td>
+              <div class="d-flex">
+                <span class="bg-light-primary">
+                  <img src="{{ data.img }}" alt=""
+                /></span>
+                <div class="flex-grow-1 ms-2">
+                  <a [routerLink]="['/ecommerce/product-list']"
+                    ><span>{{data.title}}</span>
+                    <h5>{{ data.productid }}</h5>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span>Coupon code</span>
+              <h5>{{ data.Couponcode}}</h5>
+            </td>
+            <td><img src="{{data.flagimg}}" alt="img" /></td>
+            <td>
+              <span>{{data.percentage}}%</span>
+              <h5>${{ data.price}}.00</h5>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

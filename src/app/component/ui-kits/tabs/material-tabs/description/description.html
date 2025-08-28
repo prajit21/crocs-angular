@@ -1,0 +1,27 @@
+<div class="card-body px-0 pb-0">
+  <div class="user-header pb-2">
+    <h6 class="fw-bold">Description:</h6>
+  </div>
+  <div class="user-content">
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th scope="col">Technology</th>
+            <th scope="col">Interest</th>
+            <th scope="col">Salary Expected</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(data of descriptionData; track data){
+          <tr>
+            <td>{{ data.technology }}</td>
+            <td>{{ data.interest }}</td>
+            <td>{{ data.salary }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

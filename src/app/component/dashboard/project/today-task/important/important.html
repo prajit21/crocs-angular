@@ -1,0 +1,31 @@
+<div class="table-responsive custom-scrollbar">
+  <table class="table display" style="width: 100%">
+    <tbody>
+      @for( data of projectTaskData;track data){ @if(data.value ===
+      'Important'){
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" />
+            <label class="form-check-label"></label>
+          </div>
+        </td>
+        <td>
+          <p>{{data.des}}</p>
+        </td>
+        <td><button class="btn btn-{{data.class}}">{{data.bedge}}</button></td>
+        <td>{{data.date}}</td>
+        <td>
+          <span class="delete-option">
+            <a href="javascript:void(0)">
+              <svg class="remove" (click)="close(data)">
+                <use href="assets/svg/icon-sprite.svg#Delete"></use>
+              </svg>
+            </a>
+          </span>
+        </td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+</div>

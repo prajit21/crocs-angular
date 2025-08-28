@@ -1,0 +1,46 @@
+<div class="container-fluid general-widget">
+  <div class="row">
+    <div class="col-xl-2 col-xl-25 col-lg-4 col-md-4 col-sm-6">
+      <app-project-details [Data]="projectData1" />
+    </div>
+    <div class="col-xl-2 col-xl-25 col-lg-4 col-md-4 col-sm-6">
+      <app-project-details [Data]="ProjectData2" />
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 finance">
+      <app-project-details [Data]="ProjectData3" />
+    </div>
+    <div class="col-xl-6 col-lg-8 col-md-8 box-col-6">
+      <app-general-daily-visitos />
+    </div>
+    <div class="col-xl-2 col-xl-25 col-lg-4 col-md-4 col-sm-6 box-col-3">
+      <app-top-common-chart [data]="TotalEarningsData" />
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 expenses-card">
+      <app-top-common-chart [data]="TotalExpensesData" />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+      <app-transaction-history />
+    </div>
+    <div class="col-xl-4 col-xl-5a col-lg-4 col-md-12 col-sm-6 box-col-6">
+      <app-general-product-sales />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+      <app-top-common-ecommerce [data]="TotalRevenueData" />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+      <app-top-common-ecommerce [data]="TotalSalesData" />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+      <app-top-common-ecommerce [data]="TotalCustomerData" />
+    </div>
+    <div class="col-xl-5 col-lg-6 box-col-6">
+      <app-general-stock-report />
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 box-col-6">
+      <app-track-order />
+    </div>
+    <div class="col-xl-3 col-lg-12 col-md-6 box-col-12">
+      <app-project-deliveries />
+    </div>
+  </div>
+</div>

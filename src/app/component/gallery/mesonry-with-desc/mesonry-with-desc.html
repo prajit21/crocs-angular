@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body custom-gallery-description">
+          <div class="my-gallery row grid gallery-with-description" gallerize>
+            <ngx-masonry
+              [options]="masonryOptions"
+              style="width: 100%"
+              [ordered]="true"
+            >
+              @for(image of masonryImages; track image){
+              <div
+                class="m-b-30 grid-item col-xl-3 col-sm-6"
+                ngxMasonryItem
+                style="width: 355px"
+              >
+                <a href="javascript:void(0)">
+                  <img
+                    [src]="image[1]"
+                    width="100%"
+                    class="img-thumbnail"
+                    alt
+                  />
+                  <div itemprop="caption description">
+                    <h4>Portfolio Title</h4>
+                    <p>
+                      is simply dummy text of the printing and typesetting
+                      industry. Lorem Ipsum has been the industry's standard
+                      dummy.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              }
+            </ngx-masonry>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="card transaction-history">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Transaction History</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width: 100%">
+        <tbody>
+          @for( data of transactionData; track data){
+          <tr>
+            <td>
+              <div class="d-flex">
+                <span class="bg-light-primary history">
+                  <svg>
+                    <use
+                      attr.xlink:href="assets/svg/icon-sprite.svg#{{data.icon}}"
+                    ></use>
+                  </svg>
+                </span>
+                <div class="flex-grow-1 ms-2">
+                  <a [routerLink]="['/ecommerce/product-list']">
+                    <span>{{data.title}}</span>
+                    <h5>{{ data.datetime }}</h5>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>{{ data.status}}</td>
+            <td>+ ${{ data.price }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

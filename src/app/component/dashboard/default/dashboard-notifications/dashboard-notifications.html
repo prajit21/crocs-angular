@@ -1,0 +1,76 @@
+<div class="card notifications-tabs">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Notifications</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="isOpen = false">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          (click)="isOpen =!isOpen"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex header-tab">
+      <ul class="nav nav-tabs border-tab mb-0" id="bottom-tab">
+        <li class="nav-item">
+          <a
+            class="nav-link nav-border tab-primary active pt-0"
+            [ngClass]="{'active show': openTab === 'all'}"
+            (click)="tabbed('all')"
+            >All<span class="ms-2 bg-primary">3</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-border tab-primary"
+            [ngClass]="{'active show': openTab === 'Following'}"
+            (click)="tabbed('Following')"
+            >Following</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link nav-border tab-primary"
+            [ngClass]="{'active show': openTab === 'Archive'}"
+            (click)="tabbed('Archive')"
+            >Archive</a
+          >
+        </li>
+      </ul>
+      <h6>Mark all as read</h6>
+    </div>
+    <div class="tab-content content-tab show">
+      <div
+        class="tab-pane fade show"
+        [ngClass]="{'show active': openTab === 'all'}"
+      >
+        <app-all />
+      </div>
+    </div>
+    <div class="tab-content content-tab">
+      <div
+        class="tab-pane fade"
+        [ngClass]="{'show active': openTab === 'Following'}"
+      >
+        <app-following />
+      </div>
+    </div>
+    <div class="tab-content content-tab">
+      <div
+        class="tab-pane fade"
+        [ngClass]="{'show active': openTab === 'Archive'}"
+      >
+        <app-archive />
+      </div>
+    </div>
+  </div>
+</div>

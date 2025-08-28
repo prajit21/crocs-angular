@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header pb-0">
+          <h4>IMAGE GALLERY WITH DESCRIPTION</h4>
+        </div>
+        <div
+          class="my-gallery card-body row gallery-with-description"
+          itemscope=""
+          gallerize
+        >
+          <div class="row">
+            @for(imgData of galleryGrid; track imgData){
+            <figure
+              class="col-xl-3 col-sm-6 m-0 p-3"
+              itemprop="associatedMedia"
+            >
+              <a href="javascript:void(0)" itemprop="contentUrl">
+                <img [src]="imgData.srcUrl" style="width: 100%" alt />
+                <div class="caption">
+                  <h4>{{ imgData.title }}</h4>
+                  <p>{{ imgData.text }}</p>
+                </div>
+              </a>
+            </figure>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

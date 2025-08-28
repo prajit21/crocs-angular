@@ -1,0 +1,111 @@
+<div id="print">
+  <div class="mail-header-wrapper header-wrapper1">
+    <div class="mail-header1">
+      <div class="light-square" (click)="openMailBox()">
+        <svg class="btn-email">
+          <use href="assets/svg/icon-sprite.svg#back-arrow"></use>
+        </svg>
+      </div>
+      <span>Interview Mail</span>
+    </div>
+    <div class="mail-body1">
+      <div class="light-square" placement="top" ngbTooltip="Achieve">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#sms"></use>
+        </svg>
+      </div>
+      <div class="light-square" placement="top" ngbTooltip="Bookmark">
+        <svg class="bookmark-box">
+          <use href="assets/svg/icon-sprite.svg#bookmark"></use>
+        </svg>
+      </div>
+      <div class="light-square" placement="top" ngbTooltip="Spam">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#spam"></use>
+        </svg>
+      </div>
+      <div class="light-square" placement="top" ngbTooltip="Trash">
+        <svg class="stroke-danger">
+          <use href="assets/svg/icon-sprite.svg#mail-trash"></use>
+        </svg>
+      </div>
+      <div class="light-square" placement="top" ngbTooltip="Settings">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#setting"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="mail-body-wrapper">
+    <div class="user-mail-wrapper">
+      <div class="user-title">
+        <div>
+          <div class="rounded-border">
+            <img class="img-fluid" src="assets/images/user/12.png" alt="user" />
+          </div>
+          <div class="dropdown-subtitle">
+            <p>Jacob Jones</p>
+            <div class="onhover-dropdown">
+              <button class="btn p-0 dropdown-button">
+                To me
+                <app-feathericon [icon]="'chevron-down'" />
+              </button>
+              <div class="inbox-security onhover-show-div">
+                <p>
+                  From: <span>jones &lt;jacobjones3&#64;gmail.com&gt;</span>
+                </p>
+                <p>to: <span>donut.horry&#64;gmail.com</span></p>
+                <p>reply-to:<span>&lt;jacobjones3&#64;gmail.com&gt;</span></p>
+                <p>date: <span>Jul 13, 2024, 7:10 AM</span></p>
+                <p>subject: <span>Important Account Security Update</span></p>
+                <p>security: <span>standard encryption (TLS)</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inbox-options">
+          <span>Friday 07 Apr (4 hours ago)</span>
+          <div class="light-square" (click)="favorite()">
+            <svg class="important-mail" [class.active]="favorites">
+              <use href="assets/svg/icon-sprite.svg#fill-star"></use>
+            </svg>
+          </div>
+          <button type="" class="light-square" printSectionId="print" ngxPrint>
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#print"></use>
+            </svg>
+          </button>
+          <div class="light-square btn-group" ngbDropdown>
+            <div class="dropdown-toggle" role="main" ngbDropdownToggle>
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#menubar"></use>
+              </svg>
+            </div>
+            <div class="dropdown-menu dropdown-block" ngbDropdownMenu>
+              <a
+                class="dropdown-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                <i class="fa fa-mail-reply"></i>Reply
+              </a>
+              <a
+                class="dropdown-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                <i class="fa fa-mail-forward"></i>Forward
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-user-footer />
+      <div class="send-btn">
+        <button class="btn btn-primary">
+          Send<i class="fa fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

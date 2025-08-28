@@ -1,0 +1,34 @@
+<div
+  [ngClass]="layout.config.settings.layout_type"
+  [class]="layout.config.settings.layout_version"
+></div>
+<div
+  class="page-wrapper"
+  id="pageWrapper"
+  [ngClass]="layout.config.settings.sidebar_type"
+>
+  <div
+    class="page-header"
+    [class.close_icon]="navmenu.closeSidebar"
+    [ngStyle]="{'display' :hidenav.show ?'none':'block'}"
+  >
+    <app-header />
+  </div>
+  <div class="page-body-wrapper" [ngClass]=" {'scorlled' : hidenav.show }">
+    <div
+      class="sidebar-wrapper"
+      [class.close_icon]="navmenu.closeSidebar"
+      [attr.data-layout]="layout.config.settings.icon"
+    >
+      <app-sidebar />
+    </div>
+    <div class="page-body">
+      <div class="container-fluid">
+        <app-breadcrumb />
+      </div>
+      <router-outlet />
+    </div>
+    <app-footer />
+  </div>
+</div>
+<app-customizer />

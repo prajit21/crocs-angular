@@ -1,0 +1,18 @@
+<div class="row">
+  @for(details of infoColorCards; track details){
+  <div class="{{ details.class}}">
+    <div class="card height-equal">
+      <div class="card-header {{ details.headerClass }}">
+        <h4 class="{{ details.headingClass }}">{{ details.heading }}</h4>
+      </div>
+      <div class="card-body {{ details.bodyClass }}">
+        <h4 class="pb-2">{{ details.title }}</h4>
+        <p class="mb-0">{{ details.desc }}</p>
+      </div>
+      <div class="card-footer {{ details.footerClass }}">
+        <h4 class="mb-0 text-end txt-light">Crocs Theme</h4>
+      </div>
+    </div>
+  </div>
+  }
+</div>

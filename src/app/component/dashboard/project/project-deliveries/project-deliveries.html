@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h5>Project Deliveries</h5>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button class="btn dropdown-toggle" type="button" (click)="open()">
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div id="company-viewchart">
+      <apx-chart
+        [series]="ProjectDeliveries.series"
+        [chart]="ProjectDeliveries.chart"
+        [dataLabels]="ProjectDeliveries.dataLabels"
+        [colors]="ProjectDeliveries.colors"
+        [markers]="ProjectDeliveries.markers"
+        [fill]="ProjectDeliveries.fill"
+        [xaxis]="ProjectDeliveries.xaxis"
+        [yaxis]="ProjectDeliveries.yaxis"
+        [grid]="ProjectDeliveries.grid"
+        [stroke]="ProjectDeliveries.stroke"
+        [legend]="ProjectDeliveries.legend"
+        [tooltip]="ProjectDeliveries.tooltip"
+      />
+    </div>
+  </div>
+</div>

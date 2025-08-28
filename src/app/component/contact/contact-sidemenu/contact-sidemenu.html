@@ -1,0 +1,67 @@
+<div class="md-sidebar" (clickOutside)="clickOutside()">
+  <a class="btn btn-primary md-sidebar-toggle" (click)="openFilter()"
+    >contact filter</a
+  >
+  <div
+    class="md-sidebar-aside job-left-aside custom-scrollbar"
+    [class.open]="isOpen"
+  >
+    <div class="email-left-aside">
+      <div class="card">
+        <div class="card-body">
+          <div class="email-app-sidebar left-bookmark">
+            <div class="d-flex">
+              <div class="media-size-email">
+                <img
+                  class="me-3 rounded-circle"
+                  src="assets/images/user/user.png"
+                  alt="img"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <h4>MARK JENCO</h4>
+                <p>Markjecno&#64;gmail.com</p>
+              </div>
+            </div>
+            <ul class="nav main-menu contact-options" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="badge-light-primary btn-block txt-primary btn-mail w-100"
+                  type="button"
+                  (click)="openModal('contact')"
+                >
+                  <app-feathericon [icon]="'users'" [class]="'me-2'" />
+                  New Contacts
+                </button>
+              </li>
+              <li class="nav-item"><span class="main-title"> Views</span></li>
+              @for(data of contact; track data){ @if(data.type === 'views'){
+              <li>
+                <a id="pills-personal-tab" (click)="changeTab(data.value)">
+                  <span class="title"> {{data.title}}</span></a
+                >
+              </li>
+              } }
+              <li>
+                <button
+                  class="btn btn-category"
+                  type="button"
+                  (click)="openModal('category')"
+                >
+                  <span class="title"> + Add Category</span>
+                </button>
+              </li>
+              @for(tag of contact; track tag){ @if(tag.type === 'tag'){
+              <li>
+                <a class="show" (click)="changeTab(tag.value)">
+                  <span class="title"> {{tag.title}}</span>
+                </a>
+              </li>
+              } }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
