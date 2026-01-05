@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, output } from "@angular/core";
 import {
   FormControl,
@@ -9,7 +8,7 @@ import {
 
 @Component({
   selector: "app-inventory",
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: "./inventory.html",
   styleUrl: "./inventory.scss",
 })

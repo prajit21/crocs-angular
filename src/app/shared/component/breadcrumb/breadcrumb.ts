@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   ActivatedRoute,
@@ -13,7 +12,7 @@ import { filter } from "rxjs/operators";
 
 @Component({
   selector: "app-breadcrumb",
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: "./breadcrumb.html",
   styleUrl: "./breadcrumb.scss",
 })

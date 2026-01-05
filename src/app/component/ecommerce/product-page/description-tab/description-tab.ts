@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-description-tab",
-  imports: [CommonModule, NgbModule],
+  imports: [NgbModule, NgClass],
   templateUrl: "./description-tab.html",
   styleUrl: "./description-tab.scss",
 })

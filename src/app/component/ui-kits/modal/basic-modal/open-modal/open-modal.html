@@ -16,7 +16,7 @@
             type="text"
             placeholder="Enter your name"
             formControlName="fname"
-            [ngClass]="{ 'is-invalid' : (fname?.touched || validate) && fname?.errors , 'is-valid' : !fname?.errors}"
+            [class]="{ 'is-invalid' : (fname?.touched || validate) && fname?.errors , 'is-valid' : !fname?.errors}"
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
@@ -28,7 +28,7 @@
             type="text"
             placeholder="Enter your surname"
             formControlName="lname"
-            [ngClass]="{ 'is-invalid' : (lname?.touched || validate) && lname?.errors , 'is-valid' : !lname?.errors}"
+            [class]="{ 'is-invalid' : (lname?.touched || validate) && lname?.errors , 'is-valid' : !lname?.errors}"
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
@@ -43,7 +43,7 @@
               type="email"
               placeholder="Crocsthemes@gmail.com"
               formControlName="email"
-              [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors}"
+              [class]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors}"
             />
           </div>
         </div>
@@ -55,7 +55,7 @@
               type="checkbox"
               value=""
               formControlName="term"
-              [ngClass]="{ 'is-invalid' : (term?.touched || validate) && term?.errors , 'is-valid' : !term?.errors}"
+              [class]="{ 'is-invalid' : (term?.touched || validate) && term?.errors , 'is-valid' : !term?.errors}"
             />
             <label class="form-check-label d-block mb-0" for="flexCheckDefault"
               >You accept our Terms and Privacy Policy by clicking Submit

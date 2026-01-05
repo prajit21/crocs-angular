@@ -9,7 +9,7 @@
     <p class="mb-0">UI Designer</p>
   </div>
 </div>
-<ul class="profile-dropdown onhover-show-div" [ngClass]="{'active' : show}">
+<ul class="profile-dropdown onhover-show-div" [class.active]="show">
   <li>
     <a [routerLink]="['/user/users-profile']">
       <app-feathericon [icon]="'user'" />

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
@@ -7,7 +6,7 @@ import { TapToTop } from "./shared/component/tap-to-top/tap-to-top";
 
 @Component({
   selector: "app-root",
-  imports: [CommonModule, RouterOutlet, Loader, TapToTop],
+  imports: [RouterOutlet, Loader, TapToTop],
   templateUrl: "./app.html",
   styleUrl: "./app.scss",
 })

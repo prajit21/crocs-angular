@@ -78,7 +78,7 @@ export const lineGraphType: ChartType = "line";
 
 export const lineGraphLegend: boolean = false;
 
-export const lineGraphData: ChartDataset<"line">[] = [
+export const lineGraphData: ChartDataset[] = [
   {
     label: "My First dataset",
     data: [10, 59, 80, 81, 56, 55, 40],

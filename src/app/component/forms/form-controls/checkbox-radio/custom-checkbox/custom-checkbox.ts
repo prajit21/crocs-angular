@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -10,7 +9,7 @@ import {
 
 @Component({
   selector: "app-custom-checkbox",
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: "./custom-checkbox.html",
   styleUrl: "./custom-checkbox.scss",
 })

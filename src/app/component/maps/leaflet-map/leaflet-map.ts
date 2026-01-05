@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 
@@ -8,7 +7,7 @@ import * as L from "leaflet";
 
 @Component({
   selector: "app-leaflet-map",
-  imports: [LeafletModule, CommonModule],
+  imports: [LeafletModule],
   templateUrl: "./leaflet-map.html",
   styleUrl: "./leaflet-map.scss",
 })

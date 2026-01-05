@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormControl,
@@ -12,7 +11,7 @@ import { NgbActiveModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-open-modal",
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgbModule],
+  imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./open-modal.html",
   styleUrl: "./open-modal.scss",
 })

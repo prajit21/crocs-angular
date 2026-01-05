@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
@@ -14,13 +14,13 @@ import { Sidebar } from "../../sidebar/sidebar";
 @Component({
   selector: "app-content",
   imports: [
-    CommonModule,
     Header,
     Sidebar,
     Breadcrumb,
     RouterOutlet,
     Footer,
     Customizer,
+    NgClass,
   ],
   templateUrl: "./content.html",
   styleUrl: "./content.scss",
@@ -45,7 +45,7 @@ export class Content {
     }
   }
 
-  @HostListener("window:resize", ["$event"])
+  @HostListener("window:resize")
   onResize() {
     if (window.innerWidth < 1185) {
       this.navmenu.closeSidebar = true;

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -10,7 +9,7 @@ import { ChatService } from "../../../shared/services/chat.service";
 
 @Component({
   selector: "app-contact-chat-tab",
-  imports: [CommonModule, NgbModule, FormsModule, ContactDetails],
+  imports: [NgbModule, FormsModule, ContactDetails],
   templateUrl: "./contact-chat-tab.html",
   styleUrl: "./contact-chat-tab.scss",
 })

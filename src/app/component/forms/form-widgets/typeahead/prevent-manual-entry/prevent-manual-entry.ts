@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -80,7 +79,7 @@ const states: State[] = [
 
 @Component({
   selector: "app-prevent-manual-entry",
-  imports: [CommonModule, FormsModule, NgbModule],
+  imports: [FormsModule, NgbModule],
   templateUrl: "./prevent-manual-entry.html",
   styleUrl: "./prevent-manual-entry.scss",
 })

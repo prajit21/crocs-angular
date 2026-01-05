@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from "@angular/common";
+import { DecimalPipe, AsyncPipe } from "@angular/common";
 import { Component, inject, viewChildren } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -17,11 +17,11 @@ import { OrderService } from "../../../../shared/services/ecommerce/order.servic
 @Component({
   selector: "app-datatable-order-history",
   imports: [
-    CommonModule,
     NgbModule,
     OrderdataTableDirective,
     Feathericon,
     FormsModule,
+    AsyncPipe,
   ],
   providers: [OrderService, DecimalPipe],
   templateUrl: "./datatable-order-history.html",
@@ -97,7 +97,7 @@ export class DatatableOrderHistory {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortableOrder() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
     this.service.sortColumn = column;

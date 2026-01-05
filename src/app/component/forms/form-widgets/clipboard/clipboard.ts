@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { ClipboardOnParagraph } from "./clipboard-on-paragraph/clipboard-on-paragraph";
@@ -9,7 +8,6 @@ import { CopyProtionFormParagraph } from "./copy-protion-form-paragraph/copy-pro
 @Component({
   selector: "app-clipboard",
   imports: [
-    CommonModule,
     ClipboardOnParagraph,
     ClipboardOnTextarea,
     ClipboardOnTextInput,

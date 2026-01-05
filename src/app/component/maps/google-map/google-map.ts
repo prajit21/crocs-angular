@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, viewChild } from "@angular/core";
 import { GoogleMap, GoogleMapsModule, MapMarker } from "@angular/google-maps";
 
@@ -11,7 +10,7 @@ interface Marker {
 }
 @Component({
   selector: "app-google-map",
-  imports: [CommonModule, GoogleMapsModule],
+  imports: [GoogleMapsModule],
   templateUrl: "./google-map.html",
   styleUrl: "./google-map.scss",
 })

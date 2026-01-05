@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component, HostListener, TemplateRef, inject } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -9,7 +9,7 @@ import { Config, LayoutService } from "../../services/layout.service";
 
 @Component({
   selector: "app-customizer",
-  imports: [CommonModule, ColorPicker, QuickOption],
+  imports: [ColorPicker, QuickOption, NgClass],
   templateUrl: "./customizer.html",
   styleUrl: "./customizer.scss",
 })
@@ -23,11 +23,10 @@ export class Customizer {
   public screenwidth: number = window.innerWidth;
   public layoutType: string = "ltr";
 
-  @HostListener("window:resize", ["$event"])
-  onResize(event: { target: { innerWidth: number } }) {
-    this.screenwidth = event.target.innerWidth;
+  @HostListener("window:resize")
+  onResize(): void {
+    this.screenwidth = window.innerWidth;
   }
-
   Customizer(val: string) {
     this.layoutService.customizer = val;
   }

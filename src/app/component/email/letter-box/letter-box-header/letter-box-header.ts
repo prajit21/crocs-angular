@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -9,7 +8,7 @@ import { letterBoxHeaderTab } from "../../../../shared/data/email/letter-box";
 
 @Component({
   selector: "app-letter-box-header",
-  imports: [CommonModule, NgbModule, FormsModule, SvgIcon],
+  imports: [NgbModule, FormsModule, SvgIcon],
   templateUrl: "./letter-box-header.html",
   styleUrl: "./letter-box-header.scss",
 })

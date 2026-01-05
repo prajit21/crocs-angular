@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import {
   FormControl,
@@ -12,7 +11,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-tooltip-vaildation",
-  imports: [CommonModule, NgbModule, FormsModule, ReactiveFormsModule],
+  imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./tooltip-vaildation.html",
   styleUrl: "./tooltip-vaildation.scss",
 })

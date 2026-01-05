@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { SlicePipe } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { JobFilter } from "../job-filter/job-filter";
@@ -7,7 +7,7 @@ import { jobDetails } from "../../../shared/data/job-search/job-search";
 
 @Component({
   selector: "app-job-details",
-  imports: [JobFilter, JobSimiler, CommonModule],
+  imports: [JobFilter, JobSimiler, SlicePipe],
   templateUrl: "./job-details.html",
   styleUrl: "./job-details.scss",
 })

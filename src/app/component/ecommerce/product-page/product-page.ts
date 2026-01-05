@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { GalleryModule, Image } from "@ks89/angular-modal-gallery";
@@ -9,7 +8,7 @@ import { Details } from "./details/details";
 
 @Component({
   selector: "app-product-page",
-  imports: [CommonModule, Brand, DescriptionTab, Details, GalleryModule],
+  imports: [Brand, DescriptionTab, Details, GalleryModule],
   templateUrl: "./product-page.html",
   styleUrl: "./product-page.scss",
 })

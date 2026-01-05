@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
@@ -8,7 +7,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
 
 @Component({
   selector: "app-login-tooltip",
-  imports: [RouterModule, CommonModule, NgbModule, Feathericon],
+  imports: [RouterModule, NgbModule, Feathericon],
   templateUrl: "./login-tooltip.html",
   styleUrl: "./login-tooltip.scss",
 })

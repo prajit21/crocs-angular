@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import {
   FormControl,
@@ -17,7 +16,6 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-login-validation",
   imports: [
     RouterModule,
-    CommonModule,
     ReactiveFormsModule,
     FormsModule,
     NgbModule,

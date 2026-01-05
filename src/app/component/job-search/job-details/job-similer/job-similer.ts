@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { SlicePipe } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { NgbModule, NgbRatingConfig } from "@ng-bootstrap/ng-bootstrap";
@@ -7,7 +7,7 @@ import { jobCardsData } from "../../../../shared/data/job-search/job-search";
 
 @Component({
   selector: "app-job-similer",
-  imports: [NgbModule, CommonModule],
+  imports: [NgbModule, SlicePipe],
   templateUrl: "./job-similer.html",
   styleUrl: "./job-similer.scss",
 })

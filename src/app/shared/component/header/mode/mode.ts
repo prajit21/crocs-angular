@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { LayoutService } from "../../../services/layout.service";
 
 @Component({
   selector: "app-mode",
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: "./mode.html",
   styleUrl: "./mode.scss",
 })

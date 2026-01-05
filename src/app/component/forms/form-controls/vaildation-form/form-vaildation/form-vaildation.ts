@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import {
   FormControl,
@@ -12,7 +11,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-form-vaildation",
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgbModule],
+  imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./form-vaildation.html",
   styleUrl: "./form-vaildation.scss",
 })

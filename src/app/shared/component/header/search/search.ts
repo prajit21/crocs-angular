@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { SlicePipe } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
@@ -13,9 +13,9 @@ import { SvgIcon } from "../../svg-icon/svg-icon";
     SvgIcon,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule,
     RouterModule,
     ClickOutsideDirective,
+    SlicePipe,
   ],
   templateUrl: "./search.html",
   styleUrl: "./search.scss",

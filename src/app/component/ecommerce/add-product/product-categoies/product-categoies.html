@@ -14,7 +14,7 @@
                 class="form-select"
                 id="validationDefault04"
                 formControlName="product"
-                [ngClass]="{ 'is-invalid' : (product?.touched || validate) && product?.errors, 'is-valid' : !product?.errors}"
+                [class]="{ 'is-invalid' : (product?.touched || validate) && product?.errors, 'is-valid' : !product?.errors}"
               >
                 <option>Toys & games</option>
                 <option>Sportswear</option>
@@ -43,7 +43,7 @@
                 formControlName="addTag"
                 name="add_Tag"
                 class="form-control"
-                [ngClass]="{ 'is-invalid' : (addTag?.touched || validate) && addTag?.errors, 'is-valid' : !addTag?.errors}"
+                [class]="{ 'is-invalid' : (addTag?.touched || validate) && addTag?.errors, 'is-valid' : !addTag?.errors}"
               />
               @if(addTag?.errors){
               <div class="invalid-feedback">A Add Tag is required.</div>
@@ -73,7 +73,7 @@
                 class="form-select"
                 id="publishStatus"
                 formControlName="productStatus"
-                [ngClass]="{ 'is-invalid' : (productStatus?.touched || validate) && productStatus?.errors, 'is-valid' : !productStatus?.errors}"
+                [class]="{ 'is-invalid' : (productStatus?.touched || validate) && productStatus?.errors, 'is-valid' : !productStatus?.errors}"
               >
                 <option>Publish</option>
                 <option>Drafts</option>
@@ -98,7 +98,7 @@
                   id="datetime-local1"
                   type="date"
                   formControlName="date"
-                  [ngClass]="{ 'is-invalid' : (date?.touched || validate) && date?.errors, 'is-valid' : !date?.errors}"
+                  [class]="{ 'is-invalid' : (date?.touched || validate) && date?.errors, 'is-valid' : !date?.errors}"
                 />
               </div>
               @if(date?.errors){

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -25,7 +24,6 @@ import {
 @Component({
   selector: "app-chart",
   imports: [
-    CommonModule,
     NgbModule,
     CommonWidgetsChart,
     ProjectCreated,

@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 
 @Component({
   selector: "app-left-border-alert",
-  imports: [Feathericon, CommonModule],
+  imports: [Feathericon, NgClass],
   templateUrl: "./left-border-alert.html",
   styleUrl: "./left-border-alert.scss",
 })

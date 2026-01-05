@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { Router, RouterModule } from "@angular/router";
 
@@ -6,7 +5,7 @@ import { Feathericon } from "../../feathericon/feathericon";
 
 @Component({
   selector: "app-profile",
-  imports: [CommonModule, Feathericon, RouterModule],
+  imports: [Feathericon, RouterModule],
   templateUrl: "./profile.html",
   styleUrl: "./profile.scss",
 })

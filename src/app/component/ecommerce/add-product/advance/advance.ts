@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component, output } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -9,12 +9,12 @@ import { Shipping } from "./shipping/shipping";
 @Component({
   selector: "app-advance",
   imports: [
-    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     Inventory,
     Shipping,
     AdditionalOptions,
+    NgClass,
   ],
   templateUrl: "./advance.html",
   styleUrl: "./advance.scss",

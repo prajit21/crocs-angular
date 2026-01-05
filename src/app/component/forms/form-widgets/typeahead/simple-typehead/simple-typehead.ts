@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -70,7 +69,7 @@ const states = [
 
 @Component({
   selector: "app-simple-typehead",
-  imports: [CommonModule, NgbModule, FormsModule],
+  imports: [NgbModule, FormsModule],
   templateUrl: "./simple-typehead.html",
   styleUrl: "./simple-typehead.scss",
 })

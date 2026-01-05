@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormControl,
@@ -15,7 +14,7 @@ import { contactDetails, contacts } from "../../../../shared/interface/contact";
 
 @Component({
   selector: "app-new-contact",
-  imports: [CommonModule, NgbModule, FormsModule, ReactiveFormsModule],
+  imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./new-contact.html",
   styleUrl: "./new-contact.scss",
 })

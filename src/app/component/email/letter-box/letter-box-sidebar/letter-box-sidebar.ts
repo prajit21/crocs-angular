@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject, output } from "@angular/core";
 
 import { NgbModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,7 +9,7 @@ import { ComposeMail } from "../modal/compose-mail/compose-mail";
 
 @Component({
   selector: "app-letter-box-sidebar",
-  imports: [CommonModule, NgbModule, ClickOutsideDirective],
+  imports: [NgbModule, ClickOutsideDirective],
   templateUrl: "./letter-box-sidebar.html",
   styleUrl: "./letter-box-sidebar.scss",
 })

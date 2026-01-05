@@ -44,7 +44,7 @@
                     @for(task of taskData; track task ; let i = $index){
                     <li
                       class="task"
-                      [ngClass]="{'completed':task.completed ? task.completed : completed}"
+                      [class.completed]="task.completed ? task.completed : completed"
                     >
                       <div class="task-container">
                         <h4 class="task-label" (click)="taskCompleted(task)">

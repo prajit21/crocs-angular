@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject, output } from "@angular/core";
 import {
   FormBuilder,
@@ -11,7 +10,7 @@ import { DropzoneModule, DropzoneConfigInterface } from "ngx-dropzone-wrapper";
 
 @Component({
   selector: "app-products-gallery",
-  imports: [DropzoneModule, CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [DropzoneModule, ReactiveFormsModule, FormsModule],
   templateUrl: "./products-gallery.html",
   styleUrl: "./products-gallery.scss",
 })

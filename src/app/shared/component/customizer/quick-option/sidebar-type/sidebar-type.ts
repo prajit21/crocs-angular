@@ -1,11 +1,9 @@
-import { CommonModule } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 
 import { LayoutService } from "../../../../services/layout.service";
 
 @Component({
   selector: "app-sidebar-type",
-  imports: [CommonModule],
   templateUrl: "./sidebar-type.html",
   styleUrl: "./sidebar-type.scss",
 })

@@ -1,11 +1,10 @@
-import { CommonModule } from "@angular/common";
 import { Component, input } from "@angular/core";
 
 import * as feather from "feather-icons";
 
 @Component({
   selector: "app-feathericon",
-  imports: [CommonModule],
+  imports: [],
   templateUrl: "./feathericon.html",
   styleUrl: "./feathericon.scss",
 })

@@ -1,11 +1,10 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-buttons-with-dropdowns",
-  imports: [CommonModule, NgbModule],
+  imports: [NgbModule],
   templateUrl: "./buttons-with-dropdowns.html",
   styleUrl: "./buttons-with-dropdowns.scss",
 })

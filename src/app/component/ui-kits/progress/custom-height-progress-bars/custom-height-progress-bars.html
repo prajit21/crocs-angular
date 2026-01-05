@@ -11,11 +11,11 @@
     <div class="progress-showcase row">
       <div class="col">
         @for(customheightitem of customheightData; track customheightitem){
-        <div class="progress" [ngStyle]="{'height':customheightitem.value1}">
+        <div class="progress" [style.height]="customheightitem.value1">
           <div
             class="progress-bar {{customheightitem.class}}"
             role="progressbar"
-            [ngStyle]="{'width':customheightitem.value2}"
+            [style.width]="customheightitem.value2"
           ></div>
         </div>
         }

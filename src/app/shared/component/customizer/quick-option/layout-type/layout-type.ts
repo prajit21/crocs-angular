@@ -1,11 +1,9 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { LayoutService } from "../../../../services/layout.service";
 
 @Component({
   selector: "app-layout-type",
-  imports: [CommonModule],
   templateUrl: "./layout-type.html",
   styleUrl: "./layout-type.scss",
 })

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -10,7 +9,6 @@ import { BookmarkSidemenu } from "./bookmark-sidemenu/bookmark-sidemenu";
 @Component({
   selector: "app-bookmarks",
   imports: [
-    CommonModule,
     NgbModule,
     FormsModule,
     BookmarkSidemenu,

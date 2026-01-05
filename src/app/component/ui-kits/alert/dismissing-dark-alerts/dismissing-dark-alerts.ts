@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 
 @Component({
   selector: "app-dismissing-dark-alerts",
-  imports: [CommonModule, Feathericon],
+  imports: [Feathericon, NgClass],
   templateUrl: "./dismissing-dark-alerts.html",
   styleUrl: "./dismissing-dark-alerts.scss",
 })

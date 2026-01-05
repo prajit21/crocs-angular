@@ -11,7 +11,7 @@
         <div class="progress">
           <div
             class="{{progessbaritem.class}}"
-            [ngStyle]="{'width':progessbaritem.value}"
+            [style.width]="progessbaritem.value"
           >
             @if(progessbaritem.percentage){ {{progessbaritem.percentage}} }
           </div>

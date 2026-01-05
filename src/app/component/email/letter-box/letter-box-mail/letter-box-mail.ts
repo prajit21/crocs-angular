@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass, SlicePipe } from "@angular/common";
 import { Component, input, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -9,7 +9,7 @@ import { mailDetails } from "../../../../shared/interface/letter-box";
 
 @Component({
   selector: "app-letter-box-mail",
-  imports: [CommonModule, NgbModule, FormsModule],
+  imports: [NgbModule, FormsModule, NgClass, SlicePipe],
   templateUrl: "./letter-box-mail.html",
   styleUrl: "./letter-box-mail.scss",
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,14 +10,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
 
 @Component({
   selector: "app-dashboard-notifications",
-  imports: [
-    All,
-    Following,
-    Archive,
-    NgbModule,
-    CommonModule,
-    ClickOutsideDirective,
-  ],
+  imports: [All, Following, Archive, NgbModule, ClickOutsideDirective, NgClass],
   templateUrl: "./dashboard-notifications.html",
   styleUrl: "./dashboard-notifications.scss",
 })

@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { TitleCasePipe } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-full-colored-variant",
-  imports: [CommonModule, NgbModule],
+  imports: [NgbModule, TitleCasePipe],
   templateUrl: "./full-colored-variant.html",
   styleUrl: "./full-colored-variant.scss",
 })

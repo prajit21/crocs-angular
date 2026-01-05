@@ -31,7 +31,7 @@
                   type="email"
                   placeholder="Test@gmail.com"
                   formControlName="email"
-                  [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors }"
+                  [class.is-invalid]="(email?.touched || validate) && email?.errors"
                 />
                 @if(email?.touched && email?.errors?.['required']){
                 <div class="invalid-feedback">Email is required.</div>
@@ -50,7 +50,7 @@
                     required=""
                     placeholder="*********"
                     formControlName="password"
-                    [ngClass]="{ 'is-invalid' : (password?.touched || validate) && password?.errors }"
+                    [class.is-invalid]="(password?.touched || validate) && password?.errors"
                   />
                   @if(!show){
                   <div class="show-hide" (click)="showPassword()">

@@ -1,9 +1,9 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
   selector: "app-default-toast",
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: "./default-toast.html",
   styleUrl: "./default-toast.scss",
 })

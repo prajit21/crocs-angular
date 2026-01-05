@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { SlicePipe } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
@@ -19,7 +19,6 @@ import { SvgIcon } from "../svg-icon/svg-icon";
 @Component({
   selector: "app-header",
   imports: [
-    CommonModule,
     Search,
     Bookmark,
     Mode,
@@ -31,9 +30,9 @@ import { SvgIcon } from "../svg-icon/svg-icon";
     SvgIcon,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule,
     RouterModule,
     ClickOutsideDirective,
+    SlicePipe,
   ],
   templateUrl: "./header.html",
   styleUrl: "./header.scss",
@@ -58,8 +57,8 @@ export class Header {
   }
 
   @HostListener("window:resize", ["$event"])
-  onResize(_event: number) {
-    this.navmenu.closeSidebar = window.innerWidth < 1200 ? true : false;
+  onResize(_event: UIEvent): void {
+    this.navmenu.closeSidebar = window.innerWidth < 1200;
   }
 
   openSearch() {

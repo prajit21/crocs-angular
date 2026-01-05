@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -7,7 +6,7 @@ import { ClipboardService } from "ngx-clipboard";
 
 @Component({
   selector: "app-copy-protion-form-paragraph",
-  imports: [CommonModule, NgbModule, FormsModule],
+  imports: [NgbModule, FormsModule],
   templateUrl: "./copy-protion-form-paragraph.html",
   styleUrl: "./copy-protion-form-paragraph.scss",
 })

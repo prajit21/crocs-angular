@@ -18,6 +18,19 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "feather-icons",
+              "sweetalert2",
+              "leaflet",
+              "dropzone",
+              "masonry-layout",
+              "apexcharts"
+            ],
+            "stylePreprocessorOptions": {
+              "sass": {
+                "silenceDeprecations": ["color-functions", "global-builtin", "import"]
+              }
+            },
             "outputPath": "dist/crocs",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -86,11 +99,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing", "@angular/localize/init"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [

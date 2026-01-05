@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from "@angular/common";
+import { DecimalPipe, AsyncPipe } from "@angular/common";
 import { Component, inject, viewChildren } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -20,11 +20,11 @@ import { ProjectSummeryService } from "../../../../shared/services/project-summe
   selector: "app-project-summery",
   imports: [
     NgbModule,
-    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     ProjectSummeryDirective,
     ClickOutsideDirective,
+    AsyncPipe,
   ],
   templateUrl: "./project-summery.html",
   styleUrl: "./project-summery.scss",
@@ -109,7 +109,7 @@ export class ProjectSummery {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortable() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
     this.service.sortColumn = column;

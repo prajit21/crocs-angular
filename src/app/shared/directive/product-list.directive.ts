@@ -1,4 +1,11 @@
-import { Directive, Input, input, output } from "@angular/core";
+import {
+  Directive,
+  HostBinding,
+  HostListener,
+  input,
+  output,
+  signal,
+} from "@angular/core";
 
 import { productListInterface } from "../data/ecommerce/product-list";
 
@@ -16,20 +23,28 @@ export interface SortEvent {
 }
 @Directive({
   selector: "th[sortable]",
-  host: {
-    "[class.asc]": 'direction === "asc"',
-    "[class.desc]": 'direction === "desc"',
-    "(click)": "rotate()",
-  },
 })
 export class ProductListDirective {
-  constructor() {}
   readonly sortable = input<SortColumn>("");
-  @Input() direction: SortDirection = "";
+  readonly direction = input<SortDirection>("");
+
+  public currentDirection = signal<SortDirection>(this.direction());
+
   readonly sort = output<SortEvent>();
 
-  rotate() {
-    this.direction = rotate[this.direction];
-    this.sort.emit({ column: this.sortable(), direction: this.direction });
+  @HostBinding("class.asc") get isAsc() {
+    return this.currentDirection() === "asc";
+  }
+  @HostBinding("class.desc") get isDesc() {
+    return this.currentDirection() === "desc";
+  }
+
+  @HostListener("click")
+  rotateColumn() {
+    this.currentDirection.set(rotate[this.currentDirection()]);
+    this.sort.emit({
+      column: this.sortable(),
+      direction: this.currentDirection(),
+    });
   }
 }

@@ -25,7 +25,7 @@
     </div>
     <div
       id="sidebar-menu"
-      [ngStyle]="{ marginLeft: this.layout.config.settings.sidebar_type === 'horizontal-wrapper' ? margin + 'px' : '0px' }"
+      [style.marginLeft]="this.layout.config.settings.sidebar_type === 'horizontal-wrapper' ? margin + 'px' : '0px'"
     >
       <ul
         class="sidebar-links custom-scrollbar d-flex flex-column"
@@ -55,7 +55,7 @@
         <ng-template #recursiveMenu let-menuItems>
           @for(item of menuItems; track item){
           <li
-            [ngClass]="{'sidebar-list':item.level === 1, 'sidebar-main-title':item.headTitle1}"
+            [class]="{'sidebar-list':item.level === 1, 'sidebar-main-title':item.headTitle1}"
             [class.pined]="isPined(item.title)"
           >
             @if(item.headTitle1){
@@ -70,7 +70,7 @@
             </a>
             } @else{
             <a
-              [ngClass]="{'sidebar-link sidebar-title' : item.level === 1, 
+              [class]="{'sidebar-link sidebar-title' : item.level === 1, 
                            'submenu-title' : item.level === 2 ,'active': item.active && item.level === 1}"
               [routerLink]="item.path"
               (click)="toggleMenu(item)"
@@ -92,7 +92,7 @@
             </a>
             } @if(item.children){
             <ul
-              [ngClass]="{ 'sidebar-submenu': item.level === 1, 'submenu-content opensubmegamenu' : item.level === 2 }"
+              [class]="{ 'sidebar-submenu': item.level === 1, 'submenu-content opensubmegamenu' : item.level === 2 }"
               [style.display]="item.active  ? 'block' : 'none'"
             >
               <ng-container

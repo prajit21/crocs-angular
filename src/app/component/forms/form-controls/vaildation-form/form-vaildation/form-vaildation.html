@@ -23,7 +23,7 @@
           type="text"
           placeholder="Mark"
           formControlName="firstName"
-          [ngClass]="{ 'is-invalid' : (firstName?.touched || validate) && firstName?.errors , 'is-valid' : !firstName?.errors}"
+          [class]="{ 'is-invalid' : (firstName?.touched || validate) && firstName?.errors , 'is-valid' : !firstName?.errors}"
         />
         <div class="invalid-feedback">Please enter your valid</div>
         <div class="valid-feedback">Looks's Good!</div>
@@ -36,7 +36,7 @@
           class="form-control"
           id="inputPassword1"
           type="password"
-          [ngClass]="{ 'is-invalid' : (password?.touched || validate) && password?.errors , 'is-valid' : !password?.errors}"
+          [class]="{ 'is-invalid' : (password?.touched || validate) && password?.errors , 'is-valid' : !password?.errors}"
         />
         <div class="invalid-feedback">Please enter your valid password</div>
       </div>
@@ -46,7 +46,7 @@
           class="form-select"
           id="validationCustom04"
           formControlName="state"
-          [ngClass]="{ 'is-invalid' : (state?.touched || validate) && state?.errors , 'is-valid' : !state?.errors}"
+          [class]="{ 'is-invalid' : (state?.touched || validate) && state?.errors , 'is-valid' : !state?.errors}"
         >
           <option selected="" disabled="" value="">Choose...</option>
           <option>U.K</option>
@@ -64,7 +64,7 @@
           id="validationCustom03"
           type="text"
           formControlName="city"
-          [ngClass]="{ 'is-invalid' : (city?.touched || validate) && city?.errors , 'is-valid' : !city?.errors}"
+          [class]="{ 'is-invalid' : (city?.touched || validate) && city?.errors , 'is-valid' : !city?.errors}"
         />
         <div class="invalid-feedback">Please provide a valid city.</div>
         <div class="valid-feedback">Looks's Good!</div>
@@ -76,7 +76,7 @@
           id="validationCustom05"
           type="text"
           formControlName="zip"
-          [ngClass]="{ 'is-invalid' : (zip?.touched || validate) && zip?.errors , 'is-valid' : !zip?.errors}"
+          [class]="{ 'is-invalid' : (zip?.touched || validate) && zip?.errors , 'is-valid' : !zip?.errors}"
         />
         <div class="invalid-feedback">Please provide a valid zip.</div>
         <div class="valid-feedback">Looks's Good!</div>
@@ -116,7 +116,7 @@
         <select
           class="form-select"
           formControlName="theme"
-          [ngClass]="{ 'is-invalid' : (theme?.touched || validate) && theme?.errors , 'is-valid' : !theme?.errors}"
+          [class]="{ 'is-invalid' : (theme?.touched || validate) && theme?.errors , 'is-valid' : !theme?.errors}"
           aria-label="select example"
         >
           <option value="">Select Your Favorite Pixelstrap theme</option>
@@ -133,7 +133,7 @@
           id="formFile1"
           type="file"
           formControlName="file"
-          [ngClass]="{ 'is-invalid' : (file?.touched || validate) && file?.errors , 'is-valid' : !file?.errors}"
+          [class]="{ 'is-invalid' : (file?.touched || validate) && file?.errors , 'is-valid' : !file?.errors}"
         />
         <div class="invalid-feedback">Invalid form file selected</div>
       </div>
@@ -144,7 +144,7 @@
           id="validationTextarea"
           placeholder="Enter your comment"
           formControlName="description"
-          [ngClass]="{ 'is-invalid' : (description?.touched || validate) && description?.errors , 'is-valid' : !description?.errors}"
+          [class]="{ 'is-invalid' : (description?.touched || validate) && description?.errors , 'is-valid' : !description?.errors}"
         ></textarea>
         <div class="invalid-feedback">
           Please enter a message in the textarea.
@@ -158,7 +158,7 @@
             type="checkbox"
             formControlName="terms"
             value=""
-            [ngClass]="{ 'is-invalid' : (terms?.touched || validate) && terms?.errors , 'is-valid' : !terms?.errors}"
+            [class]="{ 'is-invalid' : (terms?.touched || validate) && terms?.errors , 'is-valid' : !terms?.errors}"
           />
           <label class="form-check-label" for="invalidCheck"
             >Agree to terms and conditions</label

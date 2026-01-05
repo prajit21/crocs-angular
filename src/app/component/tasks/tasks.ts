@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -7,13 +6,7 @@ import { TaskSidemenu } from "./task-sidemenu/task-sidemenu";
 
 @Component({
   selector: "app-tasks",
-  imports: [
-    CommonModule,
-    TaskSidemenu,
-    TaskDetails,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  imports: [TaskSidemenu, TaskDetails, FormsModule, ReactiveFormsModule],
   templateUrl: "./tasks.html",
   styleUrl: "./tasks.scss",
 })

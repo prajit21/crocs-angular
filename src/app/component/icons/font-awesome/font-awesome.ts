@@ -1,11 +1,10 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { allIcon } from "../../../shared/data/icons/thimify";
 
 @Component({
   selector: "app-font-awesome",
-  imports: [CommonModule],
+  imports: [],
   templateUrl: "./font-awesome.html",
   styleUrl: "./font-awesome.scss",
 })

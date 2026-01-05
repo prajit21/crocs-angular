@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from "@angular/common";
+import { DecimalPipe } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { Component, output } from "@angular/core";
 import {
@@ -11,7 +11,7 @@ import {
 
 @Component({
   selector: "app-selling-price",
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule, FormsModule],
   providers: [DecimalPipe, HttpClient],
   templateUrl: "./selling-price.html",
   styleUrl: "./selling-price.scss",

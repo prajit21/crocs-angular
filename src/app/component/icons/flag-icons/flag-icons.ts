@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { UpperCasePipe } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { icon } from "../../../shared/data/icons/flags";
 
 @Component({
   selector: "app-flag-icons",
-  imports: [CommonModule],
+  imports: [UpperCasePipe],
   templateUrl: "./flag-icons.html",
   styleUrl: "./flag-icons.scss",
 })

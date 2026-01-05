@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -14,7 +13,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
 
 @Component({
   selector: "app-bootstrap-calendar",
-  imports: [NgbModule, CommonModule, FormsModule, Feathericon],
+  imports: [NgbModule, FormsModule, Feathericon],
   templateUrl: "./bootstrap-calendar.html",
   styleUrl: "./bootstrap-calendar.scss",
 })

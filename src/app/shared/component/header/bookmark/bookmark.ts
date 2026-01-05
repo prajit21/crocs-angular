@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { SlicePipe } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
@@ -8,7 +8,7 @@ import { SvgIcon } from "../../svg-icon/svg-icon";
 
 @Component({
   selector: "app-bookmark",
-  imports: [SvgIcon, CommonModule, RouterModule, FormsModule],
+  imports: [SvgIcon, RouterModule, FormsModule, SlicePipe],
   templateUrl: "./bookmark.html",
   styleUrl: "./bookmark.scss",
 })

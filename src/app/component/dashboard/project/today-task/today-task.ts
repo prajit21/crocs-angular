@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -17,8 +17,8 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
     Important,
     Notes,
     NgbModule,
-    CommonModule,
     ClickOutsideDirective,
+    NgClass,
   ],
   templateUrl: "./today-task.html",
   styleUrl: "./today-task.scss",

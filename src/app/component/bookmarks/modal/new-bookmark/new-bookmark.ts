@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormControl,
@@ -15,7 +14,7 @@ import { bookmarks } from "../../../../shared/interface/bookmark";
 
 @Component({
   selector: "app-new-bookmark",
-  imports: [CommonModule, NgbModule, FormsModule, ReactiveFormsModule],
+  imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./new-bookmark.html",
   styleUrl: "./new-bookmark.scss",
 })

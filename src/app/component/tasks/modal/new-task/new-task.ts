@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormControl,
@@ -15,7 +14,7 @@ import { task, taskDetails } from "../../../../shared/interface/task";
 
 @Component({
   selector: "app-new-task",
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgbModule],
+  imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./new-task.html",
   styleUrl: "./new-task.scss",
 })

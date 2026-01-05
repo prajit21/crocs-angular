@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { TranslateService } from "@ngx-translate/core";
@@ -14,7 +13,7 @@ interface selectedlanguage {
 
 @Component({
   selector: "app-language",
-  imports: [CommonModule],
+  imports: [],
   templateUrl: "./language.html",
   styleUrl: "./language.scss",
 })

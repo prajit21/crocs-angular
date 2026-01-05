@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
@@ -9,7 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
 
 @Component({
   selector: "app-upcoming-deadlines",
-  imports: [ClickOutsideDirective, NgbModule, CommonModule, RouterModule],
+  imports: [ClickOutsideDirective, NgbModule, RouterModule],
   templateUrl: "./upcoming-deadlines.html",
   styleUrl: "./upcoming-deadlines.scss",
 })

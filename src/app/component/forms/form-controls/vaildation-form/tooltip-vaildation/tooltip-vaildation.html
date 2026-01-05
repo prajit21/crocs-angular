@@ -24,7 +24,7 @@
           type="text"
           placeholder="Mark"
           formControlName="firstName"
-          [ngClass]="{ 'is-invalid' : (firstName?.touched || validate) && firstName?.errors , 'is-valid' : !firstName?.errors}"
+          [class]="{ 'is-invalid' : (firstName?.touched || validate) && firstName?.errors , 'is-valid' : !firstName?.errors}"
         />
         <div class="valid-tooltip">Looks good!</div>
       </div>
@@ -36,7 +36,7 @@
           type="text"
           placeholder="Otto"
           formControlName="lastName"
-          [ngClass]="{ 'is-invalid' : (lastName?.touched || validate) && lastName?.errors , 'is-valid' : !lastName?.errors}"
+          [class]="{ 'is-invalid' : (lastName?.touched || validate) && lastName?.errors , 'is-valid' : !lastName?.errors}"
         />
         <div class="valid-tooltip">Looks good!</div>
       </div>
@@ -54,7 +54,7 @@
             type="text"
             aria-describedby="validationTooltipUsernamePrepend"
             formControlName="userName"
-            [ngClass]="{ 'is-invalid' : (userName?.touched || validate) && userName?.errors , 'is-valid' : !userName?.errors}"
+            [class]="{ 'is-invalid' : (userName?.touched || validate) && userName?.errors , 'is-valid' : !userName?.errors}"
           />
           <div class="invalid-tooltip">
             Please choose a unique and valid username.
@@ -68,7 +68,7 @@
           id="validationTooltip03"
           type="text"
           formControlName="city"
-          [ngClass]="{ 'is-invalid' : (city?.touched || validate) && city?.errors , 'is-valid' : !city?.errors}"
+          [class]="{ 'is-invalid' : (city?.touched || validate) && city?.errors , 'is-valid' : !city?.errors}"
         />
         <div class="invalid-tooltip">Please provide a valid city.</div>
       </div>
@@ -78,7 +78,7 @@
           class="form-select"
           id="validationTooltip04"
           formControlName="state"
-          [ngClass]="{ 'is-invalid' : (state?.touched || validate) && state?.errors , 'is-valid' : !state?.errors}"
+          [class]="{ 'is-invalid' : (state?.touched || validate) && state?.errors , 'is-valid' : !state?.errors}"
         >
           <option selected="" disabled="" value="">Choose...</option>
           <option>U.S</option>
@@ -95,7 +95,7 @@
           id="validationTooltip05"
           type="text"
           formControlName="zip"
-          [ngClass]="{ 'is-invalid' : (zip?.touched || validate) && zip?.errors , 'is-valid' : !zip?.errors}"
+          [class]="{ 'is-invalid' : (zip?.touched || validate) && zip?.errors , 'is-valid' : !zip?.errors}"
         />
         <div class="invalid-tooltip">Please provide a valid zip.</div>
       </div>

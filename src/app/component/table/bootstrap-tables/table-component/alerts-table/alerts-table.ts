@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-alerts-table",
-  imports: [CommonModule, NgbModule],
+  imports: [NgbModule, NgClass],
   templateUrl: "./alerts-table.html",
   styleUrl: "./alerts-table.scss",
 })

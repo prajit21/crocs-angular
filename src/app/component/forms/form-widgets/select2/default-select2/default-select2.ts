@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -7,13 +6,7 @@ import { NgSelectModule } from "@ng-select/ng-select";
 
 @Component({
   selector: "app-default-select2",
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgSelectModule,
-    NgbModule,
-  ],
+  imports: [FormsModule, ReactiveFormsModule, NgSelectModule, NgbModule],
   templateUrl: "./default-select2.html",
   styleUrl: "./default-select2.scss",
 })

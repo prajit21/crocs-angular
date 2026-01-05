@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -9,13 +8,7 @@ import { ContactsDetails } from "./contacts-details/contacts-details";
 
 @Component({
   selector: "app-contact",
-  imports: [
-    CommonModule,
-    NgbModule,
-    FormsModule,
-    ContactSidemenu,
-    ContactsDetails,
-  ],
+  imports: [NgbModule, FormsModule, ContactSidemenu, ContactsDetails],
   templateUrl: "./contact.html",
   styleUrl: "./contact.scss",
 })

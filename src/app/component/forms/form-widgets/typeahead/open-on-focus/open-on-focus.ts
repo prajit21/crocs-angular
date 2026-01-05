@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, viewChild } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -75,7 +74,7 @@ const states = [
 
 @Component({
   selector: "app-open-on-focus",
-  imports: [NgbModule, FormsModule, CommonModule],
+  imports: [NgbModule, FormsModule],
   templateUrl: "./open-on-focus.html",
   styleUrl: "./open-on-focus.scss",
 })

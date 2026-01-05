@@ -60,7 +60,7 @@
   </div>
   <div
     class="row g-2 more-data"
-    [ngStyle]="{ 'display' : editMore ? 'block' : 'none' }"
+    [style.display]="editMore ? 'block' : 'none'"
   >
     <div class="mt-0 mb-3 col-md-12">
       <label>URLS</label>
@@ -223,7 +223,7 @@
   <a
     class="ps-0 edit-information"
     (click)="editMoreInfo()"
-    [ngStyle]="{ 'display' : editMore ? 'none' : 'block' }"
+    [style.display]="editMore ? 'none' : 'block'"
     >Edit more information</a
   >
   <button

@@ -1,11 +1,10 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-add-lable",
-  imports: [CommonModule],
+  imports: [],
   templateUrl: "./add-lable.html",
   styleUrl: "./add-lable.scss",
 })

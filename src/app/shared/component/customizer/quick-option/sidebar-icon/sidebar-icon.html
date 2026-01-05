@@ -2,7 +2,7 @@
   <li
     class="active"
     data-attr="stroke-svg"
-    [ngClass]="{ active: icon === 'stroke-svg' }"
+    [class.active]="icon === 'stroke-svg'"
     (click)="svgIcon('stroke-svg')"
   >
     <div class="header bg-light">
@@ -18,7 +18,7 @@
   </li>
   <li
     data-attr="fill-svg"
-    [ngClass]="{ active: icon === 'fill-svg' }"
+    [class.active]="icon === 'fill-svg'"
     (click)="svgIcon('fill-svg')"
   >
     <div class="header bg-light">

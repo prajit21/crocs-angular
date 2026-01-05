@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -70,7 +69,7 @@ const states = [
 
 @Component({
   selector: "app-golbal-configution-typehead",
-  imports: [CommonModule, FormsModule, NgbModule],
+  imports: [FormsModule, NgbModule],
   templateUrl: "./golbal-configution-typehead.html",
   styleUrl: "./golbal-configution-typehead.scss",
 })

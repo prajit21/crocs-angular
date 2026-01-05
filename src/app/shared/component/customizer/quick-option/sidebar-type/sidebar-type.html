@@ -1,7 +1,7 @@
 <ul class="sidebar-type layout-grid">
   <li
     data-attr="normal-sidebar"
-    [ngClass]="{'active': sidebarType === 'horizontal-wrapper'}"
+    [class.active]="sidebarType === 'horizontal-wrapper'"
     (click)="customizeSidebarType('horizontal-wrapper')"
   >
     <div class="header bg-light">
@@ -20,7 +20,7 @@
   </li>
   <li
     data-attr="compact-wrapper"
-    [ngClass]="{'active': sidebarType === 'compact-wrapper'}"
+    [class.active]="sidebarType === 'compact-wrapper'"
     (click)="customizeSidebarType('compact-wrapper')"
   >
     <div class="header bg-light">

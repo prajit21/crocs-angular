@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import {
   FormControl,
@@ -12,13 +11,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-additional-options",
-  imports: [
-    CommonModule,
-    AngularEditorModule,
-    NgbModule,
-    ReactiveFormsModule,
-    FormsModule,
-  ],
+  imports: [AngularEditorModule, NgbModule, ReactiveFormsModule, FormsModule],
   templateUrl: "./additional-options.html",
   styleUrl: "./additional-options.scss",
 })

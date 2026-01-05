@@ -1,4 +1,4 @@
-import { DecimalPipe, CommonModule } from "@angular/common";
+import { DecimalPipe, AsyncPipe } from "@angular/common";
 import { Component, inject, viewChildren } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -16,11 +16,12 @@ import { TableService } from "../../../shared/services/table.service";
 @Component({
   selector: "app-data-table",
   imports: [
-    CommonModule,
     FormsModule,
     NgbdSortableHeaderDirective,
     ReactiveFormsModule,
     NgbModule,
+    AsyncPipe,
+    DecimalPipe,
   ],
   providers: [TableService, DecimalPipe],
   templateUrl: "./data-table.html",
@@ -90,7 +91,7 @@ export class DataTable {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortable() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
 

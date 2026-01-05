@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { Calendar } from "./calendar/calendar";
@@ -19,7 +18,6 @@ import {
 @Component({
   selector: "app-default",
   imports: [
-    CommonModule,
     TopDefultCard,
     TopCommonChart,
     TopSellingProduct,

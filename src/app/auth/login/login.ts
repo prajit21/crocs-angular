@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormBuilder,
@@ -22,7 +21,6 @@ import { Feathericon } from "../../shared/component/feathericon/feathericon";
     FormsModule,
     ReactiveFormsModule,
     ToastrModule,
-    CommonModule,
   ],
   templateUrl: "./login.html",
   styleUrl: "./login.scss",

@@ -10,11 +10,11 @@
   <div
     class="page-header"
     [class.close_icon]="navmenu.closeSidebar"
-    [ngStyle]="{'display' :hidenav.show ?'none':'block'}"
+    [style.display]="hidenav.show ?'none':'block'"
   >
     <app-header />
   </div>
-  <div class="page-body-wrapper" [ngClass]=" {'scorlled' : hidenav.show }">
+  <div class="page-body-wrapper" [class.scorlled]="hidenav.show">
     <div
       class="sidebar-wrapper"
       [class.close_icon]="navmenu.closeSidebar"

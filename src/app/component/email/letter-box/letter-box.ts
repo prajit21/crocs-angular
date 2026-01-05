@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -12,7 +11,6 @@ import { MailDetails } from "./mail-details/mail-details";
 @Component({
   selector: "app-letter-box",
   imports: [
-    CommonModule,
     NgbModule,
     FormsModule,
     LetterBoxSidebar,

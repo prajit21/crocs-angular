@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -7,13 +6,7 @@ import { NgbActiveModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-new-categories",
-  imports: [
-    CommonModule,
-    NgbModule,
-    AngularEditorModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  imports: [NgbModule, AngularEditorModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./new-categories.html",
   styleUrl: "./new-categories.scss",
 })

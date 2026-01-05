@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -14,7 +14,6 @@ import { AddProducts } from "../../../shared/data/ecommerce/add-product";
 @Component({
   selector: "app-add-product",
   imports: [
-    CommonModule,
     NgbModule,
     ProductsFromStepe,
     AddProductDetails,
@@ -22,6 +21,7 @@ import { AddProducts } from "../../../shared/data/ecommerce/add-product";
     ProductCategoies,
     SellingPrice,
     Advance,
+    NgClass,
   ],
   templateUrl: "./add-product.html",
   styleUrl: "./add-product.scss",

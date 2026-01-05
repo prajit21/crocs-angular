@@ -14,7 +14,7 @@
         id="initialCost"
         formControlName="initalcost"
         type="number"
-        [ngClass]="{ 'is-invalid' : (initalcost?.touched || validate) && initalcost?.errors, 'is-valid' : !initalcost?.errors}"
+        [class]="{ 'is-invalid' : (initalcost?.touched || validate) && initalcost?.errors, 'is-valid' : !initalcost?.errors}"
       />
       @if(initalcost?.errors){
       <div class="invalid-feedback">
@@ -31,7 +31,7 @@
         id="sellingPrice"
         type="number"
         formControlName="sellingPrice"
-        [ngClass]="{ 'is-invalid' : (sellingPrice?.touched || validate) && sellingPrice?.errors, 'is-valid' : !sellingPrice?.errors}"
+        [class]="{ 'is-invalid' : (sellingPrice?.touched || validate) && sellingPrice?.errors, 'is-valid' : !sellingPrice?.errors}"
       />
       @if(sellingPrice?.errors){
       <div class="invalid-feedback">
@@ -44,7 +44,7 @@
       <select
         class="form-select"
         formControlName="currency"
-        [ngClass]="{ 'is-invalid' : (currency?.touched || validate) && currency?.errors, 'is-valid' : !currency?.errors}"
+        [class]="{ 'is-invalid' : (currency?.touched || validate) && currency?.errors, 'is-valid' : !currency?.errors}"
       >
         <option selected="">Dollar $</option>
         <option value="1">Euro €</option>
@@ -69,7 +69,7 @@
         id="productStock1"
         type="number"
         formControlName="Productstocks"
-        [ngClass]="{ 'is-invalid' : (Productstocks?.touched || validate) && Productstocks?.errors, 'is-valid' : !Productstocks?.errors}"
+        [class]="{ 'is-invalid' : (Productstocks?.touched || validate) && Productstocks?.errors, 'is-valid' : !Productstocks?.errors}"
       />
       @if(Productstocks?.errors){
       <div class="invalid-feedback">

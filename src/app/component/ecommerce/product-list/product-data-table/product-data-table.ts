@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from "@angular/common";
+import { DecimalPipe, AsyncPipe, NgClass } from "@angular/common";
 import { Component, inject, viewChildren } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
@@ -19,12 +19,13 @@ import { ProductListService } from "../../../../shared/services/ecommerce/produc
 @Component({
   selector: "app-product-data-table",
   imports: [
-    CommonModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
     ProductListDirective,
     RouterModule,
+    AsyncPipe,
+    NgClass,
   ],
   providers: [ProductListService, DecimalPipe],
   templateUrl: "./product-data-table.html",
@@ -104,7 +105,7 @@ export class ProductDataTable {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortable() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
 

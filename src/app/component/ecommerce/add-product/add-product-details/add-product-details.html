@@ -15,7 +15,7 @@
         type="text"
         formControlName="productTitle"
         autocomplete="off"
-        [ngClass]="{ 'is-invalid' : (productTitle?.touched || validate) && productTitle?.errors, 'is-valid' : !productTitle?.errors}"
+        [class]="{ 'is-invalid' : (productTitle?.touched || validate) && productTitle?.errors, 'is-valid' : !productTitle?.errors}"
       />
       @if(productTitle?.errors){
       <div class="invalid-feedback">A product name is required.</div>

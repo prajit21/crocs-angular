@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 
 import { Filter } from "./filter/filter";
@@ -8,7 +7,7 @@ import { ProductBoxFilterService } from "../../../shared/services/ecommerce/prod
 
 @Component({
   selector: "app-product",
-  imports: [CommonModule, Filter, ProductBox, Feathericon],
+  imports: [Filter, ProductBox, Feathericon],
   templateUrl: "./product.html",
   styleUrl: "./product.scss",
 })

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject, input } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -13,7 +12,7 @@ import { Print } from "../modal/print/print";
 
 @Component({
   selector: "app-contacts-details",
-  imports: [CommonModule, FormsModule, ContactHistory, EditContactDetails],
+  imports: [FormsModule, ContactHistory, EditContactDetails],
   templateUrl: "./contacts-details.html",
   styleUrl: "./contacts-details.scss",
 })

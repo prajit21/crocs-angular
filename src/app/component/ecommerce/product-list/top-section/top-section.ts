@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
@@ -7,7 +7,7 @@ import { ProductDataTable } from "../product-data-table/product-data-table";
 
 @Component({
   selector: "app-top-section",
-  imports: [CommonModule, ProductDataTable, Feathericon, RouterModule],
+  imports: [ProductDataTable, Feathericon, RouterModule, NgClass],
   templateUrl: "./top-section.html",
   styleUrl: "./top-section.scss",
 })

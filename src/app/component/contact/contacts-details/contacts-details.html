@@ -67,7 +67,7 @@
                   <div
                     class="tab-content"
                     id="v-pills-tabContent"
-                    [ngStyle]="{ 'display' : edit && contactData.title === 'Personal' ? 'none' : 'block' }"
+                    [style.display]="edit && contactData.title === 'Personal' ? 'none' : 'block'"
                   >
                     @for(details of contactDetails; track details; let i =
                     $index){ @if(details.active){
@@ -244,7 +244,7 @@
                   </div>
                   <div
                     class="contact-editform ps-0"
-                    [ngStyle]="{ 'display' : edit && contactData.title === 'Personal' ? 'block' : 'none' }"
+                    [style.display]="edit && contactData.title === 'Personal' ? 'block' : 'none'"
                   >
                     <app-edit-contact-details
                       (editValue)="editValue($event)"

@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -7,7 +6,7 @@ import { ClipboardService } from "ngx-clipboard";
 
 @Component({
   selector: "app-clipboard-on-textarea",
-  imports: [CommonModule, NgbModule, FormsModule],
+  imports: [NgbModule, FormsModule],
   templateUrl: "./clipboard-on-textarea.html",
   styleUrl: "./clipboard-on-textarea.scss",
 })
