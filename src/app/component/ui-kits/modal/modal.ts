@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CenteredModal } from "./centered-modal/centered-modal";
 import { CustomModals } from "./custom-modals/custom-modals";
@@ -20,6 +20,7 @@ import { SizesModal } from "../modal/sizes-modal/sizes-modal";
     CustomModals,
   ],
   templateUrl: "./modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./modal.scss",
 })
 export class Modal {}

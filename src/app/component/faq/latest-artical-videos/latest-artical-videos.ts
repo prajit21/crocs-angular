@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 import { articlesAndVideos } from "../../../shared/data/faq/faq";
@@ -7,6 +7,7 @@ import { articlesAndVideos } from "../../../shared/data/faq/faq";
   selector: "app-latest-artical-videos",
   imports: [Feathericon],
   templateUrl: "./latest-artical-videos.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./latest-artical-videos.scss",
 })
 export class LatestArticalVideos {

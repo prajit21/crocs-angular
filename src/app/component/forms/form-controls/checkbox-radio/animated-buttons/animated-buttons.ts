@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import {
@@ -10,6 +10,7 @@ import {
   selector: "app-animated-buttons",
   imports: [FormsModule],
   templateUrl: "./animated-buttons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./animated-buttons.scss",
 })
 export class AnimatedButtons {

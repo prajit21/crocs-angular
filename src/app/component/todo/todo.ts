@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -26,6 +26,7 @@ const Months = [
   selector: "app-todo",
   imports: [TodoFilter, FormsModule, ReactiveFormsModule, NgbModule, NgClass],
   templateUrl: "./todo.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./todo.scss",
 })
 export class Todo {

@@ -1,4 +1,9 @@
-import { Component, Input, output } from "@angular/core";
+import {
+  Component,
+  Input,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +15,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-mail-details",
   imports: [NgbModule, AngularEditorModule, Feathericon, UserFooter, NgbModule],
   templateUrl: "./mail-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./mail-details.scss",
 })
 export class MailDetails {

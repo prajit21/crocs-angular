@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgxEditorModule, Editor } from "ngx-editor";
@@ -7,6 +7,7 @@ import { NgxEditorModule, Editor } from "ngx-editor";
   selector: "app-ngx-editor",
   imports: [NgxEditorModule, FormsModule],
   templateUrl: "./ngx-editor.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./ngx-editor.scss",
 })
 export class NgxEditor {

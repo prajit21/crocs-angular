@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { bookmarks } from "../../../../shared/interface/bookmark";
   selector: "app-new-bookmark",
   imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./new-bookmark.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./new-bookmark.scss",
 })
 export class NewBookmark {

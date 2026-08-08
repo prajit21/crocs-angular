@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { allIcon } from "../../../shared/data/icons/thimify";
 
@@ -6,6 +6,7 @@ import { allIcon } from "../../../shared/data/icons/thimify";
   selector: "app-font-awesome",
   imports: [],
   templateUrl: "./font-awesome.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./font-awesome.scss",
 })
 export class FontAwesome {

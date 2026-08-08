@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { PrimaryBackground } from "../../../../../shared/data/table/basic-tables";
 
@@ -6,6 +6,7 @@ import { PrimaryBackground } from "../../../../../shared/data/table/basic-tables
   selector: "app-inverse-table-primary-background",
   imports: [],
   templateUrl: "./inverse-table-primary-background.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./inverse-table-primary-background.scss",
 })
 export class InverseTablePrimaryBackground {

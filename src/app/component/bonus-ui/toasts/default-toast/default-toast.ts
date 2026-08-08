@@ -1,10 +1,11 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-default-toast",
   imports: [NgClass],
   templateUrl: "./default-toast.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./default-toast.scss",
 })
 export class DefaultToast {

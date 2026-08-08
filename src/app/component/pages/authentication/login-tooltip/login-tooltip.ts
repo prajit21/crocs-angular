@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -9,6 +9,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-login-tooltip",
   imports: [RouterModule, NgbModule, Feathericon],
   templateUrl: "./login-tooltip.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./login-tooltip.scss",
 })
 export class LoginTooltip {

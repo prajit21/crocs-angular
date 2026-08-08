@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -11,6 +11,7 @@ import { UserDetails } from "./user-details/user-details";
   selector: "app-material-tabs",
   imports: [NgbModule, FormsModule, Description, Review, UserDetails],
   templateUrl: "./material-tabs.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./material-tabs.scss",
 })
 export class MaterialTabs {

@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AdditionalOptions } from "./additional-options/additional-options";
@@ -17,6 +17,7 @@ import { Shipping } from "./shipping/shipping";
     NgClass,
   ],
   templateUrl: "./advance.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./advance.scss",
 })
 export class Advance {

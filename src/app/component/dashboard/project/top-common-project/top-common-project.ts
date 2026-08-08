@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { TopProjectData } from "../../../../shared/data/dashboard/project/projec
   selector: "app-top-common-project",
   imports: [NgbModule],
   templateUrl: "./top-common-project.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./top-common-project.scss",
 })
 export class TopCommonProject {

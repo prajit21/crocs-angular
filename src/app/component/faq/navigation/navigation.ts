@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 import { navigationData1, navigationData2 } from "../../../shared/data/faq/faq";
@@ -7,6 +7,7 @@ import { navigationData1, navigationData2 } from "../../../shared/data/faq/faq";
   selector: "app-navigation",
   imports: [Feathericon],
   templateUrl: "./navigation.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./navigation.scss",
 })
 export class Navigation {

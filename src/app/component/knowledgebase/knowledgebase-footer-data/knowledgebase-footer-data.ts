@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   articlesAndVideosData,
@@ -11,6 +11,7 @@ import { LatestArticalVideos } from "../../faq/latest-artical-videos/latest-arti
   selector: "app-knowledgebase-footer-data",
   imports: [LatestArticalVideos, FeaturedTurorials],
   templateUrl: "./knowledgebase-footer-data.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./knowledgebase-footer-data.scss",
 })
 export class KnowledgebaseFooterData {

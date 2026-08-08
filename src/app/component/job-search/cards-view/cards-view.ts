@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule, NgbRatingConfig } from "@ng-bootstrap/ng-bootstrap";
 
@@ -9,6 +9,7 @@ import { JobFilter } from "../job-filter/job-filter";
   selector: "app-cards-view",
   imports: [JobFilter, NgbModule],
   templateUrl: "./cards-view.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./cards-view.scss",
 })
 export class CardsView {

@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { button } from "../../../../shared/data/ui-kits/tag-pills";
@@ -7,6 +7,7 @@ import { button } from "../../../../shared/data/ui-kits/tag-pills";
   selector: "app-common-badges-pills",
   imports: [Feathericon],
   templateUrl: "./common-badges-pills.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./common-badges-pills.scss",
 })
 export class CommonBadgesPills {

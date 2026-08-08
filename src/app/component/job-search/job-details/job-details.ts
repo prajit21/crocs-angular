@@ -1,5 +1,5 @@
 import { SlicePipe } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { JobFilter } from "../job-filter/job-filter";
 import { JobSimiler } from "./job-similer/job-similer";
@@ -9,6 +9,7 @@ import { jobDetails } from "../../../shared/data/job-search/job-search";
   selector: "app-job-details",
   imports: [JobFilter, JobSimiler, SlicePipe],
   templateUrl: "./job-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./job-details.scss",
 })
 export class JobDetails {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicTimeline } from "./basic-timeline/basic-timeline";
 import { HorizotalTimeline } from "./horizotal-timeline/horizotal-timeline";
@@ -16,6 +16,7 @@ import { VariationTimeline } from "./variation-timeline/variation-timeline";
     TimelineChat,
   ],
   templateUrl: "./timeline.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./timeline.scss",
 })
 export class Timeline {}

@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -9,6 +14,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-balance-modal",
   imports: [Feathericon, RouterModule],
   templateUrl: "./balance-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./balance-modal.scss",
 })
 export class BalanceModal {

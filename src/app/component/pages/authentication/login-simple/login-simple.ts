@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { CommonLoginFrom } from "../common-login-from/common-login-from";
@@ -7,6 +7,7 @@ import { CommonLoginFrom } from "../common-login-from/common-login-from";
   selector: "app-login-simple",
   imports: [CommonLoginFrom, RouterModule],
   templateUrl: "./login-simple.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./login-simple.scss",
 })
 export class LoginSimple {}

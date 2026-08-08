@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CommonInfoCard } from "./common-info-card/common-info-card";
 import { DarkColorCard } from "./dark-color-card/dark-color-card";
@@ -9,6 +9,7 @@ import { infoColorCards } from "../../../shared/data/bonus-ui/basic-card";
   selector: "app-basic-card",
   imports: [TopCommonBasicCard, DarkColorCard, CommonInfoCard],
   templateUrl: "./basic-card.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-card.scss",
 })
 export class BasicCard {

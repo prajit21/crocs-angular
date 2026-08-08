@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ClipboardOnParagraph } from "./clipboard-on-paragraph/clipboard-on-paragraph";
 import { ClipboardOnTextInput } from "./clipboard-on-text-input/clipboard-on-text-input";
@@ -14,6 +14,7 @@ import { CopyProtionFormParagraph } from "./copy-protion-form-paragraph/copy-pro
     CopyProtionFormParagraph,
   ],
   templateUrl: "./clipboard.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./clipboard.scss",
 })
 export class Clipboard {}

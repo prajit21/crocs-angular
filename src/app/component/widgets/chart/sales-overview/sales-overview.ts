@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { SalesOverviewChart } from "../../../../shared/data/widgets/chart";
   selector: "app-sales-overview",
   imports: [NgApexchartsModule],
   templateUrl: "./sales-overview.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./sales-overview.scss",
 })
 export class SalesOverview {

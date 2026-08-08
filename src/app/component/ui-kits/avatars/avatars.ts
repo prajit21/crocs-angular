@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AvatarsSizes } from "./avatars-sizes/avatars-sizes";
 import { Grouping } from "./grouping/grouping";
@@ -10,6 +10,7 @@ import { StatusIndicator } from "./status-indicator/status-indicator";
   selector: "app-avatars",
   imports: [AvatarsSizes, Grouping, Ratio, StatusIndicator, Shapes],
   templateUrl: "./avatars.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./avatars.scss",
 })
 export class Avatars {}

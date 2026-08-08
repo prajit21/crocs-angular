@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicPopover } from "./basic-popover/basic-popover";
 import { PopoverDirection } from "./popover-direction/popover-direction";
@@ -8,6 +8,7 @@ import { PopoverOffset } from "./popover-offset/popover-offset";
   selector: "app-popover",
   imports: [BasicPopover, PopoverDirection, PopoverOffset],
   templateUrl: "./popover.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./popover.scss",
 })
 export class Popover {}

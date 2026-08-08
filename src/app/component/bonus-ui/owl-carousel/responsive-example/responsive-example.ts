@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -11,6 +11,7 @@ import {
   selector: "app-responsive-example",
   imports: [CarouselModule],
   templateUrl: "./responsive-example.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./responsive-example.scss",
 })
 export class ResponsiveExample {

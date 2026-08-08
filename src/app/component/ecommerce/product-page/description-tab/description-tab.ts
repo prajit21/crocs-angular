@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -7,6 +7,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-description-tab",
   imports: [NgbModule, NgClass],
   templateUrl: "./description-tab.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./description-tab.scss",
 })
 export class DescriptionTab {

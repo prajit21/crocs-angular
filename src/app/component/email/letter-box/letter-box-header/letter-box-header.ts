@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +10,7 @@ import { letterBoxHeaderTab } from "../../../../shared/data/email/letter-box";
   selector: "app-letter-box-header",
   imports: [NgbModule, FormsModule, SvgIcon],
   templateUrl: "./letter-box-header.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./letter-box-header.scss",
 })
 export class LetterBoxHeader {

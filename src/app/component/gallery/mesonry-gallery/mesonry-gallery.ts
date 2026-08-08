@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 
 import { LightboxModule } from "ng-gallery/lightbox";
 import {
@@ -11,6 +11,7 @@ import {
   selector: "app-mesonry-gallery",
   imports: [NgxMasonryModule, LightboxModule],
   templateUrl: "./mesonry-gallery.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./mesonry-gallery.scss",
 })
 export class MesonryGallery {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   projectTask,
@@ -9,6 +9,7 @@ import {
   selector: "app-notes",
   imports: [],
   templateUrl: "./notes.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./notes.scss",
 })
 export class Notes {

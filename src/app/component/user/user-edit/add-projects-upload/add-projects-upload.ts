@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { projectData } from "../../../../shared/data/user/users-edit";
 
@@ -6,6 +6,7 @@ import { projectData } from "../../../../shared/data/user/users-edit";
   selector: "app-add-projects-upload",
   imports: [],
   templateUrl: "./add-projects-upload.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./add-projects-upload.scss",
 })
 export class AddProjectsUpload {

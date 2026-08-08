@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import * as Data from "../../../../shared/data/ui-kits/dropdown";
   selector: "app-helper-card",
   imports: [NgbModule],
   templateUrl: "./helper-card.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./helper-card.scss",
 })
 export class HelperCard {

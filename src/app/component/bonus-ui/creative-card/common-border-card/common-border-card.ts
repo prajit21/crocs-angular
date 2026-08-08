@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { commonBorderPositionCardData } from "../../../../shared/data/bonus-ui/creative-cards";
 
@@ -6,6 +6,7 @@ import { commonBorderPositionCardData } from "../../../../shared/data/bonus-ui/c
   selector: "app-common-border-card",
   imports: [],
   templateUrl: "./common-border-card.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./common-border-card.scss",
 })
 export class CommonBorderCard {

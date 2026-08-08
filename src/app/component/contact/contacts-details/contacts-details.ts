@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -14,6 +19,7 @@ import { Print } from "../modal/print/print";
   selector: "app-contacts-details",
   imports: [FormsModule, ContactHistory, EditContactDetails],
   templateUrl: "./contacts-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./contacts-details.scss",
 })
 export class ContactsDetails {

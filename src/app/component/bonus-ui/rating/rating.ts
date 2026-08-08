@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +10,7 @@ import { CurrentRatingbar } from "./current-ratingbar/current-ratingbar";
   selector: "app-rating",
   imports: [BarRatingModule, FormsModule, NgbModule, CurrentRatingbar],
   templateUrl: "./rating.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./rating.scss",
 })
 export class Rating {

@@ -1,5 +1,11 @@
 import { NgClass } from "@angular/common";
-import { Component, HostListener, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -11,6 +17,7 @@ import { Config, LayoutService } from "../../services/layout.service";
   selector: "app-customizer",
   imports: [ColorPicker, QuickOption, NgClass],
   templateUrl: "./customizer.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./customizer.scss",
 })
 export class Customizer {

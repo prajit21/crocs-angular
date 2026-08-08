@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CollapseAccordion } from "./collapse-accordion/collapse-accordion";
 import { FlushAccordion } from "./flush-accordion/flush-accordion";
@@ -20,6 +20,7 @@ import { SimpleAccordion } from "./simple-accordion/simple-accordion";
     HorizontalAccordion,
   ],
   templateUrl: "./accordion.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./accordion.scss",
 })
 export class Accordion {}

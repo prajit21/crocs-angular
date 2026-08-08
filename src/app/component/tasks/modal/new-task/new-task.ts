@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { task, taskDetails } from "../../../../shared/interface/task";
   selector: "app-new-task",
   imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./new-task.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./new-task.scss",
 })
 export class NewTask {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 
@@ -6,6 +6,7 @@ import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
   selector: "app-min-max-slider",
   imports: [NgxSliderModule],
   templateUrl: "./min-max-slider.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./min-max-slider.scss",
 })
 export class MinMaxSlider {

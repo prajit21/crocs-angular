@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { customSwitch } from "../../../../../shared/data/forms-widgets/switch";
 
@@ -6,6 +6,7 @@ import { customSwitch } from "../../../../../shared/data/forms-widgets/switch";
   selector: "app-custom-switch",
   imports: [],
   templateUrl: "./custom-switch.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./custom-switch.scss",
 })
 export class CustomSwitch {

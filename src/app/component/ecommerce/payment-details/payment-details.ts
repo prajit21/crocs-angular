@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Cod } from "./cod/cod";
 import { CreditCard } from "./credit-card/credit-card";
@@ -10,6 +10,7 @@ import { NetBanking } from "./net-banking/net-banking";
   selector: "app-payment-details",
   imports: [Cod, Emi, CreditCard, DebitCard, NetBanking],
   templateUrl: "./payment-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./payment-details.scss",
 })
 export class PaymentDetails {}

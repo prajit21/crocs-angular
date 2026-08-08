@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { GalleryModule, Image } from "@ks89/angular-modal-gallery";
 
@@ -10,6 +10,7 @@ import { Details } from "./details/details";
   selector: "app-product-page",
   imports: [Brand, DescriptionTab, Details, GalleryModule],
   templateUrl: "./product-page.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./product-page.scss",
 })
 export class ProductPage {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DashedBorders } from "../../../../../shared/data/table/basic-tables";
 
@@ -6,6 +6,7 @@ import { DashedBorders } from "../../../../../shared/data/table/basic-tables";
   selector: "app-dashed-border",
   imports: [],
   templateUrl: "./dashed-border.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./dashed-border.scss",
 })
 export class DashedBorder {

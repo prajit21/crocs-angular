@@ -1,4 +1,9 @@
-import { Component, Input, output } from "@angular/core";
+import {
+  Component,
+  Input,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +13,7 @@ import { contactDetails } from "../../../shared/interface/contact";
   selector: "app-edit-contact-details",
   imports: [NgbModule],
   templateUrl: "./edit-contact-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./edit-contact-details.scss",
 })
 export class EditContactDetails {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
@@ -14,6 +14,7 @@ import {
   selector: "app-filter",
   imports: [CarouselModule, FormsModule, ReactiveFormsModule, NgxSliderModule],
   templateUrl: "./filter.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./filter.scss",
 })
 export class Filter {

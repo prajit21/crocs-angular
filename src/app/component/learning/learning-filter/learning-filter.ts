@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { LearningCategories } from "./learning-categories/learning-categories";
 import { LearningFindCources } from "./learning-find-cources/learning-find-cources";
@@ -15,6 +15,7 @@ import { ClickOutsideDirective } from "../../../shared/directive/outside.directi
     ClickOutsideDirective,
   ],
   templateUrl: "./learning-filter.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./learning-filter.scss",
 })
 export class LearningFilter {

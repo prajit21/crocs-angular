@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { userDetailsData } from "../../../../../shared/data/ui-kits/tab";
 
@@ -6,6 +6,7 @@ import { userDetailsData } from "../../../../../shared/data/ui-kits/tab";
   selector: "app-user-details",
   imports: [],
   templateUrl: "./user-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./user-details.scss",
 })
 export class UserDetails {

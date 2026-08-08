@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AlertsTable } from "./alerts-table/alerts-table";
 import { BadgesTable } from "./badges-table/badges-table";
@@ -26,6 +26,7 @@ import { UiTable } from "./ui-table/ui-table";
     SwitchTable,
   ],
   templateUrl: "./table-component.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./table-component.scss",
 })
 export class TableComponent {}

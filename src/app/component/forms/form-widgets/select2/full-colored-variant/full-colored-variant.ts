@@ -1,5 +1,5 @@
 import { TitleCasePipe } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -7,6 +7,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-full-colored-variant",
   imports: [NgbModule, TitleCasePipe],
   templateUrl: "./full-colored-variant.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./full-colored-variant.scss",
 })
 export class FullColoredVariant {

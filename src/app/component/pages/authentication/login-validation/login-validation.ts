@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -22,6 +22,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
     Feathericon,
   ],
   templateUrl: "./login-validation.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./login-validation.scss",
 })
 export class LoginValidation {

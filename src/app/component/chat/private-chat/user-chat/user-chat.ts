@@ -1,4 +1,9 @@
-import { Component, inject, input } from "@angular/core";
+import {
+  Component,
+  inject,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { Chats, chatDetails, msgdata } from "../../../../shared/data/chat/chat";
@@ -8,6 +13,7 @@ import { ChatService } from "../../../../shared/services/chat.service";
   selector: "app-user-chat",
   imports: [FormsModule],
   templateUrl: "./user-chat.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./user-chat.scss",
 })
 export class UserChat {

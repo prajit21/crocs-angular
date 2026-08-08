@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { TopProducts } from "../../../../shared/data/dashboard/ecommerce/ecommerce";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-top-product",
   imports: [ClickOutsideDirective, RouterModule],
   templateUrl: "./top-product.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./top-product.scss",
 })
 export class TopProduct {

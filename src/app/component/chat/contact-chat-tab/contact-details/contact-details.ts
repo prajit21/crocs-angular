@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { Contacts } from "../../../../shared/data/chat/chat";
@@ -7,6 +7,7 @@ import { Contacts } from "../../../../shared/data/chat/chat";
   selector: "app-contact-details",
   imports: [Feathericon],
   templateUrl: "./contact-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./contact-details.scss",
 })
 export class ContactDetails {

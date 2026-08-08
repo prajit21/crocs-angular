@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AdditionalContent } from "./additional-content/additional-content";
 import { AlertsIconsTextActions } from "./alerts-icons-text-actions/alerts-icons-text-actions";
@@ -23,6 +23,7 @@ import * as Data from "../../../shared/data/ui-kits/alert";
     DismissingLightAlerts,
   ],
   templateUrl: "./alert.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./alert.scss",
 })
 export class Alert {

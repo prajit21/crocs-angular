@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BorderTabs } from "./border-tabs/border-tabs";
 import { IconsTabs } from "./icons-tabs/icons-tabs";
@@ -22,6 +22,7 @@ import { VerticalTabs } from "./vertical-tabs/vertical-tabs";
     BorderTabs,
   ],
   templateUrl: "./tabs.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tabs.scss",
 })
 export class Tabs {}

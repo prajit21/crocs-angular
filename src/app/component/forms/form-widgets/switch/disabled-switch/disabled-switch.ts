@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Disabledoutlineswitch } from "../../../../../shared/data/forms-widgets/switch";
 
@@ -6,6 +6,7 @@ import { Disabledoutlineswitch } from "../../../../../shared/data/forms-widgets/
   selector: "app-disabled-switch",
   imports: [],
   templateUrl: "./disabled-switch.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./disabled-switch.scss",
 })
 export class DisabledSwitch {

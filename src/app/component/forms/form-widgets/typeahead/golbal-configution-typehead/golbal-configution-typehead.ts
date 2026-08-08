@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule, NgbTypeaheadConfig } from "@ng-bootstrap/ng-bootstrap";
@@ -71,6 +71,7 @@ const states = [
   selector: "app-golbal-configution-typehead",
   imports: [FormsModule, NgbModule],
   templateUrl: "./golbal-configution-typehead.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./golbal-configution-typehead.scss",
 })
 export class GolbalConfigutionTypehead {

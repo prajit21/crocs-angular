@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ButtonsPrefixPostfix } from "./buttons-prefix-postfix/buttons-prefix-postfix";
 import { DefaultTouchspin } from "./default-touchspin/default-touchspin";
@@ -16,6 +16,7 @@ import { RoundedTouchspin } from "./rounded-touchspin/rounded-touchspin";
     RoundedTouchspin,
   ],
   templateUrl: "./touchspin.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./touchspin.scss",
 })
 export class Touchspin {}

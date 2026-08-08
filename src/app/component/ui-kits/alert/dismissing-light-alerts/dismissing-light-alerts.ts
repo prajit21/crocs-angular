@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 
@@ -7,6 +7,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-dismissing-light-alerts",
   imports: [Feathericon, NgClass],
   templateUrl: "./dismissing-light-alerts.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./dismissing-light-alerts.scss",
 })
 export class DismissingLightAlerts {

@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { TotalRevenueChart } from "../../../../shared/data/dashboard/ecommerce/e
   selector: "app-top-common-ecommerce",
   imports: [NgApexchartsModule],
   templateUrl: "./top-common-ecommerce.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./top-common-ecommerce.scss",
 })
 export class TopCommonEcommerce {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CommonProgressBar } from "./common-progress-bar/common-progress-bar";
 import { CustomHeightProgressBars } from "./custom-height-progress-bars/custom-height-progress-bars";
@@ -21,6 +21,7 @@ import * as data from "../../../shared/data/ui-kits/progress";
     ProgressNumberSteps,
   ],
   templateUrl: "./progress.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./progress.scss",
 })
 export class Progress {

@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { comments } from "../../../../shared/data/blog/blog-data";
 
@@ -6,6 +6,7 @@ import { comments } from "../../../../shared/data/blog/blog-data";
   selector: "app-blog-comment",
   imports: [],
   templateUrl: "./blog-comment.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./blog-comment.scss",
 })
 export class BlogComment {

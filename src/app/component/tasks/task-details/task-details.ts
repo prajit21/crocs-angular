@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -10,6 +10,7 @@ import { task, taskDetails } from "../../../shared/interface/task";
   selector: "app-task-details",
   imports: [NgbModule, Feathericon],
   templateUrl: "./task-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./task-details.scss",
 })
 export class TaskDetails {

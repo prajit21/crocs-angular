@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -9,6 +9,7 @@ import { findCourse } from "../../../../shared/data/learning/learning";
   selector: "app-learning-find-cources",
   imports: [NgbModule, Feathericon],
   templateUrl: "./learning-find-cources.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./learning-find-cources.scss",
 })
 export class LearningFindCources {

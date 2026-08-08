@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { massage } from "../../../../shared/data/chat/chat";
 
@@ -6,6 +6,7 @@ import { massage } from "../../../../shared/data/chat/chat";
   selector: "app-user-group-chat",
   imports: [],
   templateUrl: "./user-group-chat.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./user-group-chat.scss",
 })
 export class UserGroupChat {

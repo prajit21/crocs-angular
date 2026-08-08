@@ -1,4 +1,9 @@
-import { Component, inject, output } from "@angular/core";
+import {
+  Component,
+  inject,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -11,6 +16,7 @@ import { ChatService } from "../../../shared/services/chat.service";
   selector: "app-contact-chat-tab",
   imports: [NgbModule, FormsModule, ContactDetails],
   templateUrl: "./contact-chat-tab.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./contact-chat-tab.scss",
 })
 export class ContactChatTab {

@@ -1,5 +1,5 @@
 import { UpperCasePipe } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { icon } from "../../../shared/data/icons/flags";
 
@@ -7,6 +7,7 @@ import { icon } from "../../../shared/data/icons/flags";
   selector: "app-flag-icons",
   imports: [UpperCasePipe],
   templateUrl: "./flag-icons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./flag-icons.scss",
 })
 export class FlagIcons {

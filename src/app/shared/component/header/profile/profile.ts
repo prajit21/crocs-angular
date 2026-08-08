@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { Router, RouterModule } from "@angular/router";
 
 import { Feathericon } from "../../feathericon/feathericon";
@@ -7,6 +7,7 @@ import { Feathericon } from "../../feathericon/feathericon";
   selector: "app-profile",
   imports: [Feathericon, RouterModule],
   templateUrl: "./profile.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./profile.scss",
 })
 export class Profile {

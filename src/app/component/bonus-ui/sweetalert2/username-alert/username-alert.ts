@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import Swal from "sweetalert2";
 
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
   selector: "app-username-alert",
   imports: [],
   templateUrl: "./username-alert.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./username-alert.scss",
 })
 export class UsernameAlert {

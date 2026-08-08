@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../../shared/component/feathericon/feathericon";
 import * as data from "../../../../../shared/data/social-media/social-media-data";
@@ -7,6 +7,7 @@ import * as data from "../../../../../shared/data/social-media/social-media-data
   selector: "app-activity-log",
   imports: [Feathericon],
   templateUrl: "./activity-log.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./activity-log.scss",
 })
 export class ActivityLog {

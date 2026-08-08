@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { Categories } from "../../../../shared/data/learning/learning";
   selector: "app-learning-categories",
   imports: [NgbModule],
   templateUrl: "./learning-categories.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./learning-categories.scss",
 })
 export class LearningCategories {

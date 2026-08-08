@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +10,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-upcoming-deadlines",
   imports: [ClickOutsideDirective, NgbModule, RouterModule],
   templateUrl: "./upcoming-deadlines.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./upcoming-deadlines.scss",
 })
 export class UpcomingDeadlines {

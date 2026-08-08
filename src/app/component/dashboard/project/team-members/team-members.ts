@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { CommonCharts } from "./common-charts/common-charts";
@@ -9,6 +9,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-team-members",
   imports: [CommonCharts, ClickOutsideDirective, RouterModule],
   templateUrl: "./team-members.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./team-members.scss",
 })
 export class TeamMembers {

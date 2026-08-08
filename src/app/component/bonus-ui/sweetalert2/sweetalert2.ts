@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AjaxRequestMovie } from "./ajax-request-movie/ajax-request-movie";
 import { AutoCloseTimer } from "./auto-close-timer/auto-close-timer";
@@ -30,6 +30,7 @@ import { WarningMode } from "./warning-mode/warning-mode";
     DangerAlert,
   ],
   templateUrl: "./sweetalert2.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./sweetalert2.scss",
 })
 export class Sweetalert2 {}

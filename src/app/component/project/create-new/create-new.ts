@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ProjectCreateForm } from "./project-create-form/project-create-form";
 import { UploadFile } from "./upload-file/upload-file";
@@ -7,6 +7,7 @@ import { UploadFile } from "./upload-file/upload-file";
   selector: "app-create-new",
   imports: [UploadFile, ProjectCreateForm],
   templateUrl: "./create-new.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./create-new.scss",
 })
 export class CreateNew {}

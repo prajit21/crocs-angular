@@ -1,4 +1,9 @@
-import { Component, inject, output } from "@angular/core";
+import {
+  Component,
+  inject,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -12,6 +17,7 @@ import { TagsTask } from "../modal/tags-task/tags-task";
   selector: "app-task-sidemenu",
   imports: [Feathericon, ClickOutsideDirective],
   templateUrl: "./task-sidemenu.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./task-sidemenu.scss",
 })
 export class TaskSidemenu {

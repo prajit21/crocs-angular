@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   BorderedRadio,
@@ -10,6 +10,7 @@ import {
   selector: "app-custom-radio",
   imports: [],
   templateUrl: "./custom-radio.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./custom-radio.scss",
 })
 export class CustomRadio {

@@ -1,5 +1,10 @@
 import { DecimalPipe, AsyncPipe } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -25,6 +30,7 @@ import { TableService } from "../../../shared/services/table.service";
   ],
   providers: [TableService, DecimalPipe],
   templateUrl: "./data-table.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./data-table.scss",
 })
 export class DataTable {

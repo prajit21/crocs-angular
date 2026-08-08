@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { staps } from "../../../../shared/data/ecommerce/add-product";
 
@@ -6,6 +6,7 @@ import { staps } from "../../../../shared/data/ecommerce/add-product";
   selector: "app-products-from-stepe",
   imports: [],
   templateUrl: "./products-from-stepe.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./products-from-stepe.scss",
 })
 export class ProductsFromStepe {

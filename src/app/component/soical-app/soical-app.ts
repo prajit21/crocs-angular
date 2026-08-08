@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { SoicalProfile } from "./soical-profile/soical-profile";
 
@@ -6,6 +6,7 @@ import { SoicalProfile } from "./soical-profile/soical-profile";
   selector: "app-soical-app",
   imports: [SoicalProfile],
   templateUrl: "./soical-app.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./soical-app.scss",
 })
 export class SoicalApp {}

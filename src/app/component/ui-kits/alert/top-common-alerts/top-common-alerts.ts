@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { alert } from "../../../../shared/data/ui-kits/alert";
 
@@ -6,6 +6,7 @@ import { alert } from "../../../../shared/data/ui-kits/alert";
   selector: "app-top-common-alerts",
   imports: [],
   templateUrl: "./top-common-alerts.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./top-common-alerts.scss",
 })
 export class TopCommonAlerts {

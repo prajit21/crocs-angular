@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -8,6 +8,7 @@ import { ClipboardService } from "ngx-clipboard";
   selector: "app-copy-protion-form-paragraph",
   imports: [NgbModule, FormsModule],
   templateUrl: "./copy-protion-form-paragraph.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./copy-protion-form-paragraph.scss",
 })
 export class CopyProtionFormParagraph {

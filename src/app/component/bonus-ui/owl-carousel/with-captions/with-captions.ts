@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -11,6 +11,7 @@ import {
   selector: "app-with-captions",
   imports: [CarouselModule],
   templateUrl: "./with-captions.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./with-captions.scss",
 })
 export class WithCaptions {

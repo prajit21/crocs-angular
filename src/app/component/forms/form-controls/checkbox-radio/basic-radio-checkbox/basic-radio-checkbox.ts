@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import {
@@ -10,6 +10,7 @@ import {
   selector: "app-basic-radio-checkbox",
   imports: [FormsModule],
   templateUrl: "./basic-radio-checkbox.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-radio-checkbox.scss",
 })
 export class BasicRadioCheckbox {

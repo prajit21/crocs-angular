@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DefaultFileUpload } from "./default-file-upload/default-file-upload";
 import { ImagePreview } from "./image-preview/image-preview";
@@ -9,6 +9,7 @@ import { SingleFileUpload } from "./single-file-upload/single-file-upload";
   selector: "app-dropzone",
   imports: [DefaultFileUpload, ImagePreview, MultiFileUpload, SingleFileUpload],
   templateUrl: "./dropzone.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./dropzone.scss",
 })
 export class Dropzone {}

@@ -13,19 +13,19 @@
     <div>
       <div id="chart-widget1">
         <apx-chart
-          [series]="data()?.series!"
-          [chart]="data()?.chart!"
-          [colors]="data()?.colors!"
-          [plotOptions]="data()?.plotOptions!"
-          [fill]="data()?.fill!"
-          [dataLabels]="data()?.dataLabels!"
-          [grid]="data()?.grid!"
-          [stroke]="data()?.stroke!"
-          [xaxis]="data()?.xaxis!"
-          [yaxis]="data()?.yaxis!"
-          [responsive]="data()?.responsive!"
-          [markers]="data()?.markers!"
-          [grid]="data()?.grid!"
+          [series]="$safeNavigationMigration(data()?.series)!"
+          [chart]="$safeNavigationMigration(data()?.chart)!"
+          [colors]="$safeNavigationMigration(data()?.colors)!"
+          [plotOptions]="$safeNavigationMigration(data()?.plotOptions)!"
+          [fill]="$safeNavigationMigration(data()?.fill)!"
+          [dataLabels]="$safeNavigationMigration(data()?.dataLabels)!"
+          [grid]="$safeNavigationMigration(data()?.grid)!"
+          [stroke]="$safeNavigationMigration(data()?.stroke)!"
+          [xaxis]="$safeNavigationMigration(data()?.xaxis)!"
+          [yaxis]="$safeNavigationMigration(data()?.yaxis)!"
+          [responsive]="$safeNavigationMigration(data()?.responsive)!"
+          [markers]="$safeNavigationMigration(data()?.markers)!"
+          [grid]="$safeNavigationMigration(data()?.grid)!"
         />
       </div>
     </div>

@@ -1,5 +1,10 @@
 import { DecimalPipe, AsyncPipe, NgClass } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
@@ -29,6 +34,7 @@ import { ProductListService } from "../../../../shared/services/ecommerce/produc
   ],
   providers: [ProductListService, DecimalPipe],
   templateUrl: "./product-data-table.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./product-data-table.scss",
 })
 export class ProductDataTable {

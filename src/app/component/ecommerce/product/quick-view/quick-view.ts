@@ -1,4 +1,9 @@
-import { Component, inject, Input } from "@angular/core";
+import {
+  Component,
+  inject,
+  Input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
@@ -9,6 +14,7 @@ import { Products } from "../../../../shared/model/product.model";
   selector: "app-quick-view",
   imports: [RouterModule],
   templateUrl: "./quick-view.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./quick-view.scss",
 })
 export class QuickView {

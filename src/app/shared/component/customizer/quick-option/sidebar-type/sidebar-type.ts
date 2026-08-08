@@ -1,10 +1,16 @@
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { LayoutService } from "../../../../services/layout.service";
 
 @Component({
   selector: "app-sidebar-type",
   templateUrl: "./sidebar-type.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./sidebar-type.scss",
 })
 export class SidebarType {

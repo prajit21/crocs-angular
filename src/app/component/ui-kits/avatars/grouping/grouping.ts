@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Groupings } from "../../../../shared/data/ui-kits/avavtar";
 
@@ -6,6 +6,7 @@ import { Groupings } from "../../../../shared/data/ui-kits/avavtar";
   selector: "app-grouping",
   imports: [],
   templateUrl: "./grouping.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./grouping.scss",
 })
 export class Grouping {

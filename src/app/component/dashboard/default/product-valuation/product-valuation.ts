@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -12,6 +12,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-product-valuation",
   imports: [NgApexchartsModule, ClickOutsideDirective],
   templateUrl: "./product-valuation.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./product-valuation.scss",
 })
 export class ProductValuation {

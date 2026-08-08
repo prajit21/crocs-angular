@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -34,6 +34,7 @@ import {
     NgbModule,
   ],
   templateUrl: "./project.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./project.scss",
 })
 export class Project {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   Dimensions,
@@ -11,6 +11,7 @@ import {
   selector: "app-image-cropper",
   imports: [ImageCropperComponent],
   templateUrl: "./image-cropper.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ["./image-cropper.scss"],
 })
 export class ImageCrop {

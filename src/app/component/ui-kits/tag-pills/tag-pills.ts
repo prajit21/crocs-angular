@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BadgeHeadingsExample } from "./badge-headings-example/badge-headings-example";
 import { BadgesPartButtons } from "./badges-part-buttons/badges-part-buttons";
@@ -9,6 +9,7 @@ import * as data from "../../../shared/data/ui-kits/tag-pills";
   selector: "app-tag-pills",
   imports: [CommonBadgesPills, BadgesPartButtons, BadgeHeadingsExample],
   templateUrl: "./tag-pills.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tag-pills.scss",
 })
 export class TagPills {

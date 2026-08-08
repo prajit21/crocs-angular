@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { commonAbsoluteCardData } from "../../../../shared/data/bonus-ui/creative-cards";
 
@@ -6,6 +6,7 @@ import { commonAbsoluteCardData } from "../../../../shared/data/bonus-ui/creativ
   selector: "app-common-absolute-card",
   imports: [],
   templateUrl: "./common-absolute-card.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./common-absolute-card.scss",
 })
 export class CommonAbsoluteCard {

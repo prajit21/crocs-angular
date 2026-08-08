@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { GeneralDailyVisitos } from "./general-daily-visitos/general-daily-visitos";
 import { GeneralProductSales } from "./general-product-sales/general-product-sales";
@@ -39,6 +39,7 @@ import { ProjectDetails } from "../../dashboard/project/project-details/project-
     TrackOrder,
   ],
   templateUrl: "./general.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./general.scss",
 })
 export class General {

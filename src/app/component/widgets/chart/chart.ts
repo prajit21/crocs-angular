@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -40,6 +40,7 @@ import {
     Uses,
   ],
   templateUrl: "./chart.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./chart.scss",
 })
 export class Chart {

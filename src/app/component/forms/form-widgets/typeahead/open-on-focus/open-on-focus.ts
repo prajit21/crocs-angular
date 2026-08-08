@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule, NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
@@ -76,6 +76,7 @@ const states = [
   selector: "app-open-on-focus",
   imports: [NgbModule, FormsModule],
   templateUrl: "./open-on-focus.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./open-on-focus.scss",
 })
 export class OpenOnFocus {

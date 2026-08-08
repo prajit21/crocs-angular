@@ -1,5 +1,10 @@
 import { DecimalPipe, AsyncPipe } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -28,6 +33,7 @@ import { ProjectSummeryService } from "../../../../shared/services/project-summe
   ],
   templateUrl: "./project-summery.html",
   styleUrl: "./project-summery.scss",
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [ProjectSummeryService, DecimalPipe],
 })
 export class ProjectSummery {

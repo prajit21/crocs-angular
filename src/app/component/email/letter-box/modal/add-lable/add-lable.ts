@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-add-lable",
   imports: [],
   templateUrl: "./add-lable.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./add-lable.scss",
 })
 export class AddLable {

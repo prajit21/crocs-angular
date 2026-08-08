@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import Swal from "sweetalert2";
 
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
   selector: "app-title-text-under",
   imports: [],
   templateUrl: "./title-text-under.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./title-text-under.scss",
 })
 export class TitleTextUnder {

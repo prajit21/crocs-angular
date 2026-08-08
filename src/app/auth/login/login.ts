@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormBuilder,
   FormControl,
@@ -23,6 +23,7 @@ import { Feathericon } from "../../shared/component/feathericon/feathericon";
     ToastrModule,
   ],
   templateUrl: "./login.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./login.scss",
 })
 export class Login {

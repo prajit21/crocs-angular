@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -16,6 +16,7 @@ import { BookmarkSidemenu } from "./bookmark-sidemenu/bookmark-sidemenu";
     ReactiveFormsModule,
   ],
   templateUrl: "./bookmarks.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./bookmarks.scss",
 })
 export class Bookmarks {

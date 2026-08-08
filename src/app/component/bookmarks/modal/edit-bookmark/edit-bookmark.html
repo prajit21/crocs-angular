@@ -14,7 +14,7 @@
             type="text"
             required=""
             autocomplete="off"
-            [value]="bookmarkDetails()?.url"
+            [value]="$safeNavigationMigration(bookmarkDetails()?.url)"
           />
         </div>
         <div class="mb-3 mt-0 col-md-12">
@@ -25,7 +25,7 @@
             type="text"
             required=""
             autocomplete="off"
-            [value]="bookmarkDetails()?.title"
+            [value]="$safeNavigationMigration(bookmarkDetails()?.title)"
           />
         </div>
         <div class="mb-3 mt-0 col-md-12">
@@ -36,8 +36,7 @@
             required=""
             autocomplete="off"
           >
-{{ bookmarkDetails()?.desc }}</textarea
-          >
+{{ bookmarkDetails()?.desc }}</textarea>
         </div>
         <div class="mb-3 mt-0 col-md-6">
           <label>Group</label>

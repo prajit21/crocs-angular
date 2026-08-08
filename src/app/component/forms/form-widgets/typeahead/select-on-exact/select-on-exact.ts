@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -64,6 +64,7 @@ const states: {
   selector: "app-select-on-exact",
   imports: [NgbModule, FormsModule],
   templateUrl: "./select-on-exact.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./select-on-exact.scss",
 })
 export class SelectOnExact {

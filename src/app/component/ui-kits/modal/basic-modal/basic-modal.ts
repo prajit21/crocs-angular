@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -11,6 +11,7 @@ import { TooltipPopovers } from "./tooltip-popovers/tooltip-popovers";
   selector: "app-basic-modal",
   imports: [],
   templateUrl: "./basic-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-modal.scss",
 })
 export class BasicModal {

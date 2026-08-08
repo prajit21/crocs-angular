@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 
@@ -6,6 +6,7 @@ import { Feathericon } from "../../../shared/component/feathericon/feathericon";
   selector: "app-search-artical",
   imports: [Feathericon],
   templateUrl: "./search-artical.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./search-artical.scss",
 })
 export class SearchArtical {}

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -9,6 +9,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-general-daily-visitos",
   imports: [NgApexchartsModule, ClickOutsideDirective],
   templateUrl: "./general-daily-visitos.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./general-daily-visitos.scss",
 })
 export class GeneralDailyVisitos {

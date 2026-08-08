@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +10,7 @@ import { ContactsDetails } from "./contacts-details/contacts-details";
   selector: "app-contact",
   imports: [NgbModule, FormsModule, ContactSidemenu, ContactsDetails],
   templateUrl: "./contact.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./contact.scss",
 })
 export class Contact {

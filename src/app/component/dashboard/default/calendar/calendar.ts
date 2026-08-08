@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbCalendar, NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-calendar",
   imports: [NgbDatepickerModule, ClickOutsideDirective],
   templateUrl: "./calendar.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./calendar.scss",
 })
 export class Calendar {

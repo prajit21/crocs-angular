@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-basic-tooltip",
   imports: [NgbModule],
   templateUrl: "./basic-tooltip.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-tooltip.scss",
 })
 export class BasicTooltip {}

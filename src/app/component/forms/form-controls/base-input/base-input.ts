@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicFloatingInputControl } from "./basic-floating-input-control/basic-floating-input-control";
 import { BasicForm } from "./basic-form/basic-form";
@@ -26,6 +26,7 @@ import { SelectSizing } from "./select-sizing/select-sizing";
     RaiseInputStyle,
   ],
   templateUrl: "./base-input.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./base-input.scss",
 })
 export class BaseInput {}

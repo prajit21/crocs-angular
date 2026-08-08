@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
@@ -9,6 +9,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-add-post",
   imports: [AngularEditorModule, FormsModule, DropzoneModule, NgSelectModule],
   templateUrl: "./add-post.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./add-post.scss",
 })
 export class AddPost {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { TaskDetails } from "./task-details/task-details";
@@ -8,6 +8,7 @@ import { TaskSidemenu } from "./task-sidemenu/task-sidemenu";
   selector: "app-tasks",
   imports: [TaskSidemenu, TaskDetails, FormsModule, ReactiveFormsModule],
   templateUrl: "./tasks.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tasks.scss",
 })
 export class Tasks {

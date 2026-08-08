@@ -1,10 +1,11 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { LayoutService } from "../../../../services/layout.service";
 
 @Component({
   selector: "app-sidebar-icon",
   templateUrl: "./sidebar-icon.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./sidebar-icon.scss",
 })
 export class SidebarIcon {

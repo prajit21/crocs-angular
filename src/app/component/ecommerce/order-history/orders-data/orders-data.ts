@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { ordersHistory } from "../../../../shared/data/ecommerce/orderhistory";
@@ -7,6 +7,7 @@ import { ordersHistory } from "../../../../shared/data/ecommerce/orderhistory";
   selector: "app-orders-data",
   imports: [Feathericon],
   templateUrl: "./orders-data.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./orders-data.scss",
 })
 export class OrdersData {

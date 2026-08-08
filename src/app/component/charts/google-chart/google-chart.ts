@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AreaChart1 } from "./area-chart1/area-chart1";
 import { AreaChart2 } from "./area-chart2/area-chart2";
@@ -28,6 +28,7 @@ import { LineChart } from "./line-chart/line-chart";
     GooglePieChart4,
   ],
   templateUrl: "./google-chart.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./google-chart.scss",
 })
 export class GoogleChart {}

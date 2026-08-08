@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { RightRibbons } from "../../../../shared/data/bonus-ui/ribbons";
 
@@ -6,6 +6,7 @@ import { RightRibbons } from "../../../../shared/data/bonus-ui/ribbons";
   selector: "app-variations-right-ribbons",
   imports: [],
   templateUrl: "./variations-right-ribbons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./variations-right-ribbons.scss",
 })
 export class VariationsRightRibbons {

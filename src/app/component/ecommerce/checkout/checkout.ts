@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BillingDetails } from "./billing-details/billing-details";
 
@@ -6,6 +6,7 @@ import { BillingDetails } from "./billing-details/billing-details";
   selector: "app-checkout",
   imports: [BillingDetails],
   templateUrl: "./checkout.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./checkout.scss",
 })
 export class Checkout {}

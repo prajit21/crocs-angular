@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   VariationRadiopayment,
@@ -10,6 +10,7 @@ import {
   selector: "app-variation-radio",
   imports: [],
   templateUrl: "./variation-radio.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./variation-radio.scss",
 })
 export class VariationRadio {

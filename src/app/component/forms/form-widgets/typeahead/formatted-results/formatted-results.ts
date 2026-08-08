@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -71,6 +71,7 @@ const states = [
   selector: "app-formatted-results",
   imports: [FormsModule, NgbModule],
   templateUrl: "./formatted-results.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./formatted-results.scss",
 })
 export class FormattedResults {

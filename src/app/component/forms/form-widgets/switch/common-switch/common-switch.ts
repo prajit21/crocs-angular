@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { commonSwitch } from "../../../../../shared/data/forms-widgets/switch";
 
@@ -6,6 +6,7 @@ import { commonSwitch } from "../../../../../shared/data/forms-widgets/switch";
   selector: "app-common-switch",
   imports: [],
   templateUrl: "./common-switch.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./common-switch.scss",
 })
 export class CommonSwitch {

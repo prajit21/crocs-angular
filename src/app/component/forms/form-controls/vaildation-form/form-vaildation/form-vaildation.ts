@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-form-vaildation",
   imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./form-vaildation.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./form-vaildation.scss",
 })
 export class FormVaildation {

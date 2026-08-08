@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { NgbActiveModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-open-modal",
   imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: "./open-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./open-modal.scss",
 })
 export class OpenModal {

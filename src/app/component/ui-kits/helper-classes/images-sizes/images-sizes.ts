@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ImageSize } from "../../../../shared/data/ui-kits/helper-classes";
 
@@ -6,6 +6,7 @@ import { ImageSize } from "../../../../shared/data/ui-kits/helper-classes";
   selector: "app-images-sizes",
   imports: [],
   templateUrl: "./images-sizes.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./images-sizes.scss",
 })
 export class ImagesSizes {

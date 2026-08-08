@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import {
@@ -10,6 +10,7 @@ import {
   selector: "app-variation-checkbox",
   imports: [FormsModule],
   templateUrl: "./variation-checkbox.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./variation-checkbox.scss",
 })
 export class VariationCheckbox {

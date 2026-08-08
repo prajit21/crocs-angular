@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { recentorder } from "../../../../shared/data/dashboard/default/default";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-recent-order",
   imports: [ClickOutsideDirective, RouterModule],
   templateUrl: "./recent-order.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./recent-order.scss",
 })
 export class RecentOrder {

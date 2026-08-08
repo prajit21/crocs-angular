@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ChartistModule } from "ng-chartist";
 
@@ -8,6 +8,7 @@ import * as chartData from "../../../../shared/data/charts/chartist-chart";
   selector: "app-extreme-responsive-configuration",
   imports: [ChartistModule],
   templateUrl: "./extreme-responsive-configuration.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./extreme-responsive-configuration.scss",
 })
 export class ExtremeResponsiveConfiguration {

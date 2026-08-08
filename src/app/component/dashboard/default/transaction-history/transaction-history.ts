@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { TransactionHistoryData } from "../../../../shared/data/dashboard/default/default";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-transaction-history",
   imports: [ClickOutsideDirective, RouterModule],
   templateUrl: "./transaction-history.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./transaction-history.scss",
 })
 export class TransactionHistory {

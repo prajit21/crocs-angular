@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { contactDetails, contacts } from "../../../../shared/interface/contact";
   selector: "app-new-contact",
   imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./new-contact.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./new-contact.scss",
 })
 export class NewContact {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { LeafletModule } from "@bluehalo/ngx-leaflet";
 import * as L from "leaflet";
@@ -9,6 +9,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-user-by-country",
   imports: [LeafletModule, ClickOutsideDirective],
   templateUrl: "./user-by-country.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./user-by-country.scss",
 })
 export class UserByCountry {

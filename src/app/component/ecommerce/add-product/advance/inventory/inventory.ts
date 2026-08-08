@@ -1,4 +1,4 @@
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -10,6 +10,7 @@ import {
   selector: "app-inventory",
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: "./inventory.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./inventory.scss",
 })
 export class Inventory {

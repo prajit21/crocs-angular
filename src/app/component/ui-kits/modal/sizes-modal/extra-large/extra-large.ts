@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-extra-large",
   imports: [Feathericon],
   templateUrl: "./extra-large.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./extra-large.scss",
 })
 export class ExtraLarge {

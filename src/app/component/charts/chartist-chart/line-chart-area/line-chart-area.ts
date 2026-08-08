@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ChartistModule } from "ng-chartist";
 
@@ -8,6 +8,7 @@ import * as chartData from "../../../../shared/data/charts/chartist-chart";
   selector: "app-line-chart-area",
   imports: [ChartistModule],
   templateUrl: "./line-chart-area.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./line-chart-area.scss",
 })
 export class LineChartArea {

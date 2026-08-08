@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -23,6 +23,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
     Feathericon,
   ],
   templateUrl: "./login-sweetalert.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./login-sweetalert.scss",
 })
 export class LoginSweetalert {

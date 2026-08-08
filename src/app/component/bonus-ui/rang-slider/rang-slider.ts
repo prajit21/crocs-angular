@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CustomValues } from "./custom-values/custom-values";
 import { DefaultRangSlider } from "./default-rang-slider/default-rang-slider";
@@ -16,6 +16,7 @@ import { PrettifyNumber } from "./prettify-number/prettify-number";
     MinMaxSlider,
   ],
   templateUrl: "./rang-slider.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./rang-slider.scss",
 })
 export class RangSlider {}

@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -8,6 +8,7 @@ import { ClipboardService } from "ngx-clipboard";
   selector: "app-clipboard-on-textarea",
   imports: [NgbModule, FormsModule],
   templateUrl: "./clipboard-on-textarea.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./clipboard-on-textarea.scss",
 })
 export class ClipboardOnTextarea {

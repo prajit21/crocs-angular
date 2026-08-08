@@ -1,4 +1,4 @@
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -14,6 +14,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-add-product-details",
   imports: [AngularEditorModule, NgbModule, ReactiveFormsModule, FormsModule],
   templateUrl: "./add-product-details.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./add-product-details.scss",
 })
 export class AddProductDetails {

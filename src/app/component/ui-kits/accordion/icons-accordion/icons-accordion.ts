@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -10,6 +10,7 @@ import { IconsAccordions } from "../../../../shared/data/ui-kits/accordion";
   selector: "app-icons-accordion",
   imports: [Feathericon, NgbModule, FormsModule],
   templateUrl: "./icons-accordion.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./icons-accordion.scss",
 })
 export class IconsAccordion {

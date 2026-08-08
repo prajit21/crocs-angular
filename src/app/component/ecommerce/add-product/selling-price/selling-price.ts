@@ -1,6 +1,6 @@
 import { DecimalPipe } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -14,6 +14,7 @@ import {
   imports: [ReactiveFormsModule, FormsModule],
   providers: [DecimalPipe, HttpClient],
   templateUrl: "./selling-price.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./selling-price.scss",
 })
 export class SellingPrice {

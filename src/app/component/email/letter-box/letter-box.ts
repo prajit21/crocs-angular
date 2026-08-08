@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -19,6 +19,7 @@ import { MailDetails } from "./mail-details/mail-details";
     MailDetails,
   ],
   templateUrl: "./letter-box.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./letter-box.scss",
 })
 export class LetterBox {

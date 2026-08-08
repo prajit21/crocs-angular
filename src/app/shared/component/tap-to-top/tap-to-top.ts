@@ -1,5 +1,10 @@
 import { ViewportScroller } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { Feathericon } from "../feathericon/feathericon";
 
@@ -7,6 +12,7 @@ import { Feathericon } from "../feathericon/feathericon";
   selector: "app-tap-to-top",
   imports: [Feathericon],
   templateUrl: "./tap-to-top.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tap-to-top.scss",
 })
 export class TapToTop {

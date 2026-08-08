@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicTableBorderBottomColor } from "./basic-table-border-bottom-color/basic-table-border-bottom-color";
 import { BreckpointSpecific } from "./breckpoint-specific/breckpoint-specific";
@@ -30,6 +30,7 @@ import { TableHeadOptions } from "./table-head-options/table-head-options";
     TableHeadOptions,
   ],
   templateUrl: "./basic-tables.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-tables.scss",
 })
 export class BasicTables {}

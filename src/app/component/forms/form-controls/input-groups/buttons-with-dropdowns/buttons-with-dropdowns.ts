@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-buttons-with-dropdowns",
   imports: [NgbModule],
   templateUrl: "./buttons-with-dropdowns.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./buttons-with-dropdowns.scss",
 })
 export class ButtonsWithDropdowns {

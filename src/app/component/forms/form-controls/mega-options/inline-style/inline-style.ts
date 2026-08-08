@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { inlineStyle } from "../../../../../shared/data/form-controls/mega-options";
 
@@ -6,6 +6,7 @@ import { inlineStyle } from "../../../../../shared/data/form-controls/mega-optio
   selector: "app-inline-style",
   imports: [],
   templateUrl: "./inline-style.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./inline-style.scss",
 })
 export class InlineStyle {

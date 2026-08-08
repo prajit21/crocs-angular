@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
@@ -7,6 +7,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-compose-mail",
   imports: [AngularEditorModule],
   templateUrl: "./compose-mail.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./compose-mail.scss",
 })
 export class ComposeMail {

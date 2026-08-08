@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { allIcon } from "../../../shared/data/icons/thimify";
 
@@ -6,6 +6,7 @@ import { allIcon } from "../../../shared/data/icons/thimify";
   selector: "app-themify-icons",
   imports: [],
   templateUrl: "./themify-icons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./themify-icons.scss",
 })
 export class ThemifyIcons {

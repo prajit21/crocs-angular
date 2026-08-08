@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicTooltip } from "./basic-tooltip/basic-tooltip";
 import { ColoredTooltip } from "./colored-tooltip/colored-tooltip";
@@ -16,6 +16,7 @@ import { TooltipDirections } from "./tooltip-directions/tooltip-directions";
     TooltipDirections,
   ],
   templateUrl: "./tooltip.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tooltip.scss",
 })
 export class Tooltip {}

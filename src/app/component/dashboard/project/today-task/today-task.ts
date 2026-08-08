@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -21,6 +21,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
     NgClass,
   ],
   templateUrl: "./today-task.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./today-task.scss",
 })
 export class TodayTask {

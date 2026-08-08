@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { CryptocurrencyPricesChart } from "../../../../shared/data/widgets/chart
   selector: "app-cryptocurrency-prices",
   imports: [NgApexchartsModule],
   templateUrl: "./cryptocurrency-prices.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./cryptocurrency-prices.scss",
 })
 export class CryptocurrencyPrices {

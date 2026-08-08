@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DailyVisitors } from "./daily-visitors/daily-visitors";
 import { ManageOrder } from "./manage-order/manage-order";
@@ -30,6 +30,7 @@ import {
     StockReport,
   ],
   templateUrl: "./ecommerce.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./ecommerce.scss",
 })
 export class Ecommerce {

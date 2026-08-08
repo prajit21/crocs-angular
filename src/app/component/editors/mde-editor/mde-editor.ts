@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
@@ -7,6 +7,7 @@ import { AngularEditorModule } from "@kolkov/angular-editor";
   selector: "app-mde-editor",
   imports: [AngularEditorModule, FormsModule],
   templateUrl: "./mde-editor.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./mde-editor.scss",
 })
 export class MdeEditor {

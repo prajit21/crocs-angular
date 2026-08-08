@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-full-screen",
   imports: [Feathericon],
   templateUrl: "./full-screen.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./full-screen.scss",
 })
 export class FullScreen {

@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
@@ -7,6 +7,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-common-login-from",
   imports: [RouterModule, Feathericon],
   templateUrl: "./common-login-from.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./common-login-from.scss",
 })
 export class CommonLoginFrom {

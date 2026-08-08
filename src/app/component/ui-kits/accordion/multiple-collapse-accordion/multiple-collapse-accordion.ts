@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-multiple-collapse-accordion",
   imports: [],
   templateUrl: "./multiple-collapse-accordion.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./multiple-collapse-accordion.scss",
 })
 export class MultipleCollapseAccordion {

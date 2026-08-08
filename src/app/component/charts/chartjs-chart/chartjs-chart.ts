@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ChartjsBarChart } from "./chartjs-bar-chart/chartjs-bar-chart";
 import { ChartjsLineChart } from "./chartjs-line-chart/chartjs-line-chart";
@@ -18,6 +18,7 @@ import { PolarChart } from "./polar-chart/polar-chart";
     PolarChart,
   ],
   templateUrl: "./chartjs-chart.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./chartjs-chart.scss",
 })
 export class ChartjsChart {}

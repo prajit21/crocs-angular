@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-tooltip-vaildation",
   imports: [NgbModule, FormsModule, ReactiveFormsModule],
   templateUrl: "./tooltip-vaildation.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./tooltip-vaildation.scss",
 })
 export class TooltipVaildation {

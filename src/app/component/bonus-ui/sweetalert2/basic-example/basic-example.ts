@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import Swal from "sweetalert2";
 
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
   selector: "app-basic-example",
   imports: [],
   templateUrl: "./basic-example.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./basic-example.scss",
 })
 export class BasicExample {

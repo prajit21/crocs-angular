@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import Swal from "sweetalert2";
 
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
   selector: "app-ajax-request-movie",
   imports: [],
   templateUrl: "./ajax-request-movie.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./ajax-request-movie.scss",
 })
 export class AjaxRequestMovie {

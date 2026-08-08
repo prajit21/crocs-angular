@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-small-modal",
   imports: [Feathericon],
   templateUrl: "./small-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./small-modal.scss",
 })
 export class SmallModal {

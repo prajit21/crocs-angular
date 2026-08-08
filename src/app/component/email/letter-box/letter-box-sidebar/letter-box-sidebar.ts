@@ -1,4 +1,9 @@
-import { Component, inject, output } from "@angular/core";
+import {
+  Component,
+  inject,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -11,6 +16,7 @@ import { ComposeMail } from "../modal/compose-mail/compose-mail";
   selector: "app-letter-box-sidebar",
   imports: [NgbModule, ClickOutsideDirective],
   templateUrl: "./letter-box-sidebar.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./letter-box-sidebar.scss",
 })
 export class LetterBoxSidebar {

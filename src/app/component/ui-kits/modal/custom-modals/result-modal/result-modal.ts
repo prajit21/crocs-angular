@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +11,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-result-modal",
   imports: [],
   templateUrl: "./result-modal.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./result-modal.scss",
 })
 export class ResultModal {

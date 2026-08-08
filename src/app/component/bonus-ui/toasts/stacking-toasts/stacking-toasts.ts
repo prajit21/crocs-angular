@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { StackingToast } from "../../../../shared/data/bonus-ui/toasts";
@@ -7,6 +7,7 @@ import { StackingToast } from "../../../../shared/data/bonus-ui/toasts";
   selector: "app-stacking-toasts",
   imports: [Feathericon],
   templateUrl: "./stacking-toasts.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./stacking-toasts.scss",
 })
 export class StackingToasts {

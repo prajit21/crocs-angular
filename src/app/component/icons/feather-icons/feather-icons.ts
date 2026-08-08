@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 import { allIcon } from "../../../shared/data/icons/thimify";
@@ -7,6 +7,7 @@ import { allIcon } from "../../../shared/data/icons/thimify";
   selector: "app-feather-icons",
   imports: [Feathericon],
   templateUrl: "./feather-icons.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./feather-icons.scss",
 })
 export class FeatherIcons {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../../shared/component/feathericon/feathericon";
 
@@ -6,6 +6,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-comment-two",
   imports: [Feathericon],
   templateUrl: "./comment-two.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./comment-two.scss",
 })
 export class CommentTwo {}

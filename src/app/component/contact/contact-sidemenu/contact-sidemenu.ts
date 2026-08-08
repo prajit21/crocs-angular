@@ -1,4 +1,9 @@
-import { Component, inject, output } from "@angular/core";
+import {
+  Component,
+  inject,
+  output,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModal, NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -13,6 +18,7 @@ import { NewContact } from "../modal/new-contact/new-contact";
   selector: "app-contact-sidemenu",
   imports: [NgbModule, FormsModule, Feathericon, ClickOutsideDirective],
   templateUrl: "./contact-sidemenu.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./contact-sidemenu.scss",
 })
 export class ContactSidemenu {

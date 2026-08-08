@@ -1,5 +1,5 @@
 import { SlicePipe } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
@@ -10,6 +10,7 @@ import { SvgIcon } from "../../svg-icon/svg-icon";
   selector: "app-bookmark",
   imports: [SvgIcon, RouterModule, FormsModule, SlicePipe],
   templateUrl: "./bookmark.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./bookmark.scss",
 })
 export class Bookmark {

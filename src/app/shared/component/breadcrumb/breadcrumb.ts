@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   ActivatedRoute,
   Router,
@@ -14,6 +14,7 @@ import { filter } from "rxjs/operators";
   selector: "app-breadcrumb",
   imports: [RouterModule],
   templateUrl: "./breadcrumb.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./breadcrumb.scss",
 })
 export class Breadcrumb {
@@ -21,8 +22,7 @@ export class Breadcrumb {
   private router = inject(Router);
 
   public breadcrumbs:
-    | { parentBreadcrumb?: string | null; childBreadcrumb?: string }
-    | undefined;
+    { parentBreadcrumb?: string | null; childBreadcrumb?: string } | undefined;
   public title: string = "";
 
   constructor() {

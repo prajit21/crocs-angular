@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { About } from "../about/about";
 import { Friends } from "../friends/friends";
@@ -10,6 +10,7 @@ import { Timeline } from "../timeline/timeline";
   selector: "app-soical-profile",
   imports: [Photos, Timeline, Friends, About, NgClass],
   templateUrl: "./soical-profile.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./soical-profile.scss",
 })
 export class SoicalProfile {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Calendar } from "./calendar/calendar";
 import { DashboardNotifications } from "./dashboard-notifications/dashboard-notifications";
@@ -30,6 +30,7 @@ import {
     DashboardNotifications,
   ],
   templateUrl: "./default.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./default.scss",
 })
 export class Default {

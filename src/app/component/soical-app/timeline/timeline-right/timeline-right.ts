@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Followers } from "./followers/followers";
 import { Follwings } from "./follwings/follwings";
@@ -10,6 +10,7 @@ import { ProfileIntro } from "./profile-intro/profile-intro";
   selector: "app-timeline-right",
   imports: [Followers, Follwings, FriendsProfile, LatestPhotos, ProfileIntro],
   templateUrl: "./timeline-right.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./timeline-right.scss",
 })
 export class TimelineRight {}

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -71,6 +71,7 @@ const states = [
   selector: "app-simple-typehead",
   imports: [NgbModule, FormsModule],
   templateUrl: "./simple-typehead.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./simple-typehead.scss",
 })
 export class SimpleTypehead {

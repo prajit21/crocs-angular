@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 
@@ -6,6 +6,7 @@ import { Feathericon } from "../../../shared/component/feathericon/feathericon";
   selector: "app-latest-update",
   imports: [Feathericon],
   templateUrl: "./latest-update.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./latest-update.scss",
 })
 export class LatestUpdate {}

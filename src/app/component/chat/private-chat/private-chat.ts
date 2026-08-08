@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ContactChatTab } from "../contact-chat-tab/contact-chat-tab";
 import { UserChat } from "./user-chat/user-chat";
@@ -7,6 +7,7 @@ import { UserChat } from "./user-chat/user-chat";
   selector: "app-private-chat",
   imports: [ContactChatTab, UserChat],
   templateUrl: "./private-chat.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./private-chat.scss",
 })
 export class PrivateChat {

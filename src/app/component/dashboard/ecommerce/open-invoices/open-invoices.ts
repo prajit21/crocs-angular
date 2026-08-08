@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { OpenInvoice } from "../../../../shared/data/dashboard/ecommerce/ecommerce";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directive/outside.dire
   selector: "app-open-invoices",
   imports: [ClickOutsideDirective, RouterModule],
   templateUrl: "./open-invoices.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./open-invoices.scss",
 })
 export class OpenInvoices {

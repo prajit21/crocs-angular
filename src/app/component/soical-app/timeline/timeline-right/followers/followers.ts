@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import * as data from "../../../../../shared/data/social-media/social-media-data
   selector: "app-followers",
   imports: [NgbModule],
   templateUrl: "./followers.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./followers.scss",
 })
 export class Followers {

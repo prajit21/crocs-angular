@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DefaultButtons } from "../../../shared/data/buttons/default-style";
 
@@ -6,6 +6,7 @@ import { DefaultButtons } from "../../../shared/data/buttons/default-style";
   selector: "app-default-style",
   imports: [],
   templateUrl: "./default-style.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: "./default-style.scss",
 })
 export class DefaultStyle {
